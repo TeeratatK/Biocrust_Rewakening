@@ -1,0 +1,332 @@
+---
+title: "Taxonomic barplots with >1% abundance"
+author: "Nuttapon Pombubpa"
+date: "April 12, 2023"
+output:
+  word_document: default
+  html_document: default
+---
+```{r}
+getwd()
+```
+
+#ขั้นตอนที่ 1 ดาวน์โหลดแพ็คแกจที่จำเป็น
+```{r warning=FALSE, message=FALSE}
+library(ape)
+library(vegan)
+library(plyr)
+library(dplyr)
+library(scales)
+library(grid)
+library(reshape2)
+library(phyloseq)
+library(magrittr)
+library(ggplot2)
+library(ggpubr)
+library(data.table)
+library(tidyr)
+library(tidyverse)
+library(multcompView)
+library(VennDiagram)
+library(car)
+```
+
+#ขั้นตอนที่ 2 นำเข้าข้อมูล OTU table, taxonomy table
+```{r}
+otus <- read.table("./Data/CrustTemp2ITSasvUN3.otu_table_fix.txt",header=T,sep="\t",row.names=1)
+otumat <- as(as.matrix(otus), "matrix")
+OTU <- otu_table(otumat, taxa_are_rows = TRUE)
+```
+
+
+```{r}
+taxmat <- read.table("./Data/CrustTemp2ITSasvUN3.ASVs.taxonomy.fix.txt", header=T,sep="\t",row.names=1)
+taxmat <- as(as.matrix(taxmat),"matrix")
+TAX <- tax_table(taxmat)
+```
+
+
+#นำเข้าข้อมูล mapping file 
+
+1.Check mapping file before import to R, R will automatically change sample name that starts with number or contain “-” in sample name. If you get error in this step, you should check sample name first. 
+
+2.First column of first row should not start with #, R will not read the first row that starts with #
+
+3. You can choose which samples to include in analysis by indicating specific group in the column
+
+```{r}
+meta <- read.table("./Data/CrustTemp2ITSasvUN3.mapping_file_fix.txt",header=TRUE,row.names=1,sep="\t",stringsAsFactors=FALSE)
+```
+
+Check if your metadata file has been import successfully and correctly, the output will show a table of your metadata file (mapping file). *If you do not have header, you might start your first row with # (remove # and reload your mapping file).
+
+```{r}
+meta
+```
+
+#ขั้นตอนที่ 3 สร้าง sample_data -class ของ mapping file ด้วยคำสั่ง sample_data(...)
+Construct sample_data-class using imported metadata
+```{r warning=FALSE}
+sampleData <- sample_data(meta)
+```
+#ขั้นตอนที นำ OTU table, Taxonomy table และ Sample data ที่นำเข้าเรียบร้อยแล้วจากข้อ 2.1.2 และ 2.1.3 มาสร้าง phyloseq object ด้วยคำสั่ง phyloseq(…) เพื่อใช้สำหรับแพ็คเกจ 'Phyloseq' 
+To construct phyloseq object, otu table, taxonomy table, and sampleData are required. Phylogenetic tree can be included, but it is not necessary for constructing phyloseq object.
+Construct Phyloseq object called "Physeq"
+
+```{r warning=FALSE}
+physeq <- phyloseq(OTU,TAX,sampleData)
+physeq
+```
+
+#ขั้นตอนที่ 5ใช้คำสั่ง subset_taxa(...) เพื่อตัด taxa อื่นที่ไม่ใช่ฟังไจ และเลือกข้อมูลเฉพาะกลุ่มฟังไจ ได้ 1422 taxa ใน 50 ตัวอย่างาวิเคราะห์
+```{r}
+physeq <- subset_taxa(physeq, Kingdom == "Fungi")
+physeq
+```
+```{r }
+physeq.prune = prune_taxa(taxa_sums(physeq) > 1, physeq)
+physeq.prune
+```
+
+###วิเคราะห์ taxonomic barplots ในไบโอครัสต์ชนิด LAC
+#ขั้นตอนที่ 6 เลือกกลุ่มตัวอย่างไบโอครัสต์ชนิด LAC 
+```{r}
+physeq.LAC <- subset_samples(physeq.prune, Crusttype=="LAC")
+physeq.LAC
+```
+#ขั้นตอนที่ 7 เข้าถึงข้อมูล taxonomy table ใน physeq object จากข้อ 2.1.6 แล้วเปลี่ยนข้อมูลภายในเป็นข้อมูลในรูปของเมทริกซ์ รวมถึงเปลี่ยนข้อมูลอนุกรมวิธานที่ระบุว่า NA (ไม่สามารถระบุได้) ให้เป็นคำว่า “Unknown”
+##Make taxonomy table into a matrix and relabel NA as unknown
+```{r}
+tax.bac <- as(tax_table(physeq.LAC),"matrix")
+head(tax.bac)
+tax.bac[is.na(tax.bac)] <- "Unknown"
+tax_table(tax.bac)
+```
+#ขั้นตอนที่ 8 เปลี่ยน taxonomy table จาก object่ ชื่อว่า 'tax.bac' ที่สร้างขึ้นในข้อ 2.1.7 เป็น phyloseq object ชื่อว่า 'bac.3'
+###Convert tax table back to phyloseq object and generate phyloseq object with new tax table
+```{r}
+TAX.bac <- tax_table(tax.bac)
+bac.3 <- phyloseq(sample_data(physeq.LAC),otu_table(physeq.LAC),TAX.bac)
+bac.3
+```
+
+#ขั้นตอนที่ 9 ทำการรวมข้อมูล taxa ที่มีอนุกรมวิธานระดับออเดอร์เดียวกันเข้าด้วยกัน ด้วยฟังก์ชัน ‘tax_glom()’ ในแพ็คเกจ ‘speedyseq’
+```{r}
+glom.bac <- speedyseq::tax_glom(bac.3,taxrank = "Order")
+glom.bac
+```
+
+```{r}
+head(tax_table(glom.bac))
+```
+##### ไม่เข้าใจ
+##2.1.10 หลังจากรวม taxa แล้ว จากนั้นให้จับกลุ่มตัวอย่างที่มีระยะเวลาการบ่มน้ำเดียวกันด้วยฟังก์ชัน merge_samples() และแปลงข้อมูลให้แสดงค่าความมากน้อยสัมพัทธ์ (relative abundance) ด้วยฟังก์ชัน transform_sample_counts()
+
+##Transform OTU table to show relative abundance
+##Samples can also be merged together by a variable in the mapping file
+
+```{r}
+bac.abund <- merge_samples(glom.bac, "Incubation")
+sample_data(bac.abund)$Incubation <- factor(sample_names(bac.abund))
+bac.abund = transform_sample_counts(bac.abund, function(x) x / sum(x))
+bac.abund
+```
+
+##Merge taxonomic data with OTU table and mapping file (Can alter code to change taxonomic rank to Order, Class, Family, etc.) and change Phylum column from a factor to a character.
+
+```{r}
+data_glom.bac <- speedyseq::psmelt(bac.abund)
+data_glom.bac$Order <- as.character(data_glom.bac$Order)
+```
+
+##If a phylum has less than 1% abundance, phylum name is changed to <1% abund.
+
+```{r}
+data_glom.bac$Order[data_glom.bac$Abundance < 0.01] <- "<1% abund."
+```
+
+Count the levels present in the Phylum column
+
+```{r}
+Count = length(unique(data_glom.bac$Order))
+Count
+```
+
+Print out unique phyla names for insertion into barplots in next step.
+
+```{r}
+unique((data_glom.bac$Order))
+```
+
+Create levels of phyla represented in barplot. Levels appear on the barplot in the order they are listed
+
+
+```{r}
+#for LAC Order
+data_glom.bac$Order <- factor(data_glom.bac$Order, levels = c("Agaricales", "Trapeliales", "Pleosporales", "Hypocreales", "Orbiliales", "Dothideales", "Botryosphaeriales", "Sordariales", "Eurotiales", "Filobasidiales", "Pezizales", "Chaetothyriales", "Coniochaetales", "<1% abund.", "Unknown"))
+```
+
+
+###Create barplot of phyla - use facet_grid to separate samples by a variable ie in mapping file. Choose colors for plot in scale_fill_manual. color names can be found at http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf *amount of colors must match amount of level in phyla column
+
+```{r}
+data_glom.bac$Incubation = factor(data_glom.bac$Incubation, levels = c("0.05", "1", "24", "48", "96"))
+```
+
+```{r fig.height=5, fig.width=8, fig.align="center"}
+png("D:/Biocrust_Reawakening/Data_Metagenomics/Fungi/Revised/LAC_Taxa_Order_level_by_incubation.png", units="in", width = 8.5, height = 5.5, res = 600 )
+
+# The palette with black:
+cbbPalette <- c("Pleosporales"="darkmagenta", "Hypocreales" = "lightgoldenrod1", "Eurotiales" = "#E69F00" , "Agaricales" = "red2", "Chaetothyriales" = "violetred3", "Coniochaetales" = "lightgreen", "Dothideales" = "saddlebrown", "Pezizales" = "brown", "Filobasidiales" = "aquamarine4","Orbiliales" = "tan1", "Botryosphaeriales" = "turquoise3", "Sordariales" = "coral2", "Trapeliales" = "royalblue1", "<1% abund." = "darkgrey", "Unknown" = "darkblue")
+taxcom_layer_pl1 = ggplot(data = data_glom.bac, mapping = aes_string(x = "Incubation" ,y = "Abundance", fill = "Order" )) + 
+  geom_bar(stat="identity", position="fill") + 
+  ggtitle("LAC Fungal Taxonomic Composition (Order level) by Incubation Time")+
+  theme_pubr(border= TRUE) + 
+  theme(plot.title = element_text(hjust = 0.5)) + scale_fill_manual(values = cbbPalette) +  
+  theme(axis.text.x = element_text(angle = 45, hjust = 0.5))
+print(taxcom_layer_pl1 + theme(legend.position="bottom") + guides(fill=guide_legend(nrow=3)))
+
+dev.off()
+```
+
+```{r}
+png("./Figures/LAC_Taxa_Order_level_by_incubation.png", units="in", width = 7.5, height = 5.5, res = 600 )
+taxcom_layer_pl1 + theme(legend.position="bottom") + guides(fill=guide_legend(nrow=3)) + theme(axis.text.x = element_text(angle = 45, hjust = 1))
+dev.off()
+```
+```{r}
+# Extract percentage data
+percentage_data <- data_glom.bac %>%
+  group_by(Incubation, Order) %>%
+  summarize(Percentage = sum(Abundance)) %>%
+  group_by(Incubation) %>%
+  mutate(Percentage = Percentage / sum(Percentage) * 100) %>%
+  gather(key = "Order", value = "Percentage", -Incubation)
+
+# View the percentage data
+print(percentage_data)
+```
+```{r}
+write.csv(percentage_data, file = "LAC_Order_percentage_data.csv", row.names = FALSE)
+```
+
+
+
+#CLC
+```{r}
+physeq.CLC = subset_samples(physeq.prune, Crusttype=="CLC")
+physeq.CLC
+```
+
+##Make taxonomy table into a matrix and relabel NA as unknown
+```{r}
+tax.bac <- as(tax_table(physeq.CLC),"matrix")
+head(tax.bac)
+tax.bac[is.na(tax.bac)] <- "Unknown"
+head(tax.bac)
+```
+
+###Convert tax table back to phyloseq object and generate phyloseq object with new tax table
+```{r}
+TAX.bac <- tax_table(tax.bac)
+bac.3 <- phyloseq(sample_data(physeq.CLC),otu_table(physeq.CLC),TAX.bac)
+bac.3
+```
+
+
+```{r}
+glom.bac <- speedyseq::tax_glom(bac.3,taxrank = "Order")
+glom.bac
+```
+
+```{r}
+head(tax_table(glom.bac))
+```
+
+
+##Transform OTU table to show relative abundance
+##Samples can also be merged together by a variable in the mapping file
+
+```{r}
+bac.abund <- merge_samples(glom.bac, "Incubation")
+sample_data(bac.abund)$Incubation <- factor(sample_names(bac.abund))
+bac.abund = transform_sample_counts(bac.abund, function(x) x / sum(x))
+bac.abund
+```
+
+
+##Merge taxonomic data with OTU table and mapping file (Can alter code to change taxonomic rank to Order, Class, Family, etc.) and change Phylum column from a factor to a character.
+
+```{r}
+data_glom.bac <- speedyseq::psmelt(bac.abund)
+data_glom.bac$Order <- as.character(data_glom.bac$Order)
+```
+
+##If a phylum has less than 1% abundance, phylum name is changed to <1% abund.
+
+```{r}
+data_glom.bac$Order[data_glom.bac$Abundance < 0.01] <- "<1% abund."
+```
+
+Count the levels present in the Phylum column
+
+```{r}
+Count = length(unique(data_glom.bac$Order))
+Count
+```
+
+Print out unique phyla names for insertion into barplots in next step.
+
+```{r}
+unique((data_glom.bac$Order))
+```
+
+Create levels of phyla represented in barplot. Levels appear on the barplot in the order they are listed
+```{r}
+#for CLC Order
+data_glom.bac$Order <- factor(data_glom.bac$Order, levels = c("Pleosporales", "Hypocreales", "Eurotiales", "Xylariales", "Onygenales", "Capnodiales", "Agaricales", "Sordariales", "Helotiales", "Chaetothyriales", "Coniochaetales", "Dothideales", "Pezizales", "Filobasidiales", "<1% abund.", "Unknown" ))
+```
+
+###Create barplot of phyla - use facet_grid to separate samples by a variable ie in mapping file. Choose colors for plot in scale_fill_manual. color names can be found at http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf *amount of colors must match amount of level in phyla column
+
+```{r}
+data_glom.bac$Incubation = factor(data_glom.bac$Incubation, levels = c("0.05", "1", "24", "48", "96"))
+```
+
+```{r fig.height=5, fig.width=8, fig.align="center"}
+png("D:/Biocrust_Reawakening/Data_Metagenomics/Fungi/Revised/CLC_Taxa_Order_level_by_incubation.png", units="in", width = 8.5, height = 5.5, res = 600 )
+
+# The palette with black:
+cbbPalette <- c("Pleosporales"="darkmagenta", "Hypocreales" = "lightgoldenrod1", "Eurotiales" = "#E69F00" , "Xylariales" =  "chartreuse2",  "Onygenales" = "cadetblue1", "Capnodiales" = "darkslategrey", "Agaricales" = "red2", "Helotiales" = "royalblue1", "Chaetothyriales" = "violetred3", "Coniochaetales" = "lightgreen", "Dothideales" = "saddlebrown", "Pezizales" = "brown", "Filobasidiales" = "aquamarine4","Sordariales" = "coral2", "<1% abund." = "darkgrey" ,"Unknown" = "darkblue")
+taxcom_layer_pl = ggplot(data = data_glom.bac, mapping = aes_string(x = "Incubation" ,y = "Abundance", fill = "Order" )) + 
+  geom_bar(stat="identity", position="fill") + 
+  ggtitle("CLC Fungal Taxonomic Composition (Order level) by Incubation Time")+
+  theme_pubr(border= TRUE) + 
+  theme(plot.title = element_text(hjust = 0.5)) + scale_fill_manual(values = cbbPalette) +  
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+print(taxcom_layer_pl + theme(legend.position="bottom") + guides(fill=guide_legend(nrow=3)))
+
+dev.off()
+```
+
+```{r}
+png("./Figures/CLC_Taxa_Order_level_by_incubation.png", units="in", width = 7.5, height = 5.5, res = 600 )
+taxcom_layer_pl + theme(legend.position="bottom") + guides(fill=guide_legend(nrow=4)) + theme(axis.text.x = element_text(angle = 45, hjust = 1))
+dev.off()
+```
+
+```{r}
+# Extract percentage data
+percentage_data <- data_glom.bac %>%
+  group_by(Incubation, Order) %>%
+  summarize(Percentage = sum(Abundance)) %>%
+  group_by(Incubation) %>%
+  mutate(Percentage = Percentage / sum(Percentage) * 100) %>%
+  gather(key = "Order", value = "Percentage", -Incubation)
+
+# View the percentage data
+print(percentage_data)
+```
+```{r}
+write.csv(percentage_data, file = "CLC_Order_percentage_data.csv", row.names = FALSE)
+```

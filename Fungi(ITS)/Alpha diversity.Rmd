@@ -1,0 +1,2149 @@
+---
+title: "Metabolomics_Alpha_Div_ITS_phyloseq"
+author: "Teeratat Kaewkon"
+date: "Updated on April 12, 2023"
+output:
+  word_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+###STEP1: Load all necessary packages for analysis
+More information about Phyloseq can be found at the following link: [Phyloseq](https://joey711.github.io/phyloseq/)
+If you get error in this step, you probably need to install any packages which causes error.
+
+```{r}
+getwd()
+```
+
+```{r message=FALSE, warning=FALSE}
+library(ape)
+library(vegan)
+library(plyr)
+library(dplyr)
+library(scales)
+library(grid)
+library(reshape2)
+library(phyloseq)
+library(magrittr)
+library(ggplot2)
+library(ggpubr)
+library(data.table)
+library(tidyr)
+library(tidyverse)
+library(multcompView)
+library(car)
+```
+
+###STEP2: Import Mapping file (metadate file)
+1.Check mapping file before import to R, R doesn’t seem to like sample name to start with number or contain “-” in sample name. If you get error in this step, you should check file name first.
+
+2.First column of first row should not start with #, R will not read the first row that starts with #
+
+3. You can choose which samples to include in analysis by indicating "KEEP" in Description column
+
+
+```{r}
+meta = read.table("./Data/CrustTemp2ITSasvUN3.mapping_file_fix.txt",header=TRUE,row.names=1,sep="\t",stringsAsFactors=FALSE)
+```
+
+
+###STEP3: Check if your metadata file has been import successfully and correctly
+
+The output will show a table of your metadata file (mapping file).
+
+*If you do not have header, you might start your first row with #
+
+```{r warning=FALSE}
+head(meta)
+```
+
+###STEP4: Construct sample_data-class using imported metadata
+
+```{r}
+sampleData <- sample_data(meta)
+```
+
+###STEP5: Import OTU table
+
+```{r}
+otus <- read.table("./Data/CrustTemp2ITSasvUN3.otu_table_fix.txt",header=T,sep="\t",row.names=1)
+otumat <- as(as.matrix(otus), "matrix")
+OTU = otu_table(otumat, taxa_are_rows = TRUE)
+```
+
+###STEP6: Import taxonomy table
+
+```{r}
+taxmat <- read.table("./Data/CrustTemp2ITSasvUN3.ASVs.taxonomy.fix.txt", header=T,sep="\t",row.names=1)
+taxmat <- as(as.matrix(taxmat),"matrix")
+TAX = tax_table(taxmat)
+```
+
+###STEP8: Construct Phyloseq object
+To construct phyloseq object, otu table, taxonomy table, and sampleData are required. Phylogenetic tree can be included, but it is not necessary for constructing phyloseq object.
+Construct Phyloseq object called "Physeq"
+
+```{r warning=FALSE}
+physeq = phyloseq(OTU,TAX,sampleData)
+```
+
+Check phyloseq object
+This should indicate that your physeq is a "phyloseq-class experiment-level object""
+
+```{r warning=FALSE}
+physeq
+```
+###เลือกข้อมูลฟังไจ
+```{r}
+physeq <- subset_taxa(physeq, Kingdom == "Fungi")
+physeq
+```
+
+###STEP9: Remove singletons
+Remove any OTUs that present only one time.
+
+```{r }
+physeq.prune = prune_taxa(taxa_sums(physeq) > 1, physeq)
+physeq.prune
+```
+
+###STEP10: Plot read counts to check dataset
+Check read counts: any samples that have very low reads should be removed.
+[Ref](http://evomics.org/wp-content/uploads/2016/01/phyloseq-Lab-01-Answers.html)
+
+```{r}
+readcount = data.table(as(sample_data(physeq.prune), "data.frame"),
+                 TotalReads = sample_sums(physeq.prune), 
+                 keep.rownames = TRUE)
+setnames(readcount, "rn", "SampleID")
+
+#For plotting, use command below.
+SeqDepth = ggplot(readcount, aes(TotalReads)) + geom_histogram() + ggtitle("Sequencing Depth")
+```
+
+TotalReads of all the samples can be in this table (select only SampleID and TotalReads columns).
+In order to check samples with low number of reads, "order()" can be used to sort "TotalReads" column.
+In this dataset, N55.Rhizo has very low number of reads, so will will filter this sample out using the next minimum number of reads.
+```{r}
+readcount = readcount[order(readcount$TotalReads), c("SampleID", "TotalReads")]
+```
+
+```{r}
+readcount
+```
+
+```{r warning=FALSE}
+set.seed(1)
+physeq.prune.rarefy = rarefy_even_depth(physeq.prune, sample.size = 3000, replace = FALSE, trimOTUs = FALSE)
+physeq.prune.rarefy
+```
+
+###STEP11: Rarefaction curve
+Extract OTU table, transpose and convert to data frame
+Extract OTU table from phyloseq object as data frame and use vegan to calculate rarefaction curve
+```{r}
+otu.rare <- otu_table(physeq.prune.rarefy)
+otu.rare <- as.data.frame(t(otu.rare))
+sample_names <- rownames(otu.rare)
+
+#vegan rarecurve 
+otu.rarecurve <- rarecurve(otu.rare, step = 500, sample = 30000, label = T)
+```
+
+```{r}
+rare <- lapply(otu.rarecurve, function(x){
+  b <- as.data.frame(x)
+  b <- data.frame(OTU = b[,1], Sample.size = rownames(b))
+  b$Sample.size <- as.numeric(gsub("N", "",  b$Sample.size))
+  return(b)
+})
+```
+
+label list
+```{r}
+names(rare) <- sample_names
+```
+convert to data frame
+```{r}
+#tidyverse
+rare <- map_dfr(rare, function(x){
+  z <- data.frame(x)
+  return(z)
+}, .id = "sample")
+```
+
+```{r}
+head(rare)
+```
+
+Plot rarecurve using ggplot
+
+```{r}
+ggplot(data = rare)+
+  geom_line(aes(x = Sample.size, y = OTU, color = sample), show.legend = FALSE)+
+  scale_x_continuous(labels =  waiver()) + theme_bw() + ggtitle("Fungal Rarefaction Curve")+
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+Save ggplot as pdf to figures folder using the full path
+
+```{r}
+png("./Figures/A.Nat_Rarefaction_Curve.12000_35.png", units = "in", width = 8, height = 5, res = 600 )
+ggplot(data = rare)+
+  geom_line(aes(x = Sample.size, y = OTU, color = sample), show.legend = FALSE)+
+  scale_x_continuous(labels =  waiver()) + theme_bw() + ggtitle("Fungal Rarefaction Curve")+
+  theme(plot.title = element_text(hjust = 0.5))
+dev.off()
+```
+
+#MS: Figure Fungal Alpha Diversity (CLC)
+
+```{r}
+physeq.CLC = subset_samples(physeq.prune, Crusttype=="CLC")
+```
+
+```{r}
+#sample_data(physeq.LAC)$Incubation = factor(sample_data(physeq.LAC)$Incubation, levels = c("0.05", "1", "24", "48", "96"))
+
+sample_data(physeq.CLC)$Incubation = factor(sample_data(physeq.CLC)$Incubation, levels = c("0.05", "1", "24", "48", "96"))
+```
+
+```{r}
+alpha.diversity = estimate_richness(physeq.CLC, measures = c("Observed"))
+data.anova = cbind(sample_data(physeq.CLC), alpha.diversity)
+leveneTest(Observed ~ Incubation, data = data.anova)
+physeq.anova = aov(Observed ~ Incubation, data.anova)
+summary(physeq.anova)
+```
+```{r}
+tukey.ps = TukeyHSD(x=physeq.anova, 'Incubation', conf.level = 0.95)
+
+generate_label_df <- function(tukey.ps, variable){
+ 
+     # Extract labels and factor levels from Tukey post-hoc 
+     Tukey.levels <- tukey.ps[[variable]][,4]
+     Tukey.labels <- data.frame(multcompLetters(Tukey.levels)['Letters'])
+     
+     #I need to put the labels in the same order as in the boxplot :
+     Tukey.labels$treatment=rownames(Tukey.labels)
+     Tukey.labels=Tukey.labels[order(Tukey.labels$treatment) , ]
+     return(Tukey.labels)
+     }
+
+LABELS=generate_label_df(tukey.ps, 'Incubation')
+names(LABELS) = c('Letters','Incubation')
+```
+
+```{r}
+LABELS
+```
+
+```{r}
+ylabel <- data.frame("ylabel" = c(250, 260, 280, 180, 120)) #LAC surface
+#ylabel <- data.frame("ylabel" = c(340, 400, 340, 380, 290,  460, 510, 590, 460, 270, 230, 350)) #CLC surface
+```
+
+```{r}
+LABELS$ylabel<-ylabel$ylabel
+```
+
+```{r}
+physeq.plot.richness.incubation = plot_richness(physeq.CLC, x="Incubation", color=("Incubation"), measures=c("Observed")) + 
+  geom_boxplot(lwd=0.5) + ggtitle("CLC Fungal Alpha Diversity by Incubation time") + 
+  #stat_compare_means(method = "anova", label.y = 300) + 
+  annotate("text", x = 4.8, y = 300, label = "ANOVA, p = 0.033") +
+  theme_pubr(border= TRUE, legend = c("none")) + 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_colour_hue(l = 58) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  geom_text(data=LABELS, aes(x=LABELS$Incubation, y = LABELS$ylabel , label = LABELS$Letters))
+physeq.plot.richness.incubation
+```
+
+```{r warning=FALSE}
+tiff("D:/Biocrust_Reawakening/Data_Metagenomics/Fungi/Revised/Fun_CLC_Alpha_Div.tiff", units="in", width = 6, height = 4, res = 600 )
+physeq.plot.richness.incubation
+dev.off()
+```
+
+#MS: Figure Fungal Alpha Diversity (LAC)
+
+```{r}
+physeq.LAC = subset_samples(physeq.prune, Crusttype=="LAC")
+physeq.LAC
+```
+
+```{r}
+sample_data(physeq.LAC)$Incubation = factor(sample_data(physeq.LAC)$Incubation, levels = c("0.05", "1", "24", "48", "96"))
+```
+
+```{r}
+alpha.diversity.LAC = estimate_richness(physeq.LAC, measures = c("Observed"))
+leveneTest(Observed ~ Incubation, data = data.anova)
+data.anova.LAC = cbind(sample_data(physeq.LAC), alpha.diversity.LAC)
+physeq.anova.LAC = aov(Observed ~ Incubation, data.anova.LAC)
+summary(physeq.anova.LAC)
+```
+```{r}
+leveneTest(Observed ~ Incubation, data = data.anova)
+```
+
+```{r}
+tukey.ps.LAC = TukeyHSD(x=physeq.anova.LAC, 'Incubation', conf.level = 0.95)
+
+generate_label_df.LAC <- function(tukey.ps.LAC, variable){
+ 
+     # Extract labels and factor levels from Tukey post-hoc 
+     Tukey.levels.LAC <- tukey.ps.LAC[[variable]][,4]
+     Tukey.labels.LAC <- data.frame(multcompLetters(Tukey.levels.LAC)['Letters'])
+     
+     #I need to put the labels in the same order as in the boxplot :
+     Tukey.labels.LAC$treatment=rownames(Tukey.labels)
+     Tukey.labels.LAC=Tukey.labels.LAC[order(Tukey.labels.LAC$treatment) , ]
+     return(Tukey.labels.LAC)
+     }
+
+LABELS.LAC=generate_label_df(tukey.ps.LAC, 'Incubation')
+names(LABELS.LAC) = c('Letters','Incubation')
+```
+
+```{r}
+LABELS.LAC
+```
+
+```{r}
+ylabel.LAC <- data.frame("ylabel.LAC" = c(250, 220, 140, 180, 260)) #LAC surface
+#ylabel <- data.frame("ylabel" = c(340, 400, 340, 380, 290,  460, 510, 590, 460, 270, 230, 350)) #CLC surface
+
+```
+
+```{r}
+LABELS.LAC$ylabel.LAC<-ylabel.LAC$ylabel.LAC
+```
+
++
+
+```{r}
+physeq.plot.richness.incubation.LAC = plot_richness(physeq.LAC, x="Incubation", color=("Incubation"), measures=c("Observed")) + 
+  geom_boxplot(lwd=0.5) + ggtitle("LAC Fungal Alpha Diversity by Incubation time") + 
+  #eans(method = "anova", label.y = 300, label.x = 4.5) + ### label.vjust = 0.5
+  annotate("text", x = 4.8, y = 300, label = "ANOVA, p = 0.00145") +
+  theme_pubr(border= TRUE, legend = c("none")) + 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_colour_hue(l = 58) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  geom_text(data=LABELS.LAC, aes(x=LABELS.LAC$Incubation, y = LABELS.LAC$ylabel , label = LABELS.LAC$Letters))
+
+physeq.plot.richness.incubation.LAC
+```
+
+```{r}
+tiff("D:/Biocrust_Reawakening/Data_Metagenomics/Fungi/Revised/Fun_LAC_Alpha_Div.tiff", units="in", width = 6, height = 4, res = 600 )
+physeq.plot.richness.incubation.LAC
+dev.off()
+``` 
+
+#Alpha diversity of Order Hypocreales in CLC
+
+```{r}
+physeq.HY = subset_taxa(physeq.CLC, Order == "Hypocreales")
+physeq.HY
+```
+```{r}
+sample_data(physeq.HY)$Incubation = factor(sample_data(physeq.HY)$Incubation, levels = c("0.05", "1", "24", "48", "96"))
+```
+
+```{r}
+alpha.diversity.HY = estimate_richness(physeq.HY, measures = c("Observed"))
+data.anova.HY = cbind(sample_data(physeq.HY), alpha.diversity.HY)
+physeq.anova.HY = aov(Observed ~ Incubation, data.anova.HY)
+summary(physeq.anova.HY)
+```
+```{r}
+tukey.ps.HY = TukeyHSD(x=physeq.anova.HY, 'Incubation', conf.level = 0.95)
+
+generate_label_df.HY <- function(tukey.ps.HY, variable){
+ 
+     # Extract labels and factor levels from Tukey post-hoc 
+     Tukey.levels.HY <- tukey.ps.HY[[variable]][,4]
+     Tukey.labels.HY <- data.frame(multcompLetters(Tukey.levels.HY)['Letters'])
+     
+     #I need to put the labels in the same order as in the boxplot :
+     Tukey.labels.HY$treatment=rownames(Tukey.labels.HY)
+     Tukey.labels.HY=Tukey.labels.HY[order(Tukey.labels.HY$treatment) , ]
+     return(Tukey.labels.HY)
+     }
+
+LABELS.HY=generate_label_df(tukey.ps.HY, 'Incubation')
+names(LABELS.HY) = c('Letters','Incubation')
+```
+
+```{r}
+LABELS.HY
+```
+
+```{r}
+ylabel.HY <- data.frame("ylabel.HY" = c(5, 5, 7, 5.5, 3))
+```
+
+```{r}
+LABELS.HY$ylabel.HY<-ylabel.HY$ylabel.HY
+```
+
+```{r}
+physeq.plot.richness.incubation.HY = plot_richness(physeq.HY, x="Incubation", color=("Incubation"), measures=c("Observed")) + 
+  geom_boxplot(lwd=0.5) + ggtitle(" CLC Order Hypocreales Alpha Diversity by Incubation time") + 
+  stat_compare_means(method = "anova", label.y = 7.5, label.x = 4.5) + 
+  theme_pubr(border= TRUE, legend = c("none")) + 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_colour_hue(l = 58) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  geom_text(data=LABELS.HY, aes(x=LABELS.HY$Incubation, y = LABELS.HY$ylabel , label = LABELS.HY$Letters))
+physeq.plot.richness.incubation.HY
+```
+
+```{r}
+png("./Figures/CLC/CLC Order Hypocreales_Fungal_Alpha_Div_Incubation_time.png", units="in", width = 7.5, height = 7.5, res = 600 )
+physeq.plot.richness.incubation.HY
+dev.off()
+```
+###CLC Capno
+```{r}
+physeq.Cap = subset_taxa(physeq.CLC, Order == "Capnodiales")
+physeq.Cap
+```
+```{r}
+sample_data(physeq.Cap)$Incubation = factor(sample_data(physeq.Cap)$Incubation, levels = c("0.05", "1", "24", "48", "96"))
+```
+
+```{r}
+alpha.diversity.Cap = estimate_richness(physeq.Cap, measures = c("Observed"))
+data.anova.Cap = cbind(sample_data(physeq.Cap), alpha.diversity.Cap)
+physeq.anova.Cap = aov(Observed ~ Incubation, data.anova.Cap)
+summary(physeq.anova.Cap)
+```
+```{r}
+tukey.ps.Cap = TukeyHSD(x=physeq.anova.Cap, 'Incubation', conf.level = 0.95)
+
+generate_label_df.Cap <- function(tukey.ps.Cap, variable){
+ 
+     # Extract labels and factor levels from Tukey post-hoc 
+     Tukey.levels.Cap <- tukey.ps.Cap[[variable]][,4]
+     Tukey.labels.Cap <- data.frame(multcompLetters(Tukey.levels.Cap)['Letters'])
+     
+     #I need to put the labels in the same order as in the boxplot :
+     Tukey.labels.Cap$treatment=rownames(Tukey.labels.Cap)
+     Tukey.labels.Cap=Tukey.labels.Cap[order(Tukey.labels.Cap$treatment) , ]
+     return(Tukey.labels.Cap)
+     }
+
+LABELS.Cap=generate_label_df(tukey.ps.Cap, 'Incubation')
+names(LABELS.Cap) = c('Letters','Incubation')
+```
+
+```{r}
+LABELS.Cap
+```
+
+```{r}
+ylabel.Cap <- data.frame("ylabel.Cap" = c(6, 6, 7, 5.5, 2))
+```
+
+```{r}
+LABELS.Cap$ylabel.Cap<-ylabel.Cap$ylabel.Cap
+```
+
+```{r}
+physeq.plot.richness.incubation.Cap= plot_richness(physeq.Cap, x="Incubation", color=("Incubation"), measures=c("Observed")) + 
+  geom_boxplot(lwd=0.5) + ggtitle(" CLC Order Capnodiales Alpha Diversity by Incubation time") + 
+  stat_compare_means(method = "anova", label.y = 7.5) + 
+  theme_pubr(border= TRUE, legend = c("none")) + 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_colour_hue(l = 58) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  geom_text(data=LABELS.Cap, aes(x=LABELS.Cap$Incubation, y = LABELS.Cap$ylabel , label = LABELS.Cap$Letters))
+physeq.plot.richness.incubation.Cap
+```
+
+```{r}
+png("./Figures/CLC/CLC Order Capnodiales_Fungal_Alpha_Div_Incubation_time.png", units="in", width = 7.5, height = 7.5, res = 600 )
+physeq.plot.richness.incubation.Cap
+dev.off()
+```
+#Alpha diversity of Order Pleosporales in CLC
+
+```{r}
+physeq.Pl = subset_taxa(physeq.CLC, Order == "Pleosporales")
+physeq.Pl
+```
+
+```{r}
+sample_data(physeq.Pl)$Incubation = factor(sample_data(physeq.Pl)$Incubation, levels = c("0.05", "1", "24", "48", "96"))
+```
+
+```{r}
+alpha.diversity.Pl = estimate_richness(physeq.Pl, measures = c("Observed"))
+data.anova.Pl = cbind(sample_data(physeq.Pl), alpha.diversity.Pl)
+physeq.anova.Pl = aov(Observed ~ Incubation, data.anova.Pl)
+summary(physeq.anova.Pl)
+```
+
+```{r}
+tukey.ps.Pl = TukeyHSD(x=physeq.anova.Pl, 'Incubation', conf.level = 0.95)
+
+generate_label_df.Pl <- function(tukey.ps.Pl, variable){
+ 
+     # Extract labels and factor levels from Tukey post-hoc 
+     Tukey.levels.Pl <- tukey.ps.Pl[[variable]][,4]
+     Tukey.labels.Pl <- data.frame(multcompLetters(Tukey.levels.Pl)['Letters'])
+     
+     #I need to put the labels in the same order as in the boxplot :
+     Tukey.labels.Pl$treatment=rownames(Tukey.labels.Pl)
+     Tukey.labels.Pl=Tukey.labels.Pl[order(Tukey.labels.Pl$treatment) , ]
+     return(Tukey.labels.Pl)
+     }
+LABELS.Pl=generate_label_df(tukey.ps.Pl, 'Incubation')
+names(LABELS.Pl) = c('Letters','Incubation')
+```
+
+```{r}
+LABELS.Pl
+```
+
+```{r}
+ylabel.Pl <- data.frame("ylabel.Pl" = c(80, 75, 87, 53, 35))
+```
+
+```{r}
+LABELS.Pl$ylabel.Ol<-ylabel.Pl$ylabel.Pl
+```
+
++
+
+```{r}
+physeq.plot.richness.incubation.Pl = plot_richness(physeq.Pl, x="Incubation", color=("Incubation"), measures=c("Observed")) + 
+  geom_boxplot(lwd=0.5) + ggtitle(" CLC Order Pleosporales Alpha Diversity by Incubation time") + 
+  stat_compare_means(method = "anova", label.y = 85) + 
+  theme_pubr(border= TRUE, legend = c("none")) + 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_colour_hue(l = 58) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  geom_text(data=LABELS.Pl, aes(x=LABELS.Pl$Incubation, y = LABELS.Pl$ylabel , label = LABELS.Pl$Letters))
+physeq.plot.richness.incubation.Pl
+```
+
+```{r}
+png("./Figures/CLC/CLC Order Pleosporales_Fungal_Alpha_Div_Incubation_time.png", units="in", width = 7.5, height = 6, res = 600 )
+physeq.plot.richness.incubation.Pl
+dev.off()
+```
+#Alpha diversity of Order Agaricales in LAC
+
+```{r}
+physeq.Ag = subset_taxa(physeq.LAC, Order == "Agaricales")
+physeq.Ag
+```
+
+```{r}
+sample_data(physeq.Ag)$Incubation = factor(sample_data(physeq.Ag)$Incubation, levels = c("0.05", "1", "24", "48", "96"))
+```
+
+```{r}
+alpha.diversity.Ag = estimate_richness(physeq.Ag, measures = c("Observed"))
+data.anova.Ag = cbind(sample_data(physeq.Ag), alpha.diversity.Ag)
+physeq.anova.Ag = aov(Observed ~ Incubation, data.anova.Ag)
+summary(physeq.anova.Ag)
+```
+
+```{r}
+tukey.ps.Ag = TukeyHSD(x=physeq.anova.Ag, 'Incubation', conf.level = 0.95)
+
+generate_label_df.Ag <- function(tukey.ps.Ag, variable){
+ 
+     # Extract labels and factor levels from Tukey post-hoc 
+     Tukey.levels.Ag <- tukey.ps.Ag[[variable]][,4]
+     Tukey.labels.Ag <- data.frame(multcompLetters(Tukey.levels.Ag)['Letters'])
+     
+     #I need to put the labels in the same order as in the boxplot :
+     Tukey.labels.Ag$treatment=rownames(Tukey.labels.Ag)
+     Tukey.labels.Ag=Tukey.labels.Ag[order(Tukey.labels.Ag$treatment) , ]
+     return(Tukey.labels.Ag)
+     }
+
+LABELS.Ag=generate_label_df(tukey.ps.Ag, 'Incubation')
+names(LABELS.Ag) = c('Letters','Incubation')
+```
+
+```{r}
+LABELS.Ag
+```
+
+```{r}
+ylabel.Ag <- data.frame("ylabel.Ag" = c(10, 10, 10, 10, 10))
+```
+
+```{r}
+LABELS.Ag$ylabel.Ag<-ylabel.Ag$ylabel.Ag
+```
+
++
+
+```{r}
+physeq.plot.richness.incubation.Ag = plot_richness(physeq.Ag, x="Incubation", color=("Incubation"), measures=c("Observed")) + 
+  geom_boxplot(lwd=0.5) + ggtitle(" LAC Order Agaricales Alpha Diversity by Incubation time") + 
+  stat_compare_means(method = "anova", label.y = 15) + 
+  theme_pubr(border= TRUE, legend = c("none")) + 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_colour_hue(l = 58) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  geom_text(data=LABELS.Ag, aes(x=LABELS.Ag$Incubation, y = LABELS.Ag$ylabel , label = LABELS.Ag$Letters))
+physeq.plot.richness.incubation.Ag
+```
+
+```{r}
+png("./Figures/LAC/LAC Order Agaricales_Fungal_Alpha_Div_Incubation_time.png", units="in", width = 7.5, height = 7.5, res = 600 )
+physeq.plot.richness.incubation.Ag
+dev.off()
+```
+#Alpha diversity of Order Hypocreales in LAC
+
+```{r}
+physeq.Hl = subset_taxa(physeq.LAC, Order == "Hypocreales")
+physeq.Hl
+```
+
+```{r}
+sample_data(physeq.Hl)$Incubation = factor(sample_data(physeq.Hl)$Incubation, levels = c("0.05", "1", "24", "48", "96"))
+```
+
+```{r}
+alpha.diversity.Hl = estimate_richness(physeq.Hl, measures = c("Observed"))
+data.anova.Hl = cbind(sample_data(physeq.Hl), alpha.diversity.Hl)
+physeq.anova.Hl = aov(Observed ~ Incubation, data.anova.Hl)
+summary(physeq.anova.Hl)
+```
+
+```{r}
+tukey.ps.Hl = TukeyHSD(x=physeq.anova.Hl, 'Incubation', conf.level = 0.95)
+
+generate_label_df.Hl <- function(tukey.ps.Hl, variable){
+ 
+     # Extract labels and factor levels from Tukey post-hoc 
+     Tukey.levels.Hl <- tukey.ps.Ag[[variable]][,4]
+     Tukey.labels.Hl <- data.frame(multcompLetters(Tukey.levels.Hl)['Letters'])
+  
+     #I need to put the labels in the same order as in the boxplot :
+     Tukey.labels.Hl$treatment=rownames(Tukey.labels.Hl)
+     Tukey.labels.Hl=Tukey.labels.Hl[order(Tukey.labels.Hl$treatment) , ]
+     return(Tukey.labels.Hl)
+     }
+
+LABELS.Hl=generate_label_df(tukey.ps.Hl, 'Incubation')
+names(LABELS.Hl) = c('Letters','Incubation')
+```
+
+```{r}
+LABELS.Hl
+```
+
+```{r}
+ylabel.Hl <- data.frame("ylabel.Hl" = c(7, 5, 7, 6, 7))
+```
+
+```{r}
+LABELS.Hl$ylabel.Hl<-ylabel.Hl$ylabel.Hl
+```
+
++
+
+```{r}
+physeq.plot.richness.incubation.Hl = plot_richness(physeq.Hl, x="Incubation", color=("Incubation"), measures=c("Observed")) + 
+  geom_boxplot(lwd=0.5) + ggtitle(" LAC Order Hypocreales Alpha Diversity by Incubation time") + 
+  stat_compare_means(method = "anova", label.y = 10) + 
+  theme_pubr(border= TRUE, legend = c("none")) + 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_colour_hue(l = 58) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  geom_text(data=LABELS.Hl, aes(x=LABELS.Hl$Incubation, y = LABELS.Hl$ylabel , label = LABELS.Hl$Letters))
+physeq.plot.richness.incubation.Hl
+```
+
+```{r}
+png("./Figures/LAC/LAC Order Hypocreales_Fungal_Alpha_Div_Incubation_time.png", units="in", width = 7.5, height = 7.5, res = 600 )
+physeq.plot.richness.incubation.Hl
+dev.off()
+```
+
+##Alpha diversity of Order Agaricales in CLC
+```{r}
+physeq.AgC = subset_taxa(physeq.CLC, Order == "Agaricales")
+physeq.AgC
+```
+
+```{r}
+sample_data(physeq.AgC)$Incubation = factor(sample_data(physeq.AgC)$Incubation, levels = c("0.05", "1", "24", "48", "96"))
+```
+
+```{r}
+alpha.diversity.AgC = estimate_richness(physeq.AgC, measures = c("Observed"))
+data.anova.AgC = cbind(sample_data(physeq.AgC), alpha.diversity.AgC)
+physeq.anova.AgC = aov(Observed ~ Incubation, data.anova.AgC)
+summary(physeq.anova.AgC)
+```
+
+```{r}
+tukey.ps.AgC = TukeyHSD(x=physeq.anova.AgC, 'Incubation', conf.level = 0.95)
+
+generate_label_df.AgC <- function(tukey.ps.AgC, variable){
+ 
+     # Extract labels and factor levels from Tukey post-hoc 
+     Tukey.levels.AgC <- tukey.ps.AgC[[variable]][,4]
+     Tukey.labels.AgC <- data.frame(multcompLetters(Tukey.levels.AgC)['Letters'])
+  
+     #I need to put the labels in the same order as in the boxplot :
+     Tukey.labels.AgC$treatment=rownames(Tukey.labels.AgC)
+     Tukey.labels.AgC=Tukey.labels.AgC[order(Tukey.labels.AgC$treatment) , ]
+     return(Tukey.labels.AgC)
+     }
+
+LABELS.AgC=generate_label_df(tukey.ps.AgC, 'Incubation')
+names(LABELS.AgC) = c('Letters','Incubation')
+```
+
+```{r}
+LABELS.AgC
+```
+
+```{r}
+ylabel.AgC <- data.frame("ylabel.AgC" = c(10, 10, 15, 16, 17))
+```
+
+```{r}
+LABELS.AgC$ylabel.AgC<-ylabel.AgC$ylabel.AgC
+```
+
++
+
+```{r}
+physeq.plot.richness.incubation.AgC = plot_richness(physeq.AgC, x="Incubation", color=("Incubation"), measures=c("Observed")) + 
+  geom_boxplot(lwd=0.5) + ggtitle(" CLC Order Agaricales Alpha Diversity by Incubation time") + 
+  stat_compare_means(method = "anova", label.y = 20) + 
+  theme_pubr(border= TRUE, legend = c("none")) + 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_colour_hue(l = 58) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  geom_text(data=LABELS.AgC, aes(x=LABELS.AgC$Incubation, y = LABELS.AgC$ylabel , label = LABELS.AgC$Letters))
+physeq.plot.richness.incubation.AgC
+```
+
+```{r}
+png("./Figures/CLC/CLC Order Agaricales_Fungal_Alpha_Div_Incubation_time.png", units="in", width = 7.5, height = 7.5, res = 600 )
+physeq.plot.richness.incubation.AgC
+dev.off()
+```
+
+##Alpha diversity of Order Eurotiales in CLC
+```{r}
+physeq.Ec = subset_taxa(physeq.CLC, Order == "Eurotiales")
+physeq.Ec
+```
+
+```{r}
+sample_data(physeq.Ec)$Incubation = factor(sample_data(physeq.Ec)$Incubation, levels = c("0.05", "1", "24", "48", "96"))
+```
+
+```{r}
+alpha.diversity.Ec = estimate_richness(physeq.Ec, measures = c("Observed"))
+data.anova.Ec = cbind(sample_data(physeq.Ec), alpha.diversity.Ec)
+physeq.anova.Ec = aov(Observed ~ Incubation, data.anova.Ec)
+summary(physeq.anova.Ec)
+```
+
+```{r}
+tukey.ps.Ec = TukeyHSD(x=physeq.anova.Ec, 'Incubation', conf.level = 0.95)
+
+generate_label_df.Ec <- function(tukey.ps.Ec, variable){
+ 
+     # Extract labels and factor levels from Tukey post-hoc 
+     Tukey.levels.Ec <- tukey.ps.Ec[[variable]][,4]
+     Tukey.labels.Ec <- data.frame(multcompLetters(Tukey.levels.Ec)['Letters'])
+  
+     #I need to put the labels in the same order as in the boxplot :
+     Tukey.labels.Ec$treatment=rownames(Tukey.labels.Ec)
+     Tukey.labels.Ec=Tukey.labels.Ec[order(Tukey.labels.Ec$treatment) , ]
+     return(Tukey.labels.Ec)
+     }
+
+LABELS.Ec=generate_label_df(tukey.ps.Ec, 'Incubation')
+names(LABELS.Ec) = c('Letters','Incubation')
+```
+
+```{r}
+LABELS.Ec
+```
+
+```{r}
+ylabel.Ec <- data.frame("ylabel.Ec" = c(7, 8, 12, 10, 10))
+```
+
+```{r}
+LABELS.Ec$ylabel.Ec<-ylabel.Ec$ylabel.Ec
+```
+
++
+
+```{r}
+physeq.plot.richness.incubation.Ec = plot_richness(physeq.Ec, x="Incubation", color=("Incubation"), measures=c("Observed")) + 
+  geom_boxplot(lwd=0.5) + ggtitle(" CLC Order Eurotiales Alpha Diversity by Incubation time") + 
+  stat_compare_means(method = "anova", label.y = 13) + 
+  theme_pubr(border= TRUE, legend = c("none")) + 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_colour_hue(l = 58) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  geom_text(data=LABELS.Ec, aes(x=LABELS.Ec$Incubation, y = LABELS.Ec$ylabel , label = LABELS.Ec$Letters))
+physeq.plot.richness.incubation.Ec
+```
+
+```{r}
+png("./Figures/CLC/CLC Order Eurotiales_Fungal_Alpha_Div_Incubation_time.png", units="in", width = 7.5, height = 7.5, res = 600 )
+physeq.plot.richness.incubation.Ec
+dev.off()
+```
+
+##Alpha diversity of Order Sordariales in CLC
+```{r}
+physeq.Sc = subset_taxa(physeq.CLC, Order == "Sordariales")
+physeq.Sc
+```
+
+```{r}
+sample_data(physeq.Sc)$Incubation = factor(sample_data(physeq.Sc)$Incubation, levels = c("0.05", "1", "24", "48", "96"))
+```
+
+```{r}
+alpha.diversity.Sc = estimate_richness(physeq.Sc, measures = c("Observed"))
+data.anova.Sc = cbind(sample_data(physeq.Sc), alpha.diversity.Sc)
+physeq.anova.Sc = aov(Observed ~ Incubation, data.anova.Sc)
+summary(physeq.anova.Sc)
+```
+
+```{r}
+tukey.ps.Sc = TukeyHSD(x=physeq.anova.Sc, 'Incubation', conf.level = 0.95)
+
+generate_label_df.Sc <- function(tukey.ps.Sc, variable){
+ 
+     # Extract labels and factor levels from Tukey post-hoc 
+     Tukey.levels.Sc <- tukey.ps.Sc[[variable]][,4]
+     Tukey.labels.Sc <- data.frame(multcompLetters(Tukey.levels.Sc)['Letters'])
+  
+     #I need to put the labels in the same order as in the boxplot :
+     Tukey.labels.Sc$treatment=rownames(Tukey.labels.Sc)
+     Tukey.labels.Sc=Tukey.labels.Sc[order(Tukey.labels.Sc$treatment) , ]
+     return(Tukey.labels.Sc)
+     }
+
+LABELS.Sc=generate_label_df(tukey.ps.Sc, 'Incubation')
+names(LABELS.Sc) = c('Letters','Incubation')
+```
+
+```{r}
+LABELS.Sc
+```
+
+```{r}
+ylabel.Sc <- data.frame("ylabel.Sc" = c(17, 19, 15, 13, 8))
+```
+
+```{r}
+LABELS.Sc$ylabel.Sc<-ylabel.Sc$ylabel.Sc
+```
+
++
+
+```{r}
+physeq.plot.richness.incubation.Sc = plot_richness(physeq.Sc, x="Incubation", color=("Incubation"), measures=c("Observed")) + 
+  geom_boxplot(lwd=0.5) + ggtitle(" CLC Order Sordariales Alpha Diversity by Incubation time") + 
+  stat_compare_means(method = "anova", label.y = 20) + 
+  theme_pubr(border= TRUE, legend = c("none")) + 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_colour_hue(l = 58) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  geom_text(data=LABELS.Sc, aes(x=LABELS.Sc$Incubation, y = LABELS.Sc$ylabel , label = LABELS.Sc$Letters))
+physeq.plot.richness.incubation.Sc
+```
+
+```{r}
+png("./Figures/CLC/CLC Order  Sordariales_Fungal_Alpha_Div_Incubation_time.png", units="in", width = 7.5, height = 7.5, res = 600 )
+physeq.plot.richness.incubation.Sc
+dev.off()
+```
+
+##Alpha diversity of Order Chaetothyriales in CLC
+```{r}
+physeq.Cc = subset_taxa(physeq.CLC, Order == "Chaetothyriales")
+physeq.Cc
+```
+
+```{r}
+sample_data(physeq.Cc)$Incubation = factor(sample_data(physeq.Cc)$Incubation, levels = c("0.05", "1", "24", "48", "96"))
+```
+
+```{r}
+alpha.diversity.Cc = estimate_richness(physeq.Cc, measures = c("Observed"))
+data.anova.Cc = cbind(sample_data(physeq.Cc), alpha.diversity.Cc)
+physeq.anova.Cc = aov(Observed ~ Incubation, data.anova.Cc)
+summary(physeq.anova.Cc)
+```
+
+```{r}
+tukey.ps.Cc = TukeyHSD(x=physeq.anova.Cc, 'Incubation', conf.level = 0.95)
+
+generate_label_df.Cc <- function(tukey.ps.Cc, variable){
+ 
+     # Extract labels and factor levels from Tukey post-hoc 
+     Tukey.levels.Cc <- tukey.ps.Cc[[variable]][,4]
+     Tukey.labels.Cc <- data.frame(multcompLetters(Tukey.levels.Cc)['Letters'])
+  
+     #I need to put the labels in the same order as in the boxplot :
+     Tukey.labels.Cc$treatment=rownames(Tukey.labels.Cc)
+     Tukey.labels.Cc=Tukey.labels.Cc[order(Tukey.labels.Cc$treatment) , ]
+     return(Tukey.labels.Cc)
+     }
+
+LABELS.Cc=generate_label_df(tukey.ps.Cc, 'Incubation')
+names(LABELS.Cc) = c('Letters','Incubation')
+```
+
+```{r}
+LABELS.Cc
+```
+
+```{r}
+ylabel.Cc <- data.frame("ylabel.Cc" = c(22, 19, 24, 17, 12))
+```
+
+```{r}
+LABELS.Cc$ylabel.Cc<-ylabel.Cc$ylabel.Cc
+```
+
++
+
+```{r}
+physeq.plot.richness.incubation.Cc = plot_richness(physeq.Cc, x="Incubation", color=("Incubation"), measures=c("Observed")) + 
+  geom_boxplot(lwd=0.5) + ggtitle(" CLC Order Chaetothyriales Alpha Diversity by Incubation time") + 
+  stat_compare_means(method = "anova", label.y = 30) + 
+  theme_pubr(border= TRUE, legend = c("none")) + 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_colour_hue(l = 58) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  geom_text(data=LABELS.Cc, aes(x=LABELS.Cc$Incubation, y = LABELS.Cc$ylabel , label = LABELS.Cc$Letters))
+physeq.plot.richness.incubation.Cc
+```
+
+```{r}
+png("./Figures/CLC/CLC Order  Chaetothyriales_Fungal_Alpha_Div_Incubation_time.png", units="in", width = 7.5, height = 7.5, res = 600 )
+physeq.plot.richness.incubation.Cc
+dev.off()
+```
+
+##Alpha diversity of Order Coniochaetales in CLC
+```{r}
+physeq.Coc = subset_taxa(physeq.CLC, Order == "Coniochaetales")
+physeq.Coc
+```
+
+```{r}
+sample_data(physeq.Coc)$Incubation = factor(sample_data(physeq.Coc)$Incubation, levels = c("0.05", "1", "24", "48", "96"))
+```
+
+```{r}
+alpha.diversity.Coc = estimate_richness(physeq.Coc, measures = c("Observed"))
+data.anova.Coc = cbind(sample_data(physeq.Coc), alpha.diversity.Coc)
+physeq.anova.Coc = aov(Observed ~ Incubation, data.anova.Coc)
+summary(physeq.anova.Coc)
+```
+
+```{r}
+tukey.ps.Coc = TukeyHSD(x=physeq.anova.Coc, 'Incubation', conf.level = 0.95)
+
+generate_label_df.Coc <- function(tukey.ps.Coc, variable){
+ 
+     # Extract labels and factor levels from Tukey post-hoc 
+     Tukey.levels.Coc <- tukey.ps.Coc[[variable]][,4]
+     Tukey.labels.Coc <- data.frame(multcompLetters(Tukey.levels.Coc)['Letters'])
+  
+     #I need to put the labels in the same order as in the boxplot :
+     Tukey.labels.Coc$treatment=rownames(Tukey.labels.Coc)
+     Tukey.labels.Coc=Tukey.labels.Coc[order(Tukey.labels.Coc$treatment) , ]
+     return(Tukey.labels.Coc)
+     }
+
+LABELS.Coc=generate_label_df(tukey.ps.Coc, 'Incubation')
+names(LABELS.Coc) = c('Letters','Incubation')
+```
+
+```{r}
+LABELS.Coc
+```
+
+```{r}
+ylabel.Coc <- data.frame("ylabel.Coc" = c(5, 5, 5, 5, 5))
+```
+
+```{r}
+LABELS.Coc$ylabel.Coc<-ylabel.Coc$ylabel.Coc
+```
+
++
+
+```{r}
+physeq.plot.richness.incubation.Coc = plot_richness(physeq.Coc, x="Incubation", color=("Incubation"), measures=c("Observed")) + 
+  geom_boxplot(lwd=0.5) + ggtitle(" CLC Order Coniochaetales Alpha Diversity by Incubation time") + 
+  stat_compare_means(method = "anova", label.y = 7.5) + 
+  theme_pubr(border= TRUE, legend = c("none")) + 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_colour_hue(l = 58) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  geom_text(data=LABELS.Coc, aes(x=LABELS.Coc$Incubation, y = LABELS.Coc$ylabel , label = LABELS.Coc$Letters))
+physeq.plot.richness.incubation.Coc
+```
+
+
+```{r}
+png("./Figures/CLC/CLC Order  Coniochaetales_Fungal_Alpha_Div_Incubation_time.png", units="in", width = 7.5, height = 7.5, res = 600 )
+physeq.plot.richness.incubation.Coc
+dev.off()
+```
+
+##Alpha diversity of Order Dothideales in CLC
+```{r}
+physeq.Dc = subset_taxa(physeq.CLC, Order == "Dothideales")
+physeq.Dc
+```
+
+```{r}
+sample_data(physeq.Dc)$Incubation = factor(sample_data(physeq.Dc)$Incubation, levels = c("0.05", "1", "24", "48", "96"))
+```
+
+```{r}
+alpha.diversity.Dc = estimate_richness(physeq.Dc, measures = c("Observed"))
+data.anova.Dc = cbind(sample_data(physeq.Dc), alpha.diversity.Dc)
+physeq.anova.Dc = aov(Observed ~ Incubation, data.anova.Dc)
+summary(physeq.anova.Dc)
+```
+
+```{r}
+tukey.ps.Dc = TukeyHSD(x=physeq.anova.Dc, 'Incubation', conf.level = 0.95)
+
+generate_label_df.Dc <- function(tukey.ps.Dc, variable){
+ 
+     # Extract labels and factor levels from Tukey post-hoc 
+     Tukey.levels.Dc <- tukey.ps.Dc[[variable]][,4]
+     Tukey.labels.Dc <- data.frame(multcompLetters(Tukey.levels.Dc)['Letters'])
+  
+     #I need to put the labels in the same order as in the boxplot :
+     Tukey.labels.Dc$treatment=rownames(Tukey.labels.Dc)
+     Tukey.labels.Dc=Tukey.labels.Dc[order(Tukey.labels.Dc$treatment) , ]
+     return(Tukey.labels.Dc)
+     }
+
+LABELS.Dc=generate_label_df(tukey.ps.Dc, 'Incubation')
+names(LABELS.Dc) = c('Letters','Incubation')
+```
+
+```{r}
+LABELS.Dc
+```
+
+```{r}
+ylabel.Dc <- data.frame("ylabel.Dc" = c(10, 8, 8, 7, 5))
+```
+
+```{r}
+LABELS.Dc$ylabel.Dc<-ylabel.Dc$ylabel.Dc
+```
+
++
+
+```{r}
+physeq.plot.richness.incubation.Dc = plot_richness(physeq.Dc, x="Incubation", color=("Incubation"), measures=c("Observed")) + 
+  geom_boxplot(lwd=0.5) + ggtitle(" CLC Order Dothideales Alpha Diversity by Incubation time") + 
+  stat_compare_means(method = "anova", label.y = 12) + 
+  theme_pubr(border= TRUE, legend = c("none")) + 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_colour_hue(l = 58) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  geom_text(data=LABELS.Dc, aes(x=LABELS.Dc$Incubation, y = LABELS.Dc$ylabel , label = LABELS.Dc$Letters))
+physeq.plot.richness.incubation.Dc
+```
+
+
+```{r}
+png("./Figures/CLC/CLC Order  Dothideales_Fungal_Alpha_Div_Incubation_time.png", units="in", width = 7.5, height = 7.5, res = 600 )
+physeq.plot.richness.incubation.Dc
+dev.off()
+```
+
+##Alpha diversity of Order Pezzizales in CLC
+```{r}
+physeq.Pc = subset_taxa(physeq.CLC, Order == "Pezizales")
+physeq.Pc
+```
+
+```{r}
+sample_data(physeq.Pc)$Incubation = factor(sample_data(physeq.Pc)$Incubation, levels = c("0.05", "1", "24", "48", "96"))
+```
+
+```{r}
+alpha.diversity.Pc = estimate_richness(physeq.Pc, measures = c("Observed"))
+data.anova.Pc = cbind(sample_data(physeq.Pc), alpha.diversity.Pc)
+physeq.anova.Pc = aov(Observed ~ Incubation, data.anova.Pc)
+summary(physeq.anova.Pc)
+```
+
+```{r}
+tukey.ps.Pc = TukeyHSD(x=physeq.anova.Pc, 'Incubation', conf.level = 0.95)
+
+generate_label_df.Pc <- function(tukey.ps.Pc, variable){
+ 
+     # Extract labels and factor levels from Tukey post-hoc 
+     Tukey.levels.Pc <- tukey.ps.Pc[[variable]][,4]
+     Tukey.labels.Pc <- data.frame(multcompLetters(Tukey.levels.Pc)['Letters'])
+  
+     #I need to put the labels in the same order as in the boxplot :
+     Tukey.labels.Pc$treatment=rownames(Tukey.labels.Pc)
+     Tukey.labels.Pc=Tukey.labels.Pc[order(Tukey.labels.Pc$treatment) , ]
+     return(Tukey.labels.Pc)
+     }
+
+LABELS.Pc=generate_label_df(tukey.ps.Pc, 'Incubation')
+names(LABELS.Pc) = c('Letters','Incubation')
+```
+
+```{r}
+LABELS.Pc
+```
+
+```{r}
+ylabel.Pc <- data.frame("ylabel.Pc" = c(5, 5, 6, 4, 5))
+```
+
+```{r}
+LABELS.Pc$ylabel.Pc<-ylabel.Pc$ylabel.Pc
+```
+
++
+
+```{r}
+physeq.plot.richness.incubation.Pc = plot_richness(physeq.Pc, x="Incubation", color=("Incubation"), measures=c("Observed")) + 
+  geom_boxplot(lwd=0.5) + ggtitle(" CLC Order Pezizales Alpha Diversity by Incubation time") + 
+  stat_compare_means(method = "anova", label.y = 7.5) + 
+  theme_pubr(border= TRUE, legend = c("none")) + 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_colour_hue(l = 58) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  geom_text(data=LABELS.Pc, aes(x=LABELS.Pc$Incubation, y = LABELS.Pc$ylabel , label = LABELS.Pc$Letters))
+physeq.plot.richness.incubation.Pc
+```
+
+```{r}
+png("./Figures/CLC/CLC Order  Pezizales_Fungal_Alpha_Div_Incubation_time.png", units="in", width = 7.5, height = 7.5, res = 600 )
+physeq.plot.richness.incubation.Pc
+dev.off()
+```
+
+##Alpha diversity of Order Filobasidiales in CLC
+```{r}
+physeq.Fc = subset_taxa(physeq.CLC, Order == "Filobasidiales")
+physeq.Fc
+```
+
+```{r}
+sample_data(physeq.Fc)$Incubation = factor(sample_data(physeq.Fc)$Incubation, levels = c("0.05", "1", "24", "48", "96"))
+```
+
+```{r}
+alpha.diversity.Fc = estimate_richness(physeq.Fc, measures = c("Observed"))
+data.anova.Fc = cbind(sample_data(physeq.Fc), alpha.diversity.Fc)
+physeq.anova.Fc = aov(Observed ~ Incubation, data.anova.Fc)
+summary(physeq.anova.Fc)
+```
+
+```{r}
+tukey.ps.Fc = TukeyHSD(x=physeq.anova.Fc, 'Incubation', conf.level = 0.95)
+
+generate_label_df.Fc <- function(tukey.ps.Fc, variable){
+ 
+     # Extract labels and factor levels from Tukey post-hoc 
+     Tukey.levels.Fc <- tukey.ps.Fc[[variable]][,4]
+     Tukey.labels.Fc <- data.frame(multcompLetters(Tukey.levels.Fc)['Letters'])
+  
+     #I need to put the labels in the same order as in the boxplot :
+     Tukey.labels.Fc$treatment=rownames(Tukey.labels.Fc)
+     Tukey.labels.Fc=Tukey.labels.Fc[order(Tukey.labels.Fc$treatment) , ]
+     return(Tukey.labels.Fc)
+     }
+
+LABELS.Fc=generate_label_df(tukey.ps.Fc, 'Incubation')
+names(LABELS.Fc) = c('Letters','Incubation')
+```
+
+```{r}
+LABELS.Fc
+```
+
+```{r}
+ylabel.Fc <- data.frame("ylabel.Fc" = c(7, 2.5, 3, 4, 3))
+```
+
+```{r}
+LABELS.Fc$ylabel.Fc<-ylabel.Fc$ylabel.Fc
+```
+
++
+
+```{r}
+physeq.plot.richness.incubation.Fc = plot_richness(physeq.Fc, x="Incubation", color=("Incubation"), measures=c("Observed")) + 
+  geom_boxplot(lwd=0.5) + ggtitle(" CLC Order Filobasidiales Alpha Diversity by Incubation time") + 
+  stat_compare_means(method = "anova", label.y = 7.5) + 
+  theme_pubr(border= TRUE, legend = c("none")) + 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_colour_hue(l = 58) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  geom_text(data=LABELS.Fc, aes(x=LABELS.Fc$Incubation, y = LABELS.Fc$ylabel , label = LABELS.Fc$Letters))
+physeq.plot.richness.incubation.Fc
+```
+
+```{r}
+png("./Figures/CLC/CLC Order  Filobasidiales_Fungal_Alpha_Div_Incubation_time.png", units="in", width = 7.5, height = 7.5, res = 600 )
+physeq.plot.richness.incubation.Fc
+dev.off()
+```
+
+##Alpha diversity of Order Xylariales in CLC
+```{r}
+physeq.Xy = subset_taxa(physeq.CLC, Order == "Xylariales")
+physeq.Xy
+```
+
+```{r}
+sample_data(physeq.Xy)$Incubation = factor(sample_data(physeq.Xy)$Incubation, levels = c("0.05", "1", "24", "48", "96"))
+```
+
+```{r}
+alpha.diversity.Xy = estimate_richness(physeq.Xy, measures = c("Observed"))
+data.anova.Xy = cbind(sample_data(physeq.Xy), alpha.diversity.Xy)
+physeq.anova.Xy = aov(Observed ~ Incubation, data.anova.Xy)
+summary(physeq.anova.Xy)
+```
+
+```{r}
+tukey.ps.Xy = TukeyHSD(x=physeq.anova.Sc, 'Incubation', conf.level = 0.95)
+
+generate_label_df.Xy <- function(tukey.ps.Xy, variable){
+ 
+     # Extract labels and factor levels from Tukey post-hoc 
+     Tukey.levels.Xy <- tukey.ps.Xy[[variable]][,4]
+     Tukey.labels.Xy <- data.frame(multcompLetters(Tukey.levels.Xy)['Letters'])
+  
+     #I need to put the labels in the same order as in the boxplot :
+     Tukey.labels.Xy$treatment=rownames(Tukey.labels.Xy)
+     Tukey.labels.Xy=Tukey.labels.Xy[order(Tukey.labels.Xy$treatment) , ]
+     return(Tukey.labels.Xy)
+     }
+
+LABELS.Xy=generate_label_df(tukey.ps.Xy, 'Incubation')
+names(LABELS.Xy) = c('Letters','Incubation')
+```
+
+```{r}
+LABELS.Xy
+```
+
+```{r}
+ylabel.Xy <- data.frame("ylabel.Xy" = c(5, 4, 4, 4, 2))
+```
+
+```{r}
+LABELS.Xy$ylabel.Xy<-ylabel.Xy$ylabel.Xy
+```
+
++
+
+```{r}
+physeq.plot.richness.incubation.Xy = plot_richness(physeq.Xy, x="Incubation", color=("Incubation"), measures=c("Observed")) + 
+  geom_boxplot(lwd=0.5) + ggtitle(" CLC Order Sordariales Alpha Diversity by Incubation time") + 
+  stat_compare_means(method = "anova", label.y = 6) + 
+  theme_pubr(border= TRUE, legend = c("none")) + 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_colour_hue(l = 58) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  geom_text(data=LABELS.Xy, aes(x=LABELS.Xy$Incubation, y = LABELS.Xy$ylabel , label = LABELS.Xy$Letters))
+physeq.plot.richness.incubation.Xy
+```
+
+```{r}
+png("./Figures/CLC/CLC Order Xylariales_Fungal_Alpha_Div_Incubation_time.png", units="in", width = 7.5, height = 7.5, res = 600 )
+physeq.plot.richness.incubation.Xy
+dev.off()
+```
+
+##Alpha diversity of Order Onygenales in CLC
+```{r}
+physeq.On = subset_taxa(physeq.CLC, Order == "Onygenales")
+physeq.On
+```
+
+```{r}
+sample_data(physeq.On)$Incubation = factor(sample_data(physeq.On)$Incubation, levels = c("0.05", "1", "24", "48", "96"))
+```
+
+```{r}
+alpha.diversity.On = estimate_richness(physeq.On, measures = c("Observed"))
+data.anova.On = cbind(sample_data(physeq.On), alpha.diversity.On)
+physeq.anova.On = aov(Observed ~ Incubation, data.anova.On)
+summary(physeq.anova.On)
+```
+
+```{r}
+tukey.ps.On = TukeyHSD(x=physeq.anova.On, 'Incubation', conf.level = 0.95)
+
+generate_label_df.On <- function(tukey.ps.On, variable){
+ 
+     # Extract labels and factor levels from Tukey post-hoc 
+     Tukey.levels.On <- tukey.ps.On[[variable]][,4]
+     Tukey.labels.On <- data.frame(multcompLetters(Tukey.levels.On)['Letters'])
+  
+     #I need to put the labels in the same order as in the boxplot :
+     Tukey.labels.On$treatment=rownames(Tukey.labels.On)
+     Tukey.labels.On=Tukey.labels.On[order(Tukey.labels.Xy$treatment) , ]
+     return(Tukey.labels.On)
+     }
+
+LABELS.On=generate_label_df(tukey.ps.On, 'Incubation')
+names(LABELS.On) = c('Letters','Incubation')
+```
+
+```{r}
+LABELS.On
+```
+
+```{r}
+ylabel.On <- data.frame("ylabel.On" = c(0.5, 1.5, 1.5, 0.5, 2.5))
+```
+
+```{r}
+LABELS.On$ylabel.On<-ylabel.On$ylabel.On
+```
+
++
+
+```{r}
+physeq.plot.richness.incubation.On = plot_richness(physeq.On, x="Incubation", color=("Incubation"), measures=c("Observed")) + 
+  geom_boxplot(lwd=0.5) + ggtitle(" CLC Order Onygenales Alpha Diversity by Incubation time") + 
+  stat_compare_means(method = "anova", label.y = 3) + 
+  theme_pubr(border= TRUE, legend = c("none")) + 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_colour_hue(l = 58) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  geom_text(data=LABELS.On, aes(x=LABELS.On$Incubation, y = LABELS.On$ylabel , label = LABELS.On$Letters))
+physeq.plot.richness.incubation.On
+```
+
+```{r}
+png("./Figures/CLC/CLC Order Onygenales_Fungal_Alpha_Div_Incubation_time.png", units="in", width = 7.5, height = 7.5, res = 600 )
+physeq.plot.richness.incubation.On
+dev.off()
+```
+
+##Alpha diversity of Order Helotiales in CLC
+```{r}
+physeq.Ho = subset_taxa(physeq.CLC, Order == "Helotiales")
+physeq.Ho
+```
+
+```{r}
+sample_data(physeq.Ho)$Incubation = factor(sample_data(physeq.Ho)$Incubation, levels = c("0.05", "1", "24", "48", "96"))
+```
+
+```{r}
+alpha.diversity.Ho = estimate_richness(physeq.Ho, measures = c("Observed"))
+data.anova.Ho = cbind(sample_data(physeq.Ho), alpha.diversity.Ho)
+physeq.anova.Ho = aov(Observed ~ Incubation, data.anova.Ho)
+summary(physeq.anova.Ho)
+```
+```{r}
+tukey.ps.Ho = TukeyHSD(x=physeq.anova.Ho, 'Incubation', conf.level = 0.95)
+
+generate_label_df.Ho <- function(tukey.ps.Ho, variable){
+ 
+     # Extract labels and factor levels from Tukey post-hoc 
+     Tukey.levels.Ho <- tukey.ps.Ho[[variable]][,4]
+     Tukey.labels.Ho <- data.frame(multcompLetters(Tukey.levels.Ho)['Letters'])
+  
+     #I need to put the labels in the same order as in the boxplot :
+     Tukey.labels.Ho$treatment=rownames(Tukey.labels.Ho)
+     Tukey.labels.Ho=Tukey.labels.Ho[order(Tukey.labels.Xy$treatment) , ]
+     return(Tukey.labels.Ho)
+     }
+
+LABELS.Ho=generate_label_df(tukey.ps.Ho, 'Incubation')
+names(LABELS.Ho) = c('Letters','Incubation')
+```
+
+```{r}
+LABELS.Ho
+```
+
+```{r}
+ylabel.Ho <- data.frame("ylabel.Ho" = c(6, 6, 8, 6, 2))
+```
+
+```{r}
+LABELS.Ho$ylabel.Ho<-ylabel.Ho$ylabel.HO
+```
+
+
+##Alpha diversity of Order Filobasidiales in LAC
+```{r}
+physeq.Fl = subset_taxa(physeq.LAC, Order == "Filobasidiales")
+physeq.Fl
+```
+
+```{r}
+sample_data(physeq.Fl)$Incubation = factor(sample_data(physeq.Fl)$Incubation, levels = c("0.05", "1", "24", "48", "96"))
+```
+
+```{r}
+alpha.diversity.Fl = estimate_richness(physeq.Fl, measures = c("Observed"))
+data.anova.Fl = cbind(sample_data(physeq.Fl), alpha.diversity.Fl)
+physeq.anova.Fl = aov(Observed ~ Incubation, data.anova.Fl)
+summary(physeq.anova.Fl)
+```
+
+```{r}
+tukey.ps.Fl = TukeyHSD(x=physeq.anova.Fl, 'Incubation', conf.level = 0.95)
+
+generate_label_df.Fl <- function(tukey.ps.Fl, variable){
+ 
+     # Extract labels and factor levels from Tukey post-hoc 
+     Tukey.levels.Fl <- tukey.ps.Fl[[variable]][,4]
+     Tukey.labels.Fl <- data.frame(multcompLetters(Tukey.levels.Fl)['Letters'])
+  
+     #I need to put the labels in the same order as in the boxplot :
+     Tukey.labels.Fl$treatment=rownames(Tukey.labels.Fl)
+     Tukey.labels.Fl=Tukey.labels.Fl[order(Tukey.labels.Fl$treatment) , ]
+     return(Tukey.labels.Fl)
+     }
+
+LABELS.Fl=generate_label_df(tukey.ps.Fl, 'Incubation')
+names(LABELS.Fl) = c('Letters','Incubation')
+```
+
+```{r}
+LABELS.Fl
+```
+
+```{r}
+ylabel.Fl <- data.frame("ylabel.Fl" = c(5, 5, 4, 8.5, 12))
+```
+
+```{r}
+LABELS.Fl$ylabel.Fl<-ylabel.Fl$ylabel.Fl
+```
+
++
+
+```{r}
+physeq.plot.richness.incubation.Fl = plot_richness(physeq.Fl, x="Incubation", color=("Incubation"), measures=c("Observed")) + 
+  geom_boxplot(lwd=0.5) + ggtitle(" LAC Order Filobasidiales Alpha Diversity by Incubation time") + 
+  stat_compare_means(method = "anova", label.y = 15) + 
+  theme_pubr(border= TRUE, legend = c("none")) + 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_colour_hue(l = 58) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  geom_text(data=LABELS.Fl, aes(x=LABELS.Fl$Incubation, y = LABELS.Fl$ylabel , label = LABELS.Fl$Letters))
+physeq.plot.richness.incubation.Fl
+```
+
+```{r}
+png("./Figures/LAC/LAC Order  Filobasidiales_Fungal_Alpha_Div_Incubation_time.png", units="in", width = 7.5, height = 7.5, res = 600 )
+physeq.plot.richness.incubation.Fl
+dev.off()
+```
+
+##Alpha diversity of Order Pezzizales in LAC
+```{r}
+physeq.Pol = subset_taxa(physeq.LAC, Order == "Pezizales")
+physeq.Pol
+```
+
+```{r}
+sample_data(physeq.Pol)$Incubation = factor(sample_data(physeq.Pol)$Incubation, levels = c("0.05", "1", "24", "48", "96"))
+```
+
+```{r}
+alpha.diversity.Pol = estimate_richness(physeq.Pol, measures = c("Observed"))
+data.anova.Pol = cbind(sample_data(physeq.Pol), alpha.diversity.Pol)
+physeq.anova.Pol = aov(Observed ~ Incubation, data.anova.Pol)
+summary(physeq.anova.Pol)
+```
+
+```{r}
+tukey.ps.Pol = TukeyHSD(x=physeq.anova.Pol, 'Incubation', conf.level = 0.95)
+
+generate_label_df.Pol <- function(tukey.ps.Pol, variable){
+ 
+     # Extract labels and factor levels from Tukey post-hoc 
+     Tukey.levels.Pol <- tukey.ps.Pol[[variable]][,4]
+     Tukey.labels.Pol <- data.frame(multcompLetters(Tukey.levels.Pol)['Letters'])
+  
+     #I need to put the labels in the same order as in the boxplot :
+     Tukey.labels.Pol$treatment=rownames(Tukey.labels.Pol)
+     Tukey.labels.Pol=Tukey.labels.Pol[order(Tukey.labels.Pol$treatment) , ]
+     return(Tukey.labels.Pol)
+     }
+
+LABELS.Pol=generate_label_df(tukey.ps.Pol, 'Incubation')
+names(LABELS.Pol) = c('Letters','Incubation')
+```
+
+```{r}
+LABELS.Pol
+```
+
+```{r}
+ylabel.Pol <- data.frame("ylabel.Pol" = c(5, 5, 3, 3.5, 6))
+```
+
+```{r}
+LABELS.Pol$ylabel.Pol<-ylabel.Pol$ylabel.Pol
+```
+
++
+
+```{r}
+physeq.plot.richness.incubation.Pol = plot_richness(physeq.Pol, x="Incubation", color=("Incubation"), measures=c("Observed")) + 
+  geom_boxplot(lwd=0.5) + ggtitle(" LAC Order Pezizales Alpha Diversity by Incubation time") + 
+  stat_compare_means(method = "anova", label.y = 7.5) + 
+  theme_pubr(border= TRUE, legend = c("none")) + 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_colour_hue(l = 58) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  geom_text(data=LABELS.Pol, aes(x=LABELS.Pol$Incubation, y = LABELS.Pol$ylabel , label = LABELS.Pol$Letters))
+physeq.plot.richness.incubation.Pol
+```
+
+```{r}
+png("./Figures/LAC/LAC Order  Pezizales_Fungal_Alpha_Div_Incubation_time.png", units="in", width = 7.5, height = 7.5, res = 600 )
+physeq.plot.richness.incubation.Pol
+dev.off()
+```
+
+##Alpha diversity of Order Coniochaetales in LAC
+```{r}
+physeq.Col = subset_taxa(physeq.LAC, Order == "Coniochaetales")
+physeq.Col
+```
+
+```{r}
+sample_data(physeq.Col)$Incubation = factor(sample_data(physeq.Col)$Incubation, levels = c("0.05", "1", "24", "48", "96"))
+```
+
+```{r}
+alpha.diversity.Col = estimate_richness(physeq.Col, measures = c("Observed"))
+data.anova.Col = cbind(sample_data(physeq.Col), alpha.diversity.Col)
+physeq.anova.Col = aov(Observed ~ Incubation, data.anova.Col)
+summary(physeq.anova.Col)
+```
+
+```{r}
+tukey.ps.Col = TukeyHSD(x=physeq.anova.Col, 'Incubation', conf.level = 0.95)
+
+generate_label_df.Col <- function(tukey.ps.Col, variable){
+ 
+     # Extract labels and factor levels from Tukey post-hoc 
+     Tukey.levels.Col <- tukey.ps.Col[[variable]][,4]
+     Tukey.labels.Col <- data.frame(multcompLetters(Tukey.levels.Col)['Letters'])
+  
+     #I need to put the labels in the same order as in the boxplot :
+     Tukey.labels.Col$treatment=rownames(Tukey.labels.Col)
+     Tukey.labels.Col=Tukey.labels.Col[order(Tukey.labels.Col$treatment) , ]
+     return(Tukey.labels.Col)
+     }
+
+LABELS.Col=generate_label_df(tukey.ps.Col, 'Incubation')
+names(LABELS.Col) = c('Letters','Incubation')
+```
+
+```{r}
+LABELS.Col
+```
+
+```{r}
+ylabel.Col <- data.frame("ylabel.Col" = c(3, 3, 4, 3, 4))
+```
+
+```{r}
+LABELS.Col$ylabel.Col<-ylabel.Col$ylabel.Col
+```
+
++
+
+```{r}
+physeq.plot.richness.incubation.Col = plot_richness(physeq.Col, x="Incubation", color=("Incubation"), measures=c("Observed")) + 
+  geom_boxplot(lwd=0.5) + ggtitle(" LAC Order Coniochaetales Alpha Diversity by Incubation time") + 
+  stat_compare_means(method = "anova", label.y = 5) + 
+  theme_pubr(border= TRUE, legend = c("none")) + 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_colour_hue(l = 58) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  geom_text(data=LABELS.Col, aes(x=LABELS.Col$Incubation, y = LABELS.Col$ylabel , label = LABELS.Col$Letters))
+physeq.plot.richness.incubation.Col
+```
+
+```{r}
+png("./Figures/LAC/LAC Order  Coniochaetales_Fungal_Alpha_Div_Incubation_time.png", units="in", width = 7.5, height = 7.5, res = 600 )
+physeq.plot.richness.incubation.Col
+dev.off()
+```
+
+##Alpha diversity of Order Dothideales in LAC
+```{r}
+physeq.Dl = subset_taxa(physeq.LAC, Order == "Dothideales")
+physeq.Dl
+```
+
+```{r}
+sample_data(physeq.Dl)$Incubation = factor(sample_data(physeq.Dl)$Incubation, levels = c("0.05", "1", "24", "48", "96"))
+```
+
+```{r}
+alpha.diversity.Dl = estimate_richness(physeq.Dl, measures = c("Observed"))
+data.anova.Dl = cbind(sample_data(physeq.Dl), alpha.diversity.Dl)
+physeq.anova.Dl = aov(Observed ~ Incubation, data.anova.Dl)
+summary(physeq.anova.Dl)
+```
+
+```{r}
+tukey.ps.Dl = TukeyHSD(x=physeq.anova.Dl, 'Incubation', conf.level = 0.95)
+
+generate_label_df.Dl <- function(tukey.ps.Dl, variable){
+ 
+     # Extract labels and factor levels from Tukey post-hoc 
+     Tukey.levels.Dl <- tukey.ps.Dl[[variable]][,4]
+     Tukey.labels.Dl <- data.frame(multcompLetters(Tukey.levels.Dl)['Letters'])
+  
+     #I need to put the labels in the same order as in the boxplot :
+     Tukey.labels.Dl$treatment=rownames(Tukey.labels.Dl)
+     Tukey.labels.Dl=Tukey.labels.Dl[order(Tukey.labels.Dl$treatment) , ]
+     return(Tukey.labels.Dl)
+     }
+
+LABELS.Dl=generate_label_df(tukey.ps.Dl, 'Incubation')
+names(LABELS.Dl) = c('Letters','Incubation')
+```
+
+```{r}
+LABELS.Dl
+```
+
+```{r}
+ylabel.Dl <- data.frame("ylabel.Dl" = c(13, 11, 6, 7, 8))
+```
+
+```{r}
+LABELS.Dl$ylabel.Dl<-ylabel.Dl$ylabel.Dl
+```
+
++
+
+```{r}
+physeq.plot.richness.incubation.Dl = plot_richness(physeq.Dl, x="Incubation", color=("Incubation"), measures=c("Observed")) + 
+  geom_boxplot(lwd=0.5) + ggtitle(" LAC Order Dothideales Alpha Diversity by Incubation time") + 
+  stat_compare_means(method = "anova", label.y = 15) + 
+  theme_pubr(border= TRUE, legend = c("none")) + 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_colour_hue(l = 58) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  geom_text(data=LABELS.Dl, aes(x=LABELS.Dl$Incubation, y = LABELS.Dl$ylabel , label = LABELS.Dl$Letters))
+physeq.plot.richness.incubation.Dl
+```
+
+```{r}
+png("./Figures/LAC/LAC Order  Dothideales_Fungal_Alpha_Div_Incubation_time.png", units="in", width = 7.5, height = 7.5, res = 600 )
+physeq.plot.richness.incubation.Dl
+dev.off()
+```
+
+##Alpha diversity of Order Chaetothyriales in LAc
+```{r}
+physeq.Cl = subset_taxa(physeq.LAC, Order == "Chaetothyriales")
+physeq.Cl
+```
+
+```{r}
+sample_data(physeq.Cl)$Incubation = factor(sample_data(physeq.Cl)$Incubation, levels = c("0.05", "1", "24", "48", "96"))
+```
+
+```{r}
+alpha.diversity.Cl = estimate_richness(physeq.Cl, measures = c("Observed"))
+data.anova.Cl = cbind(sample_data(physeq.Cl), alpha.diversity.Cl)
+physeq.anova.Cl = aov(Observed ~ Incubation, data.anova.Cl)
+summary(physeq.anova.Cl)
+```
+
+```{r}
+tukey.ps.Cl = TukeyHSD(x=physeq.anova.Cl, 'Incubation', conf.level = 0.95)
+
+generate_label_df.Cl <- function(tukey.ps.Cl, variable){
+ 
+     # Extract labels and factor levels from Tukey post-hoc 
+     Tukey.levels.Cl <- tukey.ps.Cl[[variable]][,4]
+     Tukey.labels.Cl <- data.frame(multcompLetters(Tukey.levels.Cl)['Letters'])
+  
+     #I need to put the labels in the same order as in the boxplot :
+     Tukey.labels.Cl$treatment=rownames(Tukey.labels.Cl)
+     Tukey.labels.Cl=Tukey.labels.Cl[order(Tukey.labels.Cl$treatment) , ]
+     return(Tukey.labels.Cl)
+     }
+
+LABELS.Cl=generate_label_df(tukey.ps.Cl, 'Incubation')
+names(LABELS.Cl) = c('Letters','Incubation')
+```
+
+```{r}
+LABELS.Cl
+```
+
+```{r}
+ylabel.Cl <- data.frame("ylabel.Cl" = c(22, 19, 8, 12, 17))
+```
+
+```{r}
+LABELS.Cl$ylabel.Cl<-ylabel.Cl$ylabel.Cl
+```
+
++
+
+```{r}
+physeq.plot.richness.incubation.Cl = plot_richness(physeq.Cl, x="Incubation", color=("Incubation"), measures=c("Observed")) + 
+  geom_boxplot(lwd=0.5) + ggtitle(" LAC Order Chaetothyriales Alpha Diversity by Incubation time") + 
+  stat_compare_means(method = "anova", label.y = 30) + 
+  theme_pubr(border= TRUE, legend = c("none")) + 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_colour_hue(l = 58) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  geom_text(data=LABELS.Cl, aes(x=LABELS.Cl$Incubation, y = LABELS.Cl$ylabel , label = LABELS.Cl$Letters))
+physeq.plot.richness.incubation.Cl
+```
+
+```{r}
+png("./Figures/LAC/LAC Order  Chaetothyriales_Fungal_Alpha_Div_Incubation_time.png", units="in", width = 7.5, height = 7.5, res = 600 )
+physeq.plot.richness.incubation.Cl
+dev.off()
+```
+
+##Alpha diversity of Order Sordariales in LAC
+```{r}
+physeq.Scl = subset_taxa(physeq.LAC, Order == "Sordariales")
+physeq.Scl
+```
+
+```{r}
+sample_data(physeq.Scl)$Incubation = factor(sample_data(physeq.Scl)$Incubation, levels = c("0.05", "1", "24", "48", "96"))
+```
+
+```{r}
+alpha.diversity.Scl = estimate_richness(physeq.Scl, measures = c("Observed"))
+data.anova.Scl = cbind(sample_data(physeq.Scl), alpha.diversity.Scl)
+physeq.anova.Scl = aov(Observed ~ Incubation, data.anova.Scl)
+summary(physeq.anova.Scl)
+```
+
+```{r}
+tukey.ps.Scl = TukeyHSD(x=physeq.anova.Scl, 'Incubation', conf.level = 0.95)
+
+generate_label_df.Scl <- function(tukey.ps.Scl, variable){
+ 
+     # Extract labels and factor levels from Tukey post-hoc 
+     Tukey.levels.Scl <- tukey.ps.Scl[[variable]][,4]
+     Tukey.labels.Scl <- data.frame(multcompLetters(Tukey.levels.Scl)['Letters'])
+  
+     #I need to put the labels in the same order as in the boxplot :
+     Tukey.labels.Scl$treatment=rownames(Tukey.labels.Scl)
+     Tukey.labels.Scl=Tukey.labels.Scl[order(Tukey.labels.Scl$treatment) , ]
+     return(Tukey.labels.Scl)
+     }
+
+LABELS.Scl=generate_label_df(tukey.ps.Scl, 'Incubation')
+names(LABELS.Scl) = c('Letters','Incubation')
+```
+
+```{r}
+LABELS.Scl
+```
+
+```{r}
+ylabel.Scl <- data.frame("ylabel.Scl" = c(13, 13, 12, 14, 17))
+```
+
+```{r}
+LABELS.Scl$ylabel.Scl<-ylabel.Scl$ylabel.Scl
+```
+
+```{r}
+physeq.plot.richness.incubation.Scl = plot_richness(physeq.Scl, x="Incubation", color=("Incubation"), measures=c("Observed")) + 
+  geom_boxplot(lwd=0.5) + ggtitle(" LAC Order Sordariales Alpha Diversity by Incubation time") + 
+  stat_compare_means(method = "anova", label.y = 20) + 
+  theme_pubr(border= TRUE, legend = c("none")) + 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_colour_hue(l = 58) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  geom_text(data=LABELS.Scl, aes(x=LABELS.Scl$Incubation, y = LABELS.Scl$ylabel , label = LABELS.Scl$Letters))
+physeq.plot.richness.incubation.Scl
+```
+```{r}
+png("./Figures/LAC/LAC Order Sordariales_Fungal_Alpha_Div_Incubation_time.png", units="in", width = 7.5, height = 7.5, res = 600 )
+physeq.plot.richness.incubation.Scl
+dev.off()
+```
+
+##Alpha diversity of Order Eurotiales in LAC
+```{r}
+physeq.Ecl = subset_taxa(physeq.LAC, Order == "Eurotiales")
+physeq.Ecl
+```
+
+```{r}
+sample_data(physeq.Ecl)$Incubation = factor(sample_data(physeq.Ecl)$Incubation, levels = c("0.05", "1", "24", "48", "96"))
+```
+
+```{r}
+alpha.diversity.Ecl = estimate_richness(physeq.Ecl, measures = c("Observed"))
+data.anova.Ecl = cbind(sample_data(physeq.Ecl), alpha.diversity.Ecl)
+physeq.anova.Ecl = aov(Observed ~ Incubation, data.anova.Ecl)
+summary(physeq.anova.Ecl)
+```
+
+```{r}
+tukey.ps.Ecl = TukeyHSD(x=physeq.anova.Ecl, 'Incubation', conf.level = 0.95)
+
+generate_label_df.Ecl <- function(tukey.ps.Ecl, variable){
+ 
+     # Extract labels and factor levels from Tukey post-hoc 
+     Tukey.levels.Ecl <- tukey.ps.Ecl[[variable]][,4]
+     Tukey.labels.Ecl <- data.frame(multcompLetters(Tukey.levels.Ecl)['Letters'])
+  
+     #I need to put the labels in the same order as in the boxplot :
+     Tukey.labels.Ecl$treatment=rownames(Tukey.labels.Ecl)
+     Tukey.labels.Ecl=Tukey.labels.Ecl[order(Tukey.labels.Ecl$treatment) , ]
+     return(Tukey.labels.Ecl)
+     }
+
+LABELS.Ecl=generate_label_df(tukey.ps.Ecl, 'Incubation')
+names(LABELS.Ecl) = c('Letters','Incubation')
+```
+
+```{r}
+LABELS.Ecl
+```
+
+```{r}
+ylabel.Ecl <- data.frame("ylabel.Ecl" = c(13, 9, 5, 5, 8))
+```
+
+```{r}
+LABELS.Ecl$ylabel.Ecl<-ylabel.Ecl$ylabel.Ecl
+```
+
++
+
+```{r}
+physeq.plot.richness.incubation.Ecl = plot_richness(physeq.Ecl, x="Incubation", color=("Incubation"), measures=c("Observed")) + 
+  geom_boxplot(lwd=0.5) + ggtitle(" LAC Order Eurotiales Alpha Diversity by Incubation time") + 
+  stat_compare_means(method = "anova", label.y = 15) + 
+  theme_pubr(border= TRUE, legend = c("none")) + 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_colour_hue(l = 58) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  geom_text(data=LABELS.Ecl, aes(x=LABELS.Ecl$Incubation, y = LABELS.Ecl$ylabel , label = LABELS.Ecl$Letters))
+physeq.plot.richness.incubation.Ecl
+```
+
+```{r}
+png("./Figures/LAC/LAC Order Eurotiales_Fungal_Alpha_Div_Incubation_time.png", units="in", width = 7.5, height = 7.5, res = 600 )
+physeq.plot.richness.incubation.Scl
+dev.off()
+```
+
+##Alpha diversity of Order Orbiliales in LAC
+```{r}
+physeq.Ol = subset_taxa(physeq.LAC, Order == "Orbiliales")
+physeq.Ol
+```
+
+```{r}
+sample_data(physeq.Ol)$Incubation = factor(sample_data(physeq.Ol)$Incubation, levels = c("0.05", "1", "24", "48", "96"))
+```
+
+```{r}
+alpha.diversity.Ol = estimate_richness(physeq.Ol, measures = c("Observed"))
+data.anova.Ol = cbind(sample_data(physeq.Ol), alpha.diversity.Ol)
+physeq.anova.Ol = aov(Observed ~ Incubation, data.anova.Ol)
+summary(physeq.anova.Ol)
+```
+
+```{r}
+tukey.ps.Ol = TukeyHSD(x=physeq.anova.Ol, 'Incubation', conf.level = 0.95)
+
+generate_label_df.Ol <- function(tukey.ps.Ol, variable){
+ 
+     # Extract labels and factor levels from Tukey post-hoc 
+     Tukey.levels.Ol <- tukey.ps.Ol[[variable]][,4]
+     Tukey.labels.Ol <- data.frame(multcompLetters(Tukey.levels.Ol)['Letters'])
+  
+     #I need to put the labels in the same order as in the boxplot :
+     Tukey.labels.Ol$treatment=rownames(Tukey.labels.Ol)
+     Tukey.labels.Ol=Tukey.labels.Ol[order(Tukey.labels.Ol$treatment) , ]
+     return(Tukey.labels.Ol)
+     }
+
+LABELS.Ol=generate_label_df(tukey.ps.Ol, 'Incubation')
+names(LABELS.Ol) = c('Letters','Incubation')
+```
+
+```{r}
+LABELS.Ol
+```
+
+```{r}
+ylabel.Ol <- data.frame("ylabel.Ol" = c(3, 3, 2, 2, 2))
+```
+
+```{r}
+LABELS.Ol$ylabel.Ol<-ylabel.Ol$ylabel.Ol
+```
+
+```{r}
+physeq.plot.richness.incubation.Ol = plot_richness(physeq.Ol, x="Incubation", color=("Incubation"), measures=c("Observed")) + 
+  geom_boxplot(lwd=0.5) + ggtitle(" LAC Order Orbiliales Alpha Diversity by Incubation time") + 
+  stat_compare_means(method = "anova", label.y = 4) + 
+  theme_pubr(border= TRUE, legend = c("none")) + 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_colour_hue(l = 58) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  geom_text(data=LABELS.Ol, aes(x=LABELS.Ol$Incubation, y = LABELS.Ol$ylabel , label = LABELS.Ol$Letters))
+physeq.plot.richness.incubation.Ol
+```
+
+```{r}
+png("./Figures/LAC/LAC Order Orbiliales_Fungal_Alpha_Div_Incubation_time.png", units="in", width = 7.5, height = 7.5, res = 600 )
+physeq.plot.richness.incubation.Ol
+dev.off()
+```
+
+#Alpha diversity of Order Trapeliales in LAC
+
+```{r}
+physeq.Tl = subset_taxa(physeq.LAC, Order == "Trapeliales")
+physeq.Tl
+```
+
+```{r}
+sample_data(physeq.Tl)$Incubation = factor(sample_data(physeq.Tl)$Incubation, levels = c("0.05", "1", "24", "48", "96"))
+```
+
+```{r}
+alpha.diversity.Tl = estimate_richness(physeq.Tl, measures = c("Observed"))
+data.anova.Tl = cbind(sample_data(physeq.Tl), alpha.diversity.Tl)
+physeq.anova.Tl = aov(Observed ~ Incubation, data.anova.Tl)
+summary(physeq.anova.Tl)
+```
+
+```{r}
+tukey.ps.Tl = TukeyHSD(x=physeq.anova.Tl, 'Incubation', conf.level = 0.95)
+
+generate_label_df.Tl <- function(tukey.ps.Tl, variable){
+ 
+     # Extract labels and factor levels from Tukey post-hoc 
+     Tukey.levels.Tl <- tukey.ps.Tl[[variable]][,4]
+     Tukey.labels.Tl <- data.frame(multcompLetters(Tukey.levels.Tl)['Letters'])
+     
+     #I need to put the labels in the same order as in the boxplot :
+     Tukey.labels.Tl$treatment=rownames(Tukey.labels.Tl)
+     Tukey.labels.Tl=Tukey.labels.Tl[order(Tukey.labels.Tl$treatment) , ]
+     return(Tukey.labels.Tl)
+     }
+
+LABELS.Tl=generate_label_df(tukey.ps.Tl, 'Incubation')
+names(LABELS.Tl) = c('Letters','Incubation')
+```
+
+```{r}
+LABELS.Tl
+```
+
+```{r}
+ylabel.Tl <- data.frame("ylabel.Tl" = c(3, 3, 3, 3, 3))
+```
+
+```{r}
+LABELS.Tl$ylabel.Tl<-ylabel.Tl$ylabel.Tl
+```
+
+```{r}
+physeq.plot.richness.incubation.Tl = plot_richness(physeq.Tl, x="Incubation", color=("Incubation"), measures=c("Observed")) + 
+  geom_boxplot(lwd=0.5) + ggtitle(" LAC Order Trapeliales Alpha Diversity by Incubation time") + 
+  stat_compare_means(method = "anova", label.y = 4) + 
+  theme_pubr(border= TRUE, legend = c("none")) + 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_colour_hue(l = 58) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  geom_text(data=LABELS.Tl, aes(x=LABELS.Tl$Incubation, y = LABELS.Tl$ylabel , label = LABELS.Tl$Letters))
+physeq.plot.richness.incubation.Tl
+```
+
+```{r}
+png("./Figures/LAC/LAC Order Trapeliales_Fungal_Alpha_Div_Incubation_time.png", units="in", width = 7.5, height = 7.5, res = 600 )
+physeq.plot.richness.incubation.Tl
+dev.off()
+```
+
+#Alpha diversity of Order Botryosphaeriales in LAC
+
+```{r}
+physeq.Bl = subset_taxa(physeq.LAC, Order == "Botryosphaeriales")
+physeq.Bl
+```
+
+```{r}
+sample_data(physeq.Bl)$Incubation = factor(sample_data(physeq.Bl)$Incubation, levels = c("0.05", "1", "24", "48", "96"))
+```
+
+```{r}
+alpha.diversity.Bl = estimate_richness(physeq.Bl, measures = c("Observed"))
+data.anova.Bl = cbind(sample_data(physeq.Bl), alpha.diversity.Bl)
+physeq.anova.Bl = aov(Observed ~ Incubation, data.anova.Bl)
+summary(physeq.anova.Bl)
+```
+
+```{r}
+tukey.ps.Bl = TukeyHSD(x=physeq.anova.Bl, 'Incubation', conf.level = 0.95)
+
+generate_label_df.Bl <- function(tukey.ps.Bl, variable){
+ 
+     # Extract labels and factor levels from Tukey post-hoc 
+     Tukey.levels.Bl <- tukey.ps.Bl[[variable]][,4]
+     Tukey.labels.Bl <- data.frame(multcompLetters(Tukey.levels.Bl)['Letters'])
+     
+     #I need to put the labels in the same order as in the boxplot :
+     Tukey.labels.Bl$treatment=rownames(Tukey.labels.Bl)
+     Tukey.labels.Bl=Tukey.labels.Bl[order(Tukey.labels.Bl$treatment) , ]
+     return(Tukey.labels.Bl)
+     }
+
+LABELS.Bl=generate_label_df(tukey.ps.Bl, 'Incubation')
+names(LABELS.Bl) = c('Letters','Incubation')
+```
+
+```{r}
+LABELS.Bl
+```
+
+```{r}
+ylabel.Bl <- data.frame("ylabel.Bl" = c(3, 3, 3.5, 3, 3.5))
+```
+
+```{r}
+LABELS.Bl$ylabel.Bl<-ylabel.Bl$ylabel.Bl
+```
+
+```{r}
+physeq.plot.richness.incubation.Bl = plot_richness(physeq.Bl, x="Incubation", color=("Incubation"), measures=c("Observed")) + 
+  geom_boxplot(lwd=0.5) + ggtitle(" LAC Order Botryosphaeriales Alpha Diversity by Incubation time") + 
+  stat_compare_means(method = "anova", label.y = 4) + 
+  theme_pubr(border= TRUE, legend = c("none")) + 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_colour_hue(l = 58) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  geom_text(data=LABELS.Bl, aes(x=LABELS.Bl$Incubation, y = LABELS.Bl$ylabel , label = LABELS.Bl$Letters))
+physeq.plot.richness.incubation.Bl
+```
+
+```{r}
+png("./Figures/LAC/LSC Order Botryosphaeriales_Fungal_Alpha_Div_Incubation_time.png", units="in", width = 7.5, height = 7.5, res = 600 )
+physeq.plot.richness.incubation.Bl
+dev.off()
+```
+
+#Alpha diversity of Order Pleosporales in LAC
+```{r}
+physeq.Plc = subset_taxa(physeq.LAC, Order == "Pleosporales")
+physeq.Plc
+```
+
+```{r}
+sample_data(physeq.Plc)$Incubation = factor(sample_data(physeq.Plc)$Incubation, levels = c("0.05", "1", "24", "48", "96"))
+```
+
+```{r}
+alpha.diversity.Plc = estimate_richness(physeq.Plc, measures = c("Observed"))
+data.anova.Plc = cbind(sample_data(physeq.Plc), alpha.diversity.Plc)
+physeq.anova.Plc = aov(Observed ~ Incubation, data.anova.Plc)
+summary(physeq.anova.Plc)
+```
+
+```{r}
+tukey.ps.Plc = TukeyHSD(x=physeq.anova.Plc, 'Incubation', conf.level = 0.95)
+
+generate_label_df.Plc <- function(tukey.ps.Plc, variable){
+ 
+     # Extract labels and factor levels from Tukey post-hoc 
+     Tukey.levels.Plc <- tukey.ps.Plc[[variable]][,4]
+     Tukey.labels.Plc <- data.frame(multcompLetters(Tukey.levels.Plc)['Letters'])
+     
+     #I need to put the labels in the same order as in the boxplot :
+     Tukey.labels.Plc$treatment=rownames(Tukey.labels.Plc)
+     Tukey.labels.Plc=Tukey.labels.Plc[order(Tukey.labels.Plc$treatment) , ]
+     return(Tukey.labels.Plc)
+     }
+LABELS.Plc=generate_label_df(tukey.ps.Plc, 'Incubation')
+names(LABELS.Plc) = c('Letters','Incubation')
+```
+
+```{r}
+LABELS.Plc
+```
+
+```{r}
+ylabel.Plc <- data.frame("ylabel.Plc" = c(73, 63, 35, 65, 80))
+```
+
+```{r}
+LABELS.Plc$ylabel.Ol<-ylabel.Plc$ylabel.Plc
+```
+
++
+
+```{r}
+physeq.plot.richness.incubation.Plc = plot_richness(physeq.Plc, x="Incubation", color=("Incubation"), measures=c("Observed")) + 
+  geom_boxplot(lwd=0.5) + ggtitle(" LAC Order Pleosporales Alpha Diversity by Incubation time") + 
+  stat_compare_means(method = "anova", label.y = 80) + 
+  theme_pubr(border= TRUE, legend = c("none")) + 
+  theme(plot.title = element_text(hjust = 0.5)) +
+  scale_colour_hue(l = 58) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  geom_text(data=LABELS.Plc, aes(x=LABELS.Plc$Incubation, y = LABELS.Plc$ylabel , label = LABELS.Plc$Letters))
+physeq.plot.richness.incubation.Plc
+```
+
+```{r}
+png("./Figures/LAC/LAC Order Pleosporales_Fungal_Alpha_Div_Incubation_time.png", units="in", width = 7.5, height = 7.5, res = 600 )
+physeq.plot.richness.incubation.Plc
+dev.off()
+```

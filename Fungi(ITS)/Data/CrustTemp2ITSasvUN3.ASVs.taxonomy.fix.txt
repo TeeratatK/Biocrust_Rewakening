@@ -1,0 +1,1843 @@
+	Kingdom	Phylum	Class	Order	Family	Genus	Species
+ASV1	Fungi	NA	NA	NA	NA	NA	NA
+ASV2	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymellaceae	Macroventuria	NA
+ASV3	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymellaceae	NA	NA
+ASV4	Fungi	Basidiomycota	Agaricomycetes	Agaricales	NA	NA	NA
+ASV5	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Entolomataceae	Entoloma	Entoloma halophilum
+ASV6	Fungi	Ascomycota	Sordariomycetes	Sordariales	Lasiosphaeriaceae	Podospora	NA
+ASV7	Fungi	Basidiomycota	Agaricomycetes	Agaricales	NA	NA	NA
+ASV8	Fungi	Ascomycota	Sordariomycetes	Hypocreales	NA	NA	NA
+ASV9	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV10	Fungi	Ascomycota	Sordariomycetes	Hypocreales	Nectriaceae	Fusarium	NA
+ASV11	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	NA	NA	NA
+ASV12	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV13	Fungi	Ascomycota	Leotiomycetes	Helotiales	Rutstroemiaceae	NA	NA
+ASV14	Fungi	Ascomycota	Dothideomycetes	Dothideales	NA	NA	NA
+ASV15	Fungi	Ascomycota	Lecanoromycetes	Peltigerales	NA	NA	NA
+ASV16	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymellaceae	Nothophoma	Nothophoma gossypiicola
+ASV17	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymellaceae	Leptosphaerulina	Leptosphaerulina australis
+ASV18	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	NA	NA
+ASV19	Fungi	Basidiomycota	Agaricomycetes	Agaricales	NA	NA	NA
+ASV20	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV21	Fungi	Ascomycota	Pezizomycetes	Pezizales	NA	NA	NA
+ASV22	Fungi	Basidiomycota	Tremellomycetes	Filobasidiales	Filobasidiaceae	Naganishia	Naganishia uzbekistanensis
+ASV23	Fungi	Ascomycota	Lecanoromycetes	Trapeliales	NA	NA	NA
+ASV24	Fungi	NA	NA	NA	NA	NA	NA
+ASV25	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Entolomataceae	Entoloma	Entoloma halophilum
+ASV26	Metazoa	Arthropoda	Malacostraca	Amphipoda	NA	NA	NA
+ASV27	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Alternaria	Alternaria terricola
+ASV28	Fungi	Ascomycota	Pezizomycetes	Pezizales	NA	NA	NA
+ASV29	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV30	Fungi	Ascomycota	Sordariomycetes	Hypocreales	NA	NA	NA
+ASV31	Alveolata	Apicomplexa	Coccidia	Eucoccidiorida	NA	NA	NA
+ASV32	Metazoa	Arthropoda	Malacostraca	Amphipoda	NA	NA	NA
+ASV33	Fungi	Ascomycota	Eurotiomycetes	Verrucariales	NA	NA	NA
+ASV34	Fungi	Ascomycota	Orbiliomycetes	Orbiliales	NA	NA	NA
+ASV35	Viridiplantae	Chlorophyta	Trebouxiophyceae	Chlorellales	NA	NA	NA
+ASV36	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Subramaniula	Subramaniula asteroides
+ASV37	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymellaceae	NA	NA
+ASV38	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Collariella	Collariella causiiformis
+ASV39	Metazoa	Arthropoda	Malacostraca	Amphipoda	NA	NA	NA
+ASV40	Fungi	NA	NA	NA	NA	NA	NA
+ASV41	Fungi	Ascomycota	Sordariomycetes	Coniochaetales	Coniochaetaceae	Coniochaeta	Coniochaeta polymorpha
+ASV42	Metazoa	Arthropoda	Malacostraca	Amphipoda	NA	NA	NA
+ASV43	Fungi	Ascomycota	Lecanoromycetes	Trapeliales	NA	NA	NA
+ASV44	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Preussia	Preussia africana
+ASV45	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Entolomataceae	Entoloma	Entoloma halophilum
+ASV46	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV47	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Alternaria	NA
+ASV48	Fungi	NA	NA	NA	NA	NA	NA
+ASV49	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	Thyrostroma	Thyrostroma cornicola
+ASV50	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	Aspergillaceae	Aspergillus	NA
+ASV51	Fungi	Ascomycota	Eurotiomycetes	Verrucariales	NA	NA	NA
+ASV52	Fungi	Ascomycota	Sordariomycetes	Xylariales	NA	NA	NA
+ASV53	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV54	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Alternaria	Alternaria alternata
+ASV55	Fungi	NA	NA	NA	NA	NA	NA
+ASV56	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV57	NA	NA	NA	NA	NA	NA	NA
+ASV58	Viridiplantae	Anthophyta	Monocotyledonae	Dioscoreales	Dioscoreaceae	Dioscorea	Dioscorea polystachya
+ASV59	Fungi	Ascomycota	Dothideomycetes	Botryosphaeriales	NA	NA	NA
+ASV60	Fungi	Ascomycota	Sordariomycetes	Hypocreales	NA	NA	NA
+ASV61	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymellaceae	Phoma	Phoma herbarum
+ASV62	Viridiplantae	Marchantiophyta	Jungermanniopsida	Porellales	NA	NA	NA
+ASV63	Fungi	Ascomycota	Dothideomycetes	Capnodiales	NA	NA	NA
+ASV64	NA	NA	NA	NA	NA	NA	NA
+ASV65	Fungi	Basidiomycota	Tremellomycetes	Filobasidiales	Filobasidiaceae	Naganishia	Naganishia friedmannii
+ASV66	Fungi	Ascomycota	Dothideomycetes	Dothideales	Dothideaceae	Endoconidioma	Endoconidioma populi
+ASV67	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	NA	NA	NA
+ASV68	Fungi	Ascomycota	Sordariomycetes	Xylariales	NA	NA	NA
+ASV69	Fungi	Ascomycota	Sordariomycetes	Xylariales	NA	NA	NA
+ASV70	Fungi	NA	NA	NA	NA	NA	NA
+ASV71	Fungi	Olpidiomycota	Olpidiomycetes	Olpidiales	Olpidiaceae	NA	NA
+ASV72	Fungi	Ascomycota	Dothideomycetes	Botryosphaeriales	NA	NA	NA
+ASV73	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV74	Fungi	Ascomycota	Dothideomycetes	Dothideales	Aureobasidiaceae	Kabatiella	NA
+ASV75	Fungi	Ascomycota	Eurotiomycetes	Onygenales	NA	NA	NA
+ASV76	Fungi	Basidiomycota	NA	NA	NA	NA	NA
+ASV77	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	NA	NA
+ASV78	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV79	Metazoa	Arthropoda	Malacostraca	Amphipoda	NA	NA	NA
+ASV80	Rhizaria	Cercozoa	NA	NA	NA	NA	NA
+ASV81	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV82	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV83	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	Herpotrichiellaceae	Coniosporium	Coniosporium apollinis
+ASV84	Fungi	Ascomycota	Leotiomycetes	Helotiales	NA	NA	NA
+ASV85	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV86	Fungi	Ascomycota	Dothideomycetes	Botryosphaeriales	NA	NA	NA
+ASV87	Fungi	NA	NA	NA	NA	NA	NA
+ASV88	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	Aspergillaceae	Penicillium	NA
+ASV89	Fungi	Ascomycota	Sordariomycetes	Hypocreales	NA	NA	NA
+ASV90	Fungi	Basidiomycota	Agaricomycetes	Agaricales	NA	NA	NA
+ASV91	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Acrophialophora	NA
+ASV92	Fungi	Ascomycota	Sordariomycetes	Coniochaetales	Coniochaetaceae	Coniochaeta	Coniochaeta polymorpha
+ASV93	Stramenopila	Ochrophyta	Phaeophyceae	Fucales	NA	NA	NA
+ASV94	Fungi	Basidiomycota	Agaricomycetes	Cantharellales	NA	NA	NA
+ASV95	Fungi	Ascomycota	Lecanoromycetes	Umbilicariales	NA	NA	NA
+ASV96	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Trematosphaeriaceae	Trematosphaeria	NA
+ASV97	Fungi	Ascomycota	Sordariomycetes	Xylariales	NA	NA	NA
+ASV98	Fungi	Basidiomycota	Agaricomycetes	Agaricales	NA	NA	NA
+ASV99	Metazoa	Platyhelminthes	Cestoda	Cyclophyllidea	NA	NA	NA
+ASV100	Fungi	Basidiomycota	Agaricomycetes	Agaricales	NA	NA	NA
+ASV101	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	NA	NA
+ASV102	Fungi	Ascomycota	Sordariomycetes	Sordariales	NA	NA	NA
+ASV103	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Preussia	Preussia fleischhakii
+ASV104	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	NA	NA
+ASV105	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Collariella	Collariella causiiformis
+ASV106	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV107	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	NA	NA	NA
+ASV108	Fungi	NA	NA	NA	NA	NA	NA
+ASV109	Fungi	Basidiomycota	Agaricomycetes	Agaricales	NA	NA	NA
+ASV110	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV111	NA	NA	NA	NA	NA	NA	NA
+ASV112	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Preussia	Preussia fleischhakii
+ASV113	Fungi	Ascomycota	Dothideomycetes	Botryosphaeriales	NA	NA	NA
+ASV114	Fungi	Ascomycota	Leotiomycetes	Helotiales	Rutstroemiaceae	NA	NA
+ASV115	Fungi	Ascomycota	Archaeorhizomycetes	Archaeorhizomycetales	Archaeorhizomycetaceae	Archaeorhizomyces	NA
+ASV116	Fungi	Ascomycota	Archaeorhizomycetes	Archaeorhizomycetales	Archaeorhizomycetaceae	Archaeorhizomyces	NA
+ASV117	Fungi	NA	NA	NA	NA	NA	NA
+ASV118	Fungi	Ascomycota	Dothideomycetes	Capnodiales	NA	NA	NA
+ASV119	Fungi	Ascomycota	Leotiomycetes	Helotiales	NA	NA	NA
+ASV120	Fungi	Basidiobolomycota	Basidiobolomycetes	Basidiobolales	Basidiobolaceae	Basidiobolus	Basidiobolus ranarum
+ASV121	Fungi	Mortierellomycota	NA	NA	NA	NA	NA
+ASV122	Fungi	Mucoromycota	Mucoromycetes	Mucorales	NA	NA	NA
+ASV123	Fungi	Basidiobolomycota	Basidiobolomycetes	Basidiobolales	Basidiobolaceae	Basidiobolus	Basidiobolus microsporus
+ASV124	Fungi	Ascomycota	Leotiomycetes	Helotiales	NA	NA	NA
+ASV125	Fungi	NA	NA	NA	NA	NA	NA
+ASV126	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Alternaria	NA
+ASV127	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymellaceae	NA	NA
+ASV128	Fungi	Ascomycota	Eurotiomycetes	Verrucariales	Verrucariaceae	Placidium	Placidium lacinulatum var erythrostratum
+ASV129	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV130	Rhizaria	Cercozoa	NA	NA	NA	NA	NA
+ASV131	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV132	Fungi	Ascomycota	Dothideomycetes	Dothideales	Aureobasidiaceae	Aureobasidium	NA
+ASV133	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV134	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	Aspergillaceae	Penicillium	Penicillium citreonigrum
+ASV135	Choanoflagellozoa	Choanoflagellata	NA	Choanoflagellida	NA	NA	NA
+ASV136	Fungi	NA	NA	NA	NA	NA	NA
+ASV137	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	NA	NA	NA
+ASV138	Fungi	Ascomycota	Sordariomycetes	Xylariales	NA	NA	NA
+ASV139	Fungi	Ascomycota	Arthoniomycetes	Lichenostigmatales	NA	NA	NA
+ASV140	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Phaeosphaeriaceae	Chaetosphaeronema	NA
+ASV141	Alveolata	Ciliophora	NA	NA	NA	NA	NA
+ASV142	Fungi	Ascomycota	Leotiomycetes	Helotiales	Rutstroemiaceae	NA	NA
+ASV143	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymosphaeriaceae	Aporospora	NA
+ASV144	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV145	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	NA	NA	NA
+ASV146	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	Elaphomycetaceae	Elaphomyces	Elaphomyces muricatus
+ASV147	Fungi	Basidiomycota	Agaricomycetes	Agaricales	NA	NA	NA
+ASV148	Fungi	Basidiomycota	Tremellomycetes	Filobasidiales	Filobasidiaceae	Naganishia	NA
+ASV149	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	Thyrostroma	NA
+ASV150	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV151	Fungi	Ascomycota	Pezizomycetes	Pezizales	NA	NA	NA
+ASV152	Fungi	Ascomycota	Pezizomycetes	Pezizales	NA	NA	NA
+ASV153	Rhizaria	Cercozoa	NA	NA	NA	NA	NA
+ASV154	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Preussia	NA
+ASV155	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	NA	NA
+ASV156	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV157	Fungi	Ascomycota	Eurotiomycetes	Onygenales	NA	NA	NA
+ASV158	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	NA	NA	NA
+ASV159	Fungi	NA	NA	NA	NA	NA	NA
+ASV160	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	NA	NA	NA
+ASV161	Fungi	Ascomycota	Eurotiomycetes	Onygenales	NA	NA	NA
+ASV162	Fungi	Ascomycota	Dothideomycetes	Dothideales	Aureobasidiaceae	Aureobasidium	Aureobasidium pullulans
+ASV163	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV164	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	Herpotrichiellaceae	Coniosporium	NA
+ASV165	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV166	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	Aspergillaceae	Aspergillus	NA
+ASV167	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	Herpotrichiellaceae	Exophiala	Exophiala xenobiotica
+ASV168	Fungi	Ascomycota	Dothideomycetes	Capnodiales	Mycosphaerellaceae	NA	NA
+ASV169	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV170	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Entolomataceae	Entoloma	Entoloma halophilum
+ASV171	Fungi	Ascomycota	Lecanoromycetes	Acarosporales	NA	NA	NA
+ASV172	Fungi	NA	NA	NA	NA	NA	NA
+ASV173	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV174	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV175	Fungi	Ascomycota	Sordariomycetes	Xylariales	NA	NA	NA
+ASV176	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Coniothyriaceae	Coniothyrium	Coniothyrium telephii
+ASV177	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV178	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	Aspergillaceae	Aspergillus	NA
+ASV179	Fungi	Basidiomycota	Tremellomycetes	Tremellales	NA	NA	NA
+ASV180	Fungi	Ascomycota	Lecanoromycetes	Umbilicariales	NA	NA	NA
+ASV181	Fungi	Basidiomycota	Agaricomycetes	Cantharellales	Ceratobasidiaceae	Ceratobasidium	NA
+ASV182	Fungi	Basidiobolomycota	Basidiobolomycetes	Basidiobolales	Basidiobolaceae	Basidiobolus	Basidiobolus ranarum
+ASV183	Fungi	NA	NA	NA	NA	NA	NA
+ASV184	Fungi	NA	NA	NA	NA	NA	NA
+ASV185	Fungi	Basidiomycota	Tremellomycetes	Filobasidiales	Filobasidiaceae	Naganishia	NA
+ASV186	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Curvularia	NA
+ASV187	Alveolata	Dinophyta	Dinophyceae	Prorocentrales	NA	NA	NA
+ASV188	Fungi	Basidiobolomycota	Basidiobolomycetes	Basidiobolales	Basidiobolaceae	Basidiobolus	Basidiobolus microsporus
+ASV189	Fungi	Ascomycota	Dothideomycetes	Dothideales	NA	NA	NA
+ASV190	Fungi	Ascomycota	Leotiomycetes	Helotiales	NA	NA	NA
+ASV191	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Alternaria	Alternaria eureka
+ASV192	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Preussia	NA
+ASV193	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV194	Fungi	Ascomycota	Eurotiomycetes	Onygenales	NA	NA	NA
+ASV195	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Chaetomium	Chaetomium seminis-citrulli
+ASV196	Fungi	Basidiomycota	Agaricomycetes	Cantharellales	Ceratobasidiaceae	NA	NA
+ASV197	Fungi	NA	NA	NA	NA	NA	NA
+ASV198	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymosphaeriaceae	Pseudopithomyces	NA
+ASV199	Fungi	Ascomycota	Dothideomycetes	Dothideales	NA	NA	NA
+ASV200	Fungi	Ascomycota	Lecanoromycetes	Lecanorales	NA	NA	NA
+ASV201	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV202	Fungi	Mucoromycota	Mucoromycetes	Mucorales	NA	NA	NA
+ASV203	Fungi	Basidiomycota	Tremellomycetes	Tremellales	NA	NA	NA
+ASV204	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Botryotrichum	NA
+ASV205	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV206	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV207	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV208	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Preussia	NA
+ASV209	Choanoflagellozoa	Choanoflagellata	NA	Choanoflagellida	NA	NA	NA
+ASV210	Fungi	Ascomycota	Sordariomycetes	Sordariales	Lasiosphaeriaceae	Fimetariella	Fimetariella rabenhorstii
+ASV211	Fungi	Ascomycota	Dothideomycetes	Dothideales	NA	NA	NA
+ASV212	Fungi	Ascomycota	Arthoniomycetes	Lichenostigmatales	Phaeococcomycetaceae	Phaeococcomyces	Phaeococcomyces mexicanus
+ASV213	Fungi	Ascomycota	Pezizomycetes	NA	NA	NA	NA
+ASV214	Fungi	Ascomycota	Leotiomycetes	Helotiales	NA	NA	NA
+ASV215	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV216	Fungi	Ascomycota	Pezizomycetes	NA	NA	NA	NA
+ASV217	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	Herpotrichiellaceae	Coniosporium	Coniosporium apollinis
+ASV218	Fungi	Ascomycota	Arthoniomycetes	Lichenostigmatales	Phaeococcomycetaceae	Phaeococcomyces	Phaeococcomyces mexicanus
+ASV219	Rhizaria	Cercozoa	NA	NA	NA	NA	NA
+ASV220	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV221	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymosphaeriaceae	Deniquelata	Deniquelata barringtoniae
+ASV222	Fungi	NA	NA	NA	NA	NA	NA
+ASV223	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV224	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	Herpotrichiellaceae	NA	NA
+ASV225	Fungi	Ascomycota	Sordariomycetes	NA	NA	NA	NA
+ASV226	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Preussia	Preussia fleischhakii
+ASV227	Fungi	Ascomycota	Sordariomycetes	NA	NA	NA	NA
+ASV228	Fungi	Ascomycota	Dothideomycetes	Tubeufiales	NA	NA	NA
+ASV229	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV230	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Trematosphaeriaceae	Trematosphaeria	NA
+ASV231	Fungi	Ascomycota	Eurotiomycetes	Onygenales	NA	NA	NA
+ASV232	Fungi	Ascomycota	Sordariomycetes	Xylariales	NA	NA	NA
+ASV233	Fungi	Ascomycota	Leotiomycetes	Helotiales	NA	NA	NA
+ASV234	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	NA	NA	NA
+ASV235	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV236	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV237	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	Herpotrichiellaceae	Coniosporium	Coniosporium apollinis
+ASV238	Fungi	Ascomycota	Dothideomycetes	NA	NA	Catenulomyces	Catenulomyces convolutus
+ASV239	Fungi	Ascomycota	Dothideomycetes	Botryosphaeriales	Botryosphaeriaceae	Microdiplodia	NA
+ASV240	Fungi	NA	NA	NA	NA	NA	NA
+ASV241	Fungi	NA	NA	NA	NA	NA	NA
+ASV242	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV243	Fungi	NA	NA	NA	NA	NA	NA
+ASV244	Fungi	Rozellomycota	NA	NA	NA	NA	NA
+ASV245	Fungi	NA	NA	NA	NA	NA	NA
+ASV246	Fungi	NA	NA	NA	NA	NA	NA
+ASV247	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	Aspergillaceae	Aspergillus	Aspergillus granulosus
+ASV248	Fungi	Ascomycota	Dothideomycetes	Botryosphaeriales	Botryosphaeriaceae	Macrophomina	Macrophomina phaseolina
+ASV249	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Thielavia	NA
+ASV250	Fungi	Ascomycota	Pezizomycetes	Pezizales	NA	NA	NA
+ASV251	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV252	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV253	Fungi	Mortierellomycota	Mortierellomycetes	Mortierellales	Mortierellaceae	Mortierella	NA
+ASV254	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV255	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Exserohilum	NA
+ASV256	Fungi	Ascomycota	Dothideomycetes	Capnodiales	Mycosphaerellaceae	Mycosphaerella	NA
+ASV257	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	NA	NA
+ASV258	Fungi	NA	NA	NA	NA	NA	NA
+ASV259	NA	NA	NA	NA	NA	NA	NA
+ASV260	Fungi	Ascomycota	Eurotiomycetes	Onygenales	Onygenaceae	Mallochia	Mallochia reticulata
+ASV261	Fungi	Ascomycota	Sordariomycetes	NA	NA	NA	NA
+ASV262	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV263	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	NA	NA	NA
+ASV264	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	NA	NA	NA
+ASV265	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	NA	NA
+ASV266	Fungi	NA	NA	NA	NA	NA	NA
+ASV267	Fungi	Ascomycota	Sordariomycetes	Xylariales	NA	NA	NA
+ASV268	Fungi	Ascomycota	Sordariomycetes	Sordariales	Sordariaceae	NA	NA
+ASV269	Rhizaria	Cercozoa	NA	NA	NA	NA	NA
+ASV270	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV271	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Sporormiella	Sporormiella septenaria
+ASV272	Fungi	Mortierellomycota	Mortierellomycetes	Mortierellales	Mortierellaceae	Mortierella	NA
+ASV273	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV274	Fungi	Ascomycota	Lecanoromycetes	Lecanorales	NA	NA	NA
+ASV275	Fungi	Blastocladiomycota	Blastocladiomycetes	Blastocladiales	NA	NA	NA
+ASV276	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	NA	NA	NA
+ASV277	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV278	Fungi	Ascomycota	Eurotiomycetes	Verrucariales	Verrucariaceae	Placidium	Placidium lacinulatum var lacinulatum
+ASV279	Fungi	Basidiomycota	Agaricomycetes	Agaricales	NA	NA	NA
+ASV280	Fungi	NA	NA	NA	NA	NA	NA
+ASV281	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Stemphylium	NA
+ASV282	Fungi	Ascomycota	Dothideomycetes	Dothideales	NA	NA	NA
+ASV283	Fungi	NA	NA	NA	NA	NA	NA
+ASV284	Fungi	Ascomycota	Dothideomycetes	Capnodiales	Mycosphaerellaceae	Mycocentrospora	NA
+ASV285	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV286	Fungi	Ascomycota	Dothideomycetes	Tubeufiales	NA	NA	NA
+ASV287	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Chaetomium	NA
+ASV288	Fungi	Ascomycota	Sordariomycetes	NA	NA	NA	NA
+ASV289	Fungi	Ascomycota	Pezizomycetes	Pezizales	NA	NA	NA
+ASV290	Alveolata	Ciliophora	Oligohymenophorea	Peniculida	NA	NA	NA
+ASV291	Fungi	Ascomycota	Dothideomycetes	Tubeufiales	NA	NA	NA
+ASV292	Fungi	Ascomycota	Sordariomycetes	Sordariales	Sordariaceae	Neurospora	Neurospora crassa
+ASV293	Fungi	Ascomycota	Lecanoromycetes	Teloschistales	NA	NA	NA
+ASV294	Fungi	Basidiomycota	Tremellomycetes	NA	NA	NA	NA
+ASV295	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV296	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Periconiaceae	Periconia	Periconia macrospinosa
+ASV297	Fungi	Mortierellomycota	Mortierellomycetes	Mortierellales	Mortierellaceae	Mortierella	Mortierella alpina
+ASV298	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	Herpotrichiellaceae	Coniosporium	Coniosporium apollinis
+ASV299	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymellaceae	Phoma	NA
+ASV300	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Dictyosporiaceae	Dictyosporium	Dictyosporium heptasporum
+ASV301	Fungi	Ascomycota	Dothideomycetes	Capnodiales	Mycosphaerellaceae	NA	NA
+ASV302	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV303	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV304	Fungi	Ascomycota	Dothideomycetes	Capnodiales	NA	NA	NA
+ASV305	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Cortinariaceae	Cortinarius	Cortinarius diasemospermus
+ASV306	Viridiplantae	Chlorophyta	Trebouxiophyceae	Chlorellales	NA	NA	NA
+ASV307	Fungi	Ascomycota	Dothideomycetes	Capnodiales	Mycosphaerellaceae	Mycosphaerella	NA
+ASV308	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymosphaeriaceae	Deniquelata	Deniquelata barringtoniae
+ASV309	Stramenopila	Ochrophyta	Phaeophyceae	Fucales	NA	NA	NA
+ASV310	Viridiplantae	Marchantiophyta	Jungermanniopsida	Porellales	NA	NA	NA
+ASV311	Fungi	Basidiomycota	Agaricomycetes	Cantharellales	Ceratobasidiaceae	NA	NA
+ASV312	Fungi	NA	NA	NA	NA	NA	NA
+ASV313	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV314	Fungi	Mortierellomycota	Mortierellomycetes	Mortierellales	Mortierellaceae	Mortierella	NA
+ASV315	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Ovatospora	Ovatospora unipora
+ASV316	Fungi	Ascomycota	Pezizomycetes	Pezizales	Ascobolaceae	NA	NA
+ASV317	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV318	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Preussia	NA
+ASV319	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	NA	NA	NA
+ASV320	Fungi	Ascomycota	Leotiomycetes	Helotiales	NA	NA	NA
+ASV321	Fungi	NA	NA	NA	NA	NA	NA
+ASV322	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	NA	NA
+ASV323	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV324	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymosphaeriaceae	Verrucoconiothyrium	Verrucoconiothyrium prosopidis
+ASV325	Stramenopila	Ochrophyta	Bacillariophyceae	Lithodesmiales	NA	NA	NA
+ASV326	Cryptista	Cryptophyta	NA	Pyrenomonadales	NA	NA	NA
+ASV327	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV328	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV329	Fungi	Mortierellomycota	Mortierellomycetes	Mortierellales	Mortierellaceae	Mortierella	NA
+ASV330	Fungi	Ascomycota	Eurotiomycetes	Verrucariales	Verrucariaceae	Placidium	Placidium lacinulatum var lacinulatum
+ASV331	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV332	Fungi	Ascomycota	Pezizomycetes	NA	NA	NA	NA
+ASV333	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV334	Fungi	Ascomycota	Pezizomycetes	NA	NA	NA	NA
+ASV335	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV336	Fungi	NA	NA	NA	NA	NA	NA
+ASV337	Rhizaria	Cercozoa	NA	NA	NA	NA	NA
+ASV338	Alveolata	Apicomplexa	Coccidia	Eucoccidiorida	NA	NA	NA
+ASV339	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV340	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV341	Fungi	Mortierellomycota	Mortierellomycetes	Mortierellales	Mortierellaceae	Mortierella	NA
+ASV342	Fungi	Ascomycota	Sordariomycetes	Hypocreales	Stachybotryaceae	NA	NA
+ASV343	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Chaetomidium	Chaetomidium arxii
+ASV344	Fungi	Basidiomycota	Agaricomycetes	Agaricales	NA	NA	NA
+ASV345	Fungi	Ascomycota	Lecanoromycetes	Lecanorales	NA	NA	NA
+ASV346	Fungi	Ascomycota	Eurotiomycetes	Onygenales	Onygenaceae	Amauroascus	Amauroascus kuehnii
+ASV347	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV348	Fungi	NA	NA	NA	NA	NA	NA
+ASV349	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Sporormia	NA
+ASV350	Fungi	Ascomycota	Pezizomycetes	Pezizales	NA	NA	NA
+ASV351	Metazoa	Platyhelminthes	Trematoda	Monopisthocotylea	NA	NA	NA
+ASV352	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Curvularia	Curvularia affinis
+ASV353	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV354	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Thielavia	Thielavia subthermophila
+ASV355	Fungi	Basidiomycota	Microbotryomycetes	Sporidiobolales	Sporidiobolaceae	Rhodotorula	NA
+ASV356	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Preussia	NA
+ASV357	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV358	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV359	Metazoa	Nematoda	Dorylaimea	Dorylaimida	NA	NA	NA
+ASV360	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	NA	NA	NA
+ASV361	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymosphaeriaceae	Deniquelata	Deniquelata barringtoniae
+ASV362	Metazoa	Porifera	Demospongiae	Verongida	NA	NA	NA
+ASV363	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Phaeosphaeriaceae	Chaetosphaeronema	NA
+ASV364	Fungi	Olpidiomycota	Olpidiomycetes	Olpidiales	Olpidiaceae	Olpidium	Olpidium brassicae
+ASV365	Fungi	Ascomycota	Lecanoromycetes	Lecideales	Lecideaceae	Lecidea	Lecidea laboriosa
+ASV366	Fungi	Ascomycota	Lecanoromycetes	Trapeliales	NA	NA	NA
+ASV367	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Thielavia	Thielavia inaequalis
+ASV368	Metazoa	Mollusca	Bivalvia	Ostreoida	NA	NA	NA
+ASV369	Fungi	Basidiomycota	Agaricomycetes	Thelephorales	Thelephoraceae	Tomentella	Tomentella terrestris
+ASV370	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV371	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Preussia	NA
+ASV372	Metazoa	Arthropoda	Malacostraca	Decapoda	NA	NA	NA
+ASV373	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	NA	NA
+ASV374	Fungi	NA	NA	NA	NA	NA	NA
+ASV375	Fungi	Ascomycota	Dothideomycetes	Capnodiales	Cladosporiaceae	Cladosporium	NA
+ASV376	Fungi	NA	NA	NA	NA	NA	NA
+ASV377	Fungi	Basidiomycota	Tremellomycetes	Tremellales	Bulleribasidiaceae	Vishniacozyma	Vishniacozyma victoriae
+ASV378	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV379	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV380	Fungi	Basidiomycota	Tremellomycetes	Filobasidiales	Filobasidiaceae	Filobasidium	Filobasidium magnum
+ASV381	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV382	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	NA	NA
+ASV383	NA	NA	NA	NA	NA	NA	NA
+ASV384	Metazoa	Arthropoda	Insecta	Hemiptera	NA	NA	NA
+ASV385	Rhodoplantae	Rhodophyta	Bangiophyceae	Bangiales	NA	NA	NA
+ASV386	Metazoa	Arthropoda	Insecta	Diptera	NA	NA	NA
+ASV387	Fungi	Basidiomycota	Tremellomycetes	NA	NA	NA	NA
+ASV388	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	NA	NA
+ASV389	Fungi	Ascomycota	Leotiomycetes	Helotiales	NA	NA	NA
+ASV390	Rhizaria	Cercozoa	NA	NA	NA	NA	NA
+ASV391	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV392	Fungi	Ascomycota	Lecanoromycetes	Peltigerales	NA	NA	NA
+ASV393	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV394	Stramenopila	Ochrophyta	Bacillariophyceae	Lithodesmiales	NA	NA	NA
+ASV395	Fungi	NA	NA	NA	NA	NA	NA
+ASV396	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV397	Fungi	NA	NA	NA	NA	NA	NA
+ASV398	Fungi	Ascomycota	Sordariomycetes	NA	NA	NA	NA
+ASV399	Fungi	Ascomycota	Dothideomycetes	Mytilinidales	Gloniaceae	Cenococcum	Cenococcum geophilum
+ASV400	Fungi	Basidiomycota	Tremellomycetes	Tremellales	Trimorphomycetaceae	Saitozyma	Saitozyma paraflava
+ASV401	Fungi	NA	NA	NA	NA	NA	NA
+ASV402	Fungi	Ascomycota	Sordariomycetes	NA	NA	NA	NA
+ASV403	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	Trichocomaceae	Talaromyces	NA
+ASV404	Viridiplantae	Anthophyta	Eudicotyledonae	Fabales	NA	NA	NA
+ASV405	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV406	Fungi	Ascomycota	Eurotiomycetes	Onygenales	Onygenaceae	Mallochia	Mallochia reticulata
+ASV407	Fungi	Ascomycota	Sordariomycetes	Xylariales	NA	NA	NA
+ASV408	Fungi	NA	NA	NA	NA	NA	NA
+ASV409	Fungi	Ascomycota	Sordariomycetes	Sordariales	NA	NA	NA
+ASV410	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Preussia	NA
+ASV411	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Agaricaceae	Tulostoma	NA
+ASV412	Fungi	Ascomycota	Lecanoromycetes	Acarosporales	NA	NA	NA
+ASV413	Fungi	Olpidiomycota	Olpidiomycetes	Olpidiales	Olpidiaceae	NA	NA
+ASV414	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	NA	NA	NA
+ASV415	Fungi	NA	NA	NA	NA	NA	NA
+ASV416	Fungi	Basidiomycota	Agaricomycetes	Agaricales	NA	NA	NA
+ASV417	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV418	Fungi	Ascomycota	Sordariomycetes	Hypocreales	NA	NA	NA
+ASV419	Fungi	NA	NA	NA	NA	NA	NA
+ASV420	Fungi	Basidiomycota	Tremellomycetes	Filobasidiales	Piskurozymaceae	Solicoccozyma	Solicoccozyma aeria
+ASV421	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Acrophialophora	Acrophialophora levis
+ASV422	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	NA	NA
+ASV423	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	Aspergillaceae	Aspergillus	NA
+ASV424	Fungi	Ascomycota	Dothideomycetes	Venturiales	Venturiaceae	Venturia	NA
+ASV425	Fungi	Ascomycota	Sordariomycetes	NA	NA	NA	NA
+ASV426	Alveolata	Apicomplexa	Coccidia	Eucoccidiorida	NA	NA	NA
+ASV427	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV428	Metazoa	Arthropoda	Malacostraca	Decapoda	NA	NA	NA
+ASV429	Fungi	Ascomycota	Lecanoromycetes	Umbilicariales	NA	NA	NA
+ASV430	Stramenopila	Oomycota	Oomycetes	Peronosporales	NA	NA	NA
+ASV431	Fungi	Basidiomycota	Agaricomycetes	Agaricales	NA	NA	NA
+ASV432	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV433	Fungi	Mucoromycota	Mucoromycetes	Mucorales	NA	NA	NA
+ASV434	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV435	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Sporormiella	NA
+ASV436	Fungi	Basidiomycota	Agaricomycetes	Boletales	Boletaceae	Aureoboletus	Aureoboletus mirabilis
+ASV437	Fungi	Ascomycota	Sordariomycetes	Sordariales	NA	NA	NA
+ASV438	Fungi	Ascomycota	Taphrinomycetes	Taphrinales	Protomycetaceae	Saitoella	Saitoella coloradoensis
+ASV439	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	NA	NA
+ASV440	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV441	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Bipolaris	Bipolaris papendorfii
+ASV442	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV443	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	NA	NA	NA
+ASV444	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV445	Fungi	Basidiomycota	Agaricomycetes	Auriculariales	NA	NA	NA
+ASV446	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV447	Fungi	Ascomycota	Dothideomycetes	NA	NA	Catenulomyces	Catenulomyces convolutus
+ASV448	Fungi	Ascomycota	Dothideomycetes	Dothideales	Aureobasidiaceae	Kabatiella	NA
+ASV449	Fungi	NA	NA	NA	NA	NA	NA
+ASV450	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	Herpotrichiellaceae	NA	NA
+ASV451	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV452	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV453	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV454	Fungi	Ascomycota	Arthoniomycetes	Lichenostigmatales	Phaeococcomycetaceae	Phaeococcomyces	Phaeococcomyces mexicanus
+ASV455	Fungi	Mucoromycota	Mucoromycetes	Mucorales	Rhizopodaceae	Rhizopus	Rhizopus microsporus
+ASV456	Fungi	Ascomycota	Sordariomycetes	NA	NA	NA	NA
+ASV457	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	Herpotrichiellaceae	Coniosporium	Coniosporium apollinis
+ASV458	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV459	Fungi	Ascomycota	Arthoniomycetes	Lichenostigmatales	Phaeococcomycetaceae	Phaeococcomyces	NA
+ASV460	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV461	Choanoflagellozoa	Choanoflagellata	NA	Choanoflagellida	NA	NA	NA
+ASV462	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV463	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV464	Fungi	Ascomycota	Pezizomycetes	Pezizales	NA	NA	NA
+ASV465	Fungi	Ascomycota	Pezizomycetes	Pezizales	Pezizaceae	NA	NA
+ASV466	Fungi	Basidiomycota	Tremellomycetes	Filobasidiales	Piskurozymaceae	Solicoccozyma	Solicoccozyma aeria
+ASV467	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Preussia	NA
+ASV468	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	Neophaeococcomyces	NA
+ASV469	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV470	Fungi	Ascomycota	Lecanoromycetes	Lecanorales	NA	NA	NA
+ASV471	Fungi	Ascomycota	Lecanoromycetes	Lecanorales	NA	NA	NA
+ASV472	Fungi	Ascomycota	Dothideomycetes	Botryosphaeriales	NA	NA	NA
+ASV473	Ichthyosporia	NA	Ichthyosporea	Dermocystida	NA	NA	NA
+ASV474	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Phaeosphaeriaceae	Chaetosphaeronema	NA
+ASV475	Fungi	Ascomycota	Pezizomycetes	Pezizales	NA	NA	NA
+ASV476	Fungi	Ascomycota	Dothideomycetes	Capnodiales	NA	NA	NA
+ASV477	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV478	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV479	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV480	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV481	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV482	NA	NA	NA	NA	NA	NA	NA
+ASV483	Alveolata	Apicomplexa	Coccidia	Eucoccidiorida	NA	NA	NA
+ASV484	Fungi	Mucoromycota	Mucoromycetes	Mucorales	Rhizopodaceae	Rhizopus	NA
+ASV485	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV486	Fungi	Basidiomycota	Pucciniomycetes	Pucciniales	NA	NA	NA
+ASV487	Fungi	NA	NA	NA	NA	NA	NA
+ASV488	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV489	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV490	Fungi	Ascomycota	Sordariomycetes	Xylariales	NA	NA	NA
+ASV491	Fungi	Basidiomycota	Tremellomycetes	Tremellales	NA	NA	NA
+ASV492	Fungi	Ascomycota	Sordariomycetes	NA	NA	NA	NA
+ASV493	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymosphaeriaceae	Deniquelata	Deniquelata barringtoniae
+ASV494	Fungi	NA	NA	NA	NA	NA	NA
+ASV495	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV496	Alveolata	Apicomplexa	Coccidia	Eucoccidiorida	NA	NA	NA
+ASV497	Fungi	Mortierellomycota	Mortierellomycetes	Mortierellales	Mortierellaceae	Mortierella	NA
+ASV498	Fungi	Ascomycota	Pezizomycetes	Pezizales	NA	NA	NA
+ASV499	Fungi	Ascomycota	Dothideomycetes	Capnodiales	NA	NA	NA
+ASV500	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV501	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymellaceae	Phoma	NA
+ASV502	Viridiplantae	Chlorophyta	Mamiellophyceae	Mamiellales	NA	NA	NA
+ASV503	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV504	Fungi	NA	NA	NA	NA	NA	NA
+ASV505	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Sporormiella	Sporormiella intermedia
+ASV506	Fungi	Mortierellomycota	Mortierellomycetes	Mortierellales	Mortierellaceae	Mortierella	Mortierella wolfii
+ASV507	Alveolata	Ciliophora	NA	NA	NA	NA	NA
+ASV508	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV509	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	Aspergillaceae	Aspergillus	NA
+ASV510	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV511	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV512	Fungi	Ascomycota	Dothideomycetes	Dothideales	Aureobasidiaceae	NA	NA
+ASV513	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV514	Fungi	Basidiomycota	Agaricomycetes	Corticiales	Corticiaceae	NA	NA
+ASV515	Fungi	NA	NA	NA	NA	NA	NA
+ASV516	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	NA	NA
+ASV517	Fungi	Ascomycota	Sordariomycetes	Xylariales	NA	NA	NA
+ASV518	Fungi	Ascomycota	Eurotiomycetes	Onygenales	NA	NA	NA
+ASV519	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV520	Fungi	Ascomycota	Dothideomycetes	Tubeufiales	NA	NA	NA
+ASV521	Fungi	Mortierellomycota	Mortierellomycetes	Mortierellales	Mortierellaceae	Mortierella	Mortierella exigua
+ASV522	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Chaetomium	Chaetomium jodhpurense
+ASV523	Fungi	Ascomycota	Pezizomycetes	Pezizales	NA	NA	NA
+ASV524	Viridiplantae	Chlorophyta	Mamiellophyceae	Mamiellales	NA	NA	NA
+ASV525	Fungi	Basidiomycota	Agaricomycetes	Agaricales	NA	NA	NA
+ASV526	Viridiplantae	Chlorophyta	NA	NA	NA	NA	NA
+ASV527	Viridiplantae	Chlorophyta	Nephroselmidophyceae	Nephroselmidales	NA	NA	NA
+ASV528	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV529	Fungi	Ascomycota	Lecanoromycetes	Acarosporales	NA	NA	NA
+ASV530	Alveolata	Ciliophora	Oligohymenophorea	Astomatida	NA	NA	NA
+ASV531	Viridiplantae	Marchantiophyta	Jungermanniopsida	Porellales	NA	NA	NA
+ASV532	Ichthyosporia	NA	Ichthyosporea	Dermocystida	NA	NA	NA
+ASV533	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	Aspergillaceae	Aspergillus	Aspergillus granulosus
+ASV534	Fungi	Basidiomycota	Agaricomycetes	Agaricales	NA	NA	NA
+ASV535	Fungi	Ascomycota	Eurotiomycetes	Onygenales	NA	NA	NA
+ASV536	Fungi	NA	NA	NA	NA	NA	NA
+ASV537	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	Bahusakala	NA
+ASV538	Viridiplantae	Chlorophyta	NA	NA	NA	NA	NA
+ASV539	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV540	Metazoa	Arthropoda	Insecta	Diptera	NA	NA	NA
+ASV541	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV542	Fungi	NA	NA	NA	NA	NA	NA
+ASV543	Ichthyosporia	NA	Ichthyosporea	Dermocystida	NA	NA	NA
+ASV544	Fungi	Ascomycota	Eurotiomycetes	Verrucariales	NA	NA	NA
+ASV545	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV546	Rhizaria	Cercozoa	NA	NA	NA	NA	NA
+ASV547	Fungi	Ascomycota	Taphrinomycetes	Taphrinales	NA	NA	NA
+ASV548	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV549	Alveolata	Dinophyta	Dinophyceae	Prorocentrales	NA	NA	NA
+ASV550	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV551	Fungi	Basidiomycota	Agaricomycetes	Cantharellales	Cantharellaceae	Craterellus	Craterellus tubaeformis
+ASV552	Fungi	NA	NA	NA	NA	NA	NA
+ASV553	Rhizaria	Cercozoa	NA	NA	NA	NA	NA
+ASV554	Metazoa	Cnidaria	Hydrozoa	Hydroidolina	NA	NA	NA
+ASV555	Metazoa	Arthropoda	Insecta	Diptera	NA	NA	NA
+ASV556	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Trematosphaeriaceae	Trematosphaeria	NA
+ASV557	Cryptista	Cryptophyta	NA	Pyrenomonadales	NA	NA	NA
+ASV558	Fungi	Basidiomycota	Tremellomycetes	Filobasidiales	Filobasidiaceae	Naganishia	Naganishia bhutanensis
+ASV559	Ichthyosporia	NA	Ichthyosporea	Dermocystida	NA	NA	NA
+ASV560	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV561	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV562	Metazoa	Arthropoda	Insecta	Diptera	NA	NA	NA
+ASV563	Alveolata	Dinophyta	Dinophyceae	Prorocentrales	NA	NA	NA
+ASV564	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV565	Ichthyosporia	NA	Ichthyosporea	Dermocystida	NA	NA	NA
+ASV566	Rhizaria	Cercozoa	NA	NA	NA	NA	NA
+ASV567	Fungi	Ascomycota	Pezizomycetes	Pezizales	Pyronemataceae	Scutellinia	NA
+ASV568	Fungi	Ascomycota	Dothideomycetes	Capnodiales	Cladosporiaceae	Cladosporium	NA
+ASV569	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV570	Fungi	Ascomycota	Eurotiomycetes	Verrucariales	Verrucariaceae	NA	NA
+ASV571	Fungi	Ascomycota	Dothideomycetes	Dothideales	NA	NA	NA
+ASV572	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Sporormiella	Sporormiella similis
+ASV573	Fungi	Basidiomycota	Agaricomycetes	Agaricales	NA	NA	NA
+ASV574	NA	NA	NA	NA	NA	NA	NA
+ASV575	Fungi	Ascomycota	Lecanoromycetes	Lecanorales	NA	NA	NA
+ASV576	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymosphaeriaceae	Pseudopithomyces	Pseudopithomyces chartarum
+ASV577	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV578	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Sporormiella	Sporormiella septenaria
+ASV579	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV580	Fungi	Ascomycota	Lecanoromycetes	Peltigerales	NA	NA	NA
+ASV581	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Alternaria	NA
+ASV582	Fungi	Ascomycota	Eurotiomycetes	Onygenales	Gymnoascaceae	Gymnoascus	Gymnoascus reessii
+ASV583	Fungi	NA	NA	NA	NA	NA	NA
+ASV584	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV585	Fungi	Basidiomycota	Tremellomycetes	Filobasidiales	Filobasidiaceae	Naganishia	Naganishia randhawae
+ASV586	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV587	Fungi	Mortierellomycota	Mortierellomycetes	Mortierellales	Mortierellaceae	Mortierella	NA
+ASV588	Metazoa	Nematoda	Dorylaimea	Dorylaimida	NA	NA	NA
+ASV589	Fungi	Ascomycota	Dothideomycetes	Dothideales	NA	NA	NA
+ASV590	Alveolata	Apicomplexa	Coccidia	Eucoccidiorida	NA	NA	NA
+ASV591	Fungi	Ascomycota	Sordariomycetes	Hypocreales	Nectriaceae	NA	NA
+ASV592	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV593	Metazoa	Arthropoda	Insecta	Diptera	NA	NA	NA
+ASV594	Fungi	Ascomycota	Dothideomycetes	Dothideales	NA	NA	NA
+ASV595	Fungi	Ascomycota	Lecanoromycetes	Peltigerales	NA	NA	NA
+ASV596	Fungi	NA	NA	NA	NA	NA	NA
+ASV597	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV598	Fungi	NA	NA	NA	NA	NA	NA
+ASV599	Fungi	Ascomycota	Eurotiomycetes	Verrucariales	NA	NA	NA
+ASV600	Viridiplantae	Chlorophyta	Mamiellophyceae	Mamiellales	NA	NA	NA
+ASV601	Viridiplantae	Chlorophyta	Mamiellophyceae	Mamiellales	NA	NA	NA
+ASV602	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	NA	NA
+ASV603	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	Aspergillaceae	Aspergillus	NA
+ASV604	Fungi	Basidiomycota	Tremellomycetes	Tremellales	Rhynchogastremataceae	NA	NA
+ASV605	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Preussia	NA
+ASV606	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV607	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Tetraplosphaeriaceae	NA	NA
+ASV608	Stramenopila	Oomycota	Oomycetes	Peronosporales	NA	NA	NA
+ASV609	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Dictyosporiaceae	Dictyosporium	Dictyosporium heptasporum
+ASV610	Fungi	Basidiomycota	Agaricomycetes	Thelephorales	Thelephoraceae	Tomentella	Tomentella terrestris
+ASV611	Metazoa	Arthropoda	Malacostraca	Amphipoda	NA	NA	NA
+ASV612	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV613	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV614	Alveolata	Apicomplexa	Coccidia	Eucoccidiorida	NA	NA	NA
+ASV615	Fungi	NA	NA	NA	NA	NA	NA
+ASV616	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	Aspergillaceae	Aspergillus	NA
+ASV617	Metazoa	Arthropoda	Malacostraca	Amphipoda	NA	NA	NA
+ASV618	Fungi	Ascomycota	Dothideomycetes	Tubeufiales	NA	NA	NA
+ASV619	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymosphaeriaceae	Paracamarosporium	Paracamarosporium leucadendri
+ASV620	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Curvularia	NA
+ASV621	Fungi	Basidiomycota	Tremellomycetes	Filobasidiales	Filobasidiaceae	Filobasidium	Filobasidium chernovii
+ASV622	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV623	Fungi	NA	NA	NA	NA	NA	NA
+ASV624	Metazoa	Craniata	Actinopterygii	Perciformes	NA	NA	NA
+ASV625	Fungi	Ascomycota	Lecanoromycetes	Umbilicariales	NA	NA	NA
+ASV626	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymellaceae	NA	NA
+ASV627	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV628	Viridiplantae	Chlorophyta	NA	NA	NA	NA	NA
+ASV629	Fungi	Ascomycota	Dothideomycetes	Dothideales	NA	NA	NA
+ASV630	Choanoflagellozoa	Choanoflagellata	NA	Choanoflagellida	NA	NA	NA
+ASV631	Fungi	Ascomycota	Sordariomycetes	NA	NA	NA	NA
+ASV632	Stramenopila	Oomycota	Oomycetes	Saprolegniales	NA	NA	NA
+ASV633	Metazoa	Annelida	Clitellata	Enchytraeida	NA	NA	NA
+ASV634	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Preussia	Preussia persica
+ASV635	Fungi	Calcarisporiellomycota	Calcarisporiellomycetes	Calcarisporiellales	Calcarisporiellaceae	Calcarisporiella	NA
+ASV636	Fungi	Ascomycota	Sordariomycetes	Sordariales	Lasiosphaeriaceae	NA	NA
+ASV637	Fungi	Basidiomycota	Tremellomycetes	Tremellales	Tremellaceae	NA	NA
+ASV638	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV639	Stramenopila	Oomycota	Oomycetes	Peronosporales	NA	NA	NA
+ASV640	Fungi	NA	NA	NA	NA	NA	NA
+ASV641	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Neocamarosporium	NA
+ASV642	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	NA	NA
+ASV643	Fungi	Ascomycota	Dothideomycetes	Myriangiales	NA	NA	NA
+ASV644	Fungi	Mortierellomycota	Mortierellomycetes	Mortierellales	Mortierellaceae	Mortierella	NA
+ASV645	Stramenopila	Ochrophyta	Phaeophyceae	Fucales	NA	NA	NA
+ASV646	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV647	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	NA	NA	NA
+ASV648	Metazoa	Platyhelminthes	Cestoda	Cyclophyllidea	NA	NA	NA
+ASV649	Fungi	Ascomycota	Sordariomycetes	Xylariales	NA	NA	NA
+ASV650	Rhodoplantae	Rhodophyta	Florideophyceae	Gracilariales	NA	NA	NA
+ASV651	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Inocybaceae	Inocybe	Inocybe fuscidula
+ASV652	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Preussia	Preussia fleischhakii
+ASV653	Fungi	Ascomycota	Pezizomycetes	Pezizales	Pezizaceae	Iodophanus	NA
+ASV654	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	NA	NA
+ASV655	Fungi	Ascomycota	Lecanoromycetes	Trapeliales	NA	NA	NA
+ASV656	Fungi	Ascomycota	Lecanoromycetes	Umbilicariales	NA	NA	NA
+ASV657	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV658	Fungi	Ascomycota	Pezizomycetes	Pezizales	NA	NA	NA
+ASV659	Fungi	Basidiobolomycota	Basidiobolomycetes	Basidiobolales	Basidiobolaceae	Basidiobolus	Basidiobolus ranarum
+ASV660	Fungi	Basidiomycota	Tremellomycetes	Cystofilobasidiales	Cystofilobasidiaceae	Cystofilobasidium	NA
+ASV661	Fungi	Ascomycota	Lecanoromycetes	Acarosporales	Acarosporaceae	NA	NA
+ASV662	Fungi	Ascomycota	Dothideomycetes	Capnodiales	NA	NA	NA
+ASV663	Fungi	NA	NA	NA	NA	NA	NA
+ASV664	Viridiplantae	Chlorophyta	NA	NA	NA	NA	NA
+ASV665	Fungi	Calcarisporiellomycota	Calcarisporiellomycetes	Calcarisporiellales	Calcarisporiellaceae	Calcarisporiella	NA
+ASV666	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV667	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Curvularia	Curvularia pallescens
+ASV668	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	Herpotrichiellaceae	Coniosporium	Coniosporium apollinis
+ASV669	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	NA	NA
+ASV670	Protista	NA	NA	NA	NA	NA	NA
+ASV671	Ichthyosporia	NA	Ichthyosporea	Dermocystida	NA	NA	NA
+ASV672	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV673	Metazoa	Arthropoda	Malacostraca	Amphipoda	NA	NA	NA
+ASV674	Fungi	NA	NA	NA	NA	NA	NA
+ASV675	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV676	Fungi	Ascomycota	Eurotiomycetes	Onygenales	NA	NA	NA
+ASV677	Fungi	Ascomycota	Dothideomycetes	Capnodiales	Cladosporiaceae	Cladosporium	NA
+ASV678	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV679	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV680	Fungi	Ascomycota	Orbiliomycetes	Orbiliales	NA	NA	NA
+ASV681	Fungi	Basidiomycota	Agaricomycetes	Hymenochaetales	NA	NA	NA
+ASV682	Fungi	Basidiomycota	Agaricomycetes	Russulales	NA	NA	NA
+ASV683	Fungi	Basidiomycota	Microbotryomycetes	Sporidiobolales	Sporidiobolaceae	Rhodotorula	Rhodotorula kratochvilovae
+ASV684	Fungi	Mortierellomycota	Mortierellomycetes	Mortierellales	Mortierellaceae	Mortierella	NA
+ASV685	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV686	Alveolata	Apicomplexa	Coccidia	Eucoccidiorida	NA	NA	NA
+ASV687	Fungi	Ascomycota	Sordariomycetes	Sordariales	Sordariaceae	NA	NA
+ASV688	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Curvularia	Curvularia caricae-papayae
+ASV689	Metazoa	Arthropoda	Insecta	Diptera	NA	NA	NA
+ASV690	Fungi	Ascomycota	Lecanoromycetes	Peltigerales	NA	NA	NA
+ASV691	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV692	Metazoa	Cnidaria	Hydrozoa	Hydroidolina	NA	NA	NA
+ASV693	Alveolata	Ciliophora	Spirotrichea	Sporadotrichida	NA	NA	NA
+ASV694	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Curvularia	Curvularia nicotiae
+ASV695	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Agaricaceae	Tulostoma	NA
+ASV696	Fungi	Ascomycota	Sordariomycetes	Hypocreales	NA	NA	NA
+ASV697	Rhizaria	Cercozoa	NA	NA	NA	NA	NA
+ASV698	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymosphaeriaceae	Deniquelata	Deniquelata barringtoniae
+ASV699	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	Herpotrichiellaceae	Coniosporium	Coniosporium apollinis
+ASV700	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV701	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Agaricaceae	NA	NA
+ASV702	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV703	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymellaceae	Allophoma	Allophoma labilis
+ASV704	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV705	Choanoflagellozoa	Choanoflagellata	NA	Choanoflagellida	NA	NA	NA
+ASV706	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	Trichocomaceae	Talaromyces	Talaromyces verruculosus
+ASV707	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Alternaria	NA
+ASV708	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV709	Metazoa	Arthropoda	Arachnida	Sarcoptiformes	NA	NA	NA
+ASV710	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV711	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymosphaeriaceae	Pseudopithomyces	Pseudopithomyces chartarum
+ASV712	NA	NA	NA	NA	NA	NA	NA
+ASV713	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV714	Fungi	NA	NA	NA	NA	NA	NA
+ASV715	Fungi	Ascomycota	Pezizomycetes	NA	NA	NA	NA
+ASV716	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Trematosphaeriaceae	Trematosphaeria	NA
+ASV717	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	Thyrostroma	NA
+ASV718	Fungi	Basidiomycota	Agaricomycetes	Boletales	Coniophoraceae	Coniophora	NA
+ASV719	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	Thyrostroma	NA
+ASV720	Rhizaria	Cercozoa	NA	NA	NA	NA	NA
+ASV721	Viridiplantae	Chlorophyta	NA	NA	NA	NA	NA
+ASV722	Alveolata	Apicomplexa	Coccidia	Eucoccidiorida	NA	NA	NA
+ASV723	Ichthyosporia	NA	Ichthyosporea	Dermocystida	NA	NA	NA
+ASV724	NA	NA	NA	NA	NA	NA	NA
+ASV725	Metazoa	Craniata	Actinopterygii	Perciformes	NA	NA	NA
+ASV726	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV727	Fungi	Ascomycota	Sordariomycetes	Xylariales	NA	NA	NA
+ASV728	Fungi	Basidiomycota	Tremellomycetes	Filobasidiales	Filobasidiaceae	Filobasidium	Filobasidium oeirense
+ASV729	Metazoa	Arthropoda	Insecta	Hymenoptera	NA	NA	NA
+ASV730	Fungi	Ascomycota	Lecanoromycetes	Lecanorales	NA	NA	NA
+ASV731	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Chaetomium	Chaetomium globosum
+ASV732	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	NA	NA	NA
+ASV733	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV734	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV735	Fungi	Ascomycota	Eurotiomycetes	Verrucariales	Verrucariaceae	NA	NA
+ASV736	Rhizaria	Cercozoa	NA	NA	NA	NA	NA
+ASV737	Metazoa	Nematoda	Chromadorea	Rhabditida	NA	NA	NA
+ASV738	Fungi	Ascomycota	Pezizomycetes	Pezizales	NA	NA	NA
+ASV739	Metazoa	Cnidaria	Hydrozoa	Hydroidolina	NA	NA	NA
+ASV740	Fungi	NA	NA	NA	NA	NA	NA
+ASV741	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	Trichomeriaceae	Knufia	Knufia marmoricola
+ASV742	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Preussia	NA
+ASV743	Fungi	Mucoromycota	Mucoromycetes	Mucorales	Mucoraceae	Actinomucor	Actinomucor elegans
+ASV744	Alveolata	Ciliophora	Oligohymenophorea	Apostomatida	NA	NA	NA
+ASV745	Viridiplantae	Marchantiophyta	Jungermanniopsida	Porellales	NA	NA	NA
+ASV746	Viridiplantae	Anthophyta	Monocotyledonae	Poales	NA	NA	NA
+ASV747	Fungi	Ascomycota	Sordariomycetes	Microascales	NA	NA	NA
+ASV748	Alveolata	Ciliophora	Spirotrichea	Tintinnida	NA	NA	NA
+ASV749	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV750	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	NA	NA	NA
+ASV751	Fungi	NA	NA	NA	NA	NA	NA
+ASV752	Fungi	Ascomycota	Sordariomycetes	Hypocreales	Hypocreaceae	Trichoderma	Trichoderma citrinoviride
+ASV753	Ichthyosporia	NA	Ichthyosporea	Dermocystida	NA	NA	NA
+ASV754	Ichthyosporia	NA	Ichthyosporea	Dermocystida	NA	NA	NA
+ASV755	Fungi	Basidiomycota	NA	NA	NA	NA	NA
+ASV756	Fungi	Basidiomycota	Pucciniomycetes	Pucciniales	NA	NA	NA
+ASV757	Alveolata	Dinophyta	Dinophyceae	Prorocentrales	NA	NA	NA
+ASV758	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	Aspergillaceae	Penicillium	NA
+ASV759	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV760	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Alternaria	NA
+ASV761	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV762	Fungi	NA	NA	NA	NA	NA	NA
+ASV763	Fungi	Ascomycota	Dothideomycetes	Tubeufiales	NA	NA	NA
+ASV764	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV765	Fungi	Basidiomycota	Agaricomycetes	Thelephorales	Thelephoraceae	Tomentella	NA
+ASV766	Metazoa	Arthropoda	Insecta	Diptera	NA	NA	NA
+ASV767	Fungi	Ascomycota	Dothideomycetes	Capnodiales	NA	NA	NA
+ASV768	Cryptista	Cryptophyta	NA	Pyrenomonadales	NA	NA	NA
+ASV769	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	Aspergillaceae	Penicillium	NA
+ASV770	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV771	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Thielavia	Thielavia subthermophila
+ASV772	Viridiplantae	Chlorophyta	Mamiellophyceae	Mamiellales	NA	NA	NA
+ASV773	Metazoa	Arthropoda	Malacostraca	Decapoda	NA	NA	NA
+ASV774	Fungi	NA	NA	NA	NA	NA	NA
+ASV775	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Lycoperdaceae	Calvatia	Calvatia pachydermica
+ASV776	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Neocamarosporium	Neocamarosporium goegapense
+ASV777	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	NA	NA	NA
+ASV778	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	Herpotrichiellaceae	NA	NA
+ASV779	Stramenopila	Ochrophyta	Bacillariophyceae	Lithodesmiales	NA	NA	NA
+ASV780	Fungi	Ascomycota	Dothideomycetes	Venturiales	NA	NA	NA
+ASV781	Fungi	Basidiomycota	Agaricomycetes	Russulales	Peniophoraceae	Peniophora	NA
+ASV782	Alveolata	Ciliophora	NA	NA	NA	NA	NA
+ASV783	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV784	Metazoa	Annelida	Clitellata	Enchytraeida	NA	NA	NA
+ASV785	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV786	Metazoa	Cnidaria	Hydrozoa	Hydroidolina	NA	NA	NA
+ASV787	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymosphaeriaceae	Pseudopithomyces	NA
+ASV788	Viridiplantae	Anthophyta	Eudicotyledonae	Sapindales	NA	NA	NA
+ASV789	Viridiplantae	Chlorophyta	NA	NA	NA	NA	NA
+ASV790	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	Herpotrichiellaceae	Coniosporium	NA
+ASV791	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV792	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	NA	NA
+ASV793	Fungi	Ascomycota	Leotiomycetes	Thelebolales	NA	NA	NA
+ASV794	Alveolata	Dinophyta	Dinophyceae	Prorocentrales	NA	NA	NA
+ASV795	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV796	Stramenopila	Ochrophyta	Bacillariophyceae	Lithodesmiales	NA	NA	NA
+ASV797	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Melanocarpus	Melanocarpus tardus
+ASV798	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Alternaria	Alternaria chlamydosporigena
+ASV799	Metazoa	Arthropoda	Insecta	Diptera	NA	NA	NA
+ASV800	Fungi	NA	NA	NA	NA	NA	NA
+ASV801	Fungi	NA	NA	NA	NA	NA	NA
+ASV802	Metazoa	Porifera	Demospongiae	Verongida	NA	NA	NA
+ASV803	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV804	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymosphaeriaceae	Aporospora	NA
+ASV805	Alveolata	Ciliophora	NA	NA	NA	NA	NA
+ASV806	Fungi	Ascomycota	Xylonomycetes	Symbiotaphrinales	NA	NA	NA
+ASV807	Viridiplantae	Chlorophyta	Mamiellophyceae	Mamiellales	NA	NA	NA
+ASV808	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV809	Alveolata	Apicomplexa	Coccidia	Eucoccidiorida	NA	NA	NA
+ASV810	Stramenopila	Oomycota	Oomycetes	Peronosporales	NA	NA	NA
+ASV811	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV812	Rhodoplantae	Rhodophyta	Florideophyceae	Batrachospermales	NA	NA	NA
+ASV813	Fungi	Basidiomycota	Tremellomycetes	NA	NA	NA	NA
+ASV814	Fungi	NA	NA	NA	NA	NA	NA
+ASV815	Fungi	Ascomycota	Arthoniomycetes	Lichenostigmatales	Phaeococcomycetaceae	Phaeococcomyces	NA
+ASV816	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Phaeosphaeriaceae	Phaeodothis	NA
+ASV817	Viridiplantae	Chlorophyta	Chlorophyceae	Volvocales	NA	NA	NA
+ASV818	Fungi	NA	NA	NA	NA	NA	NA
+ASV819	Fungi	Ascomycota	Saccharomycetes	Saccharomycetales	NA	Diutina	Diutina catenulata
+ASV820	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV821	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV822	Stramenopila	Oomycota	Oomycetes	Peronosporales	NA	NA	NA
+ASV823	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Psathyrellaceae	Coprinellus	NA
+ASV824	Fungi	Mortierellomycota	Mortierellomycetes	Mortierellales	Mortierellaceae	Mortierella	Mortierella alpina
+ASV825	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	NA	NA
+ASV826	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV827	Fungi	Ascomycota	Dothideomycetes	Botryosphaeriales	Aplosporellaceae	Aplosporella	NA
+ASV828	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV829	Fungi	Ascomycota	Sordariomycetes	Coniochaetales	Coniochaetaceae	Coniochaeta	NA
+ASV830	Fungi	NA	NA	NA	NA	NA	NA
+ASV831	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV832	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Chaetomium	NA
+ASV833	Fungi	NA	NA	NA	NA	NA	NA
+ASV834	Fungi	Ascomycota	Lecanoromycetes	Peltigerales	NA	NA	NA
+ASV835	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Phaeosphaeriaceae	Chaetosphaeronema	NA
+ASV836	Fungi	Ascomycota	Lecanoromycetes	Trapeliales	NA	NA	NA
+ASV837	Ichthyosporia	NA	Ichthyosporea	Dermocystida	NA	NA	NA
+ASV838	Metazoa	Arthropoda	Malacostraca	Amphipoda	NA	NA	NA
+ASV839	Fungi	Basidiomycota	Agaricomycetes	Thelephorales	Thelephoraceae	Tomentella	NA
+ASV840	Alveolata	Ciliophora	Spirotrichea	Sporadotrichida	NA	NA	NA
+ASV841	Fungi	NA	NA	NA	NA	NA	NA
+ASV842	Fungi	NA	NA	NA	NA	NA	NA
+ASV843	Fungi	Basidiomycota	Agaricomycetes	Agaricales	NA	NA	NA
+ASV844	Fungi	Ascomycota	Lecanoromycetes	Acarosporales	NA	NA	NA
+ASV845	Viridiplantae	Chlorophyta	Mamiellophyceae	Mamiellales	NA	NA	NA
+ASV846	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	NA	NA	NA
+ASV847	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Melanommataceae	Petrakia	NA
+ASV848	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	Herpotrichiellaceae	Exophiala	Exophiala capensis
+ASV849	Metazoa	Cnidaria	Hydrozoa	Hydroidolina	NA	NA	NA
+ASV850	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Chaetomium	NA
+ASV851	Stramenopila	Ochrophyta	Bacillariophyceae	Lithodesmiales	NA	NA	NA
+ASV852	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	Aspergillaceae	Penicillium	Penicillium chrysogenum
+ASV853	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV854	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Comoclathris	NA
+ASV855	Alveolata	Apicomplexa	Coccidia	Eucoccidiorida	NA	NA	NA
+ASV856	Metazoa	Arthropoda	Insecta	Diptera	NA	NA	NA
+ASV857	Fungi	Ascomycota	Pezizomycetes	Pezizales	Pezizaceae	Peziza	Peziza ostracoderma
+ASV858	Fungi	NA	NA	NA	NA	NA	NA
+ASV859	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	Aspergillaceae	Penicillium	Penicillium chrysogenum
+ASV860	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV861	Fungi	NA	NA	NA	NA	NA	NA
+ASV862	Fungi	Rozellomycota	NA	NA	NA	NA	NA
+ASV863	Fungi	NA	NA	NA	NA	NA	NA
+ASV864	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Alternaria	NA
+ASV865	Ichthyosporia	NA	Ichthyosporea	Dermocystida	NA	NA	NA
+ASV866	Fungi	NA	NA	NA	NA	NA	NA
+ASV867	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Curvularia	Curvularia inaequalis
+ASV868	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	Aspergillaceae	Penicillium	Penicillium brevicompactum
+ASV869	Fungi	Mucoromycota	Mucoromycetes	Mucorales	NA	NA	NA
+ASV870	Fungi	Ascomycota	Sordariomycetes	Hypocreales	NA	NA	NA
+ASV871	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Chaetomium	NA
+ASV872	Viridiplantae	Chlorophyta	Trebouxiophyceae	Microthamniales	NA	NA	NA
+ASV873	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	Aspergillaceae	Aspergillus	NA
+ASV874	Metazoa	Mollusca	Bivalvia	Veneroida	NA	NA	NA
+ASV875	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Agaricaceae	Tulostoma	NA
+ASV876	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Agaricaceae	Lepiota	NA
+ASV877	Fungi	Ascomycota	Xylonomycetes	Symbiotaphrinales	NA	NA	NA
+ASV878	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	Sarcinomyces	Sarcinomyces crustaceus
+ASV879	Fungi	Ascomycota	Leotiomycetes	Helotiales	NA	NA	NA
+ASV880	Fungi	Ascomycota	Lecanoromycetes	Umbilicariales	NA	NA	NA
+ASV881	Fungi	NA	NA	NA	NA	NA	NA
+ASV882	Cryptista	Cryptophyta	NA	Pyrenomonadales	NA	NA	NA
+ASV883	Alveolata	Apicomplexa	Coccidia	Eucoccidiorida	NA	NA	NA
+ASV884	Fungi	Ascomycota	Pezizomycetes	NA	NA	NA	NA
+ASV885	Fungi	Ascomycota	Lecanoromycetes	Lecanorales	NA	NA	NA
+ASV886	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	NA	NA
+ASV887	Alveolata	Ciliophora	NA	NA	NA	NA	NA
+ASV888	Fungi	Ascomycota	Pezizomycetes	Pezizales	NA	NA	NA
+ASV889	Fungi	Entomophthoromycota	Entomophthoromycetes	Entomophthorales	NA	NA	NA
+ASV890	Viridiplantae	Chlorophyta	Trebouxiophyceae	NA	NA	NA	NA
+ASV891	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV892	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV893	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymosphaeriaceae	Deniquelata	Deniquelata barringtoniae
+ASV894	Fungi	Ascomycota	Sordariomycetes	Hypocreales	NA	NA	NA
+ASV895	Fungi	Ascomycota	Pezizomycetes	Pezizales	NA	NA	NA
+ASV896	Alveolata	Ciliophora	NA	NA	NA	NA	NA
+ASV897	Viridiplantae	Chlorophyta	Mamiellophyceae	Mamiellales	NA	NA	NA
+ASV898	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV899	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV900	Fungi	Ascomycota	Eurotiomycetes	Onygenales	NA	NA	NA
+ASV901	Fungi	Basidiomycota	NA	NA	NA	NA	NA
+ASV902	Rhizaria	Cercozoa	NA	NA	NA	NA	NA
+ASV903	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV904	Fungi	Ascomycota	Sordariomycetes	Sordariales	Sordariaceae	Gelasinospora	NA
+ASV905	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV906	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Chaetomium	Chaetomium mareoticum
+ASV907	Fungi	Ascomycota	Dothideomycetes	Strigulales	NA	NA	NA
+ASV908	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV909	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Preussia	Preussia pilosella
+ASV910	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	Herpotrichiellaceae	NA	NA
+ASV911	Fungi	Ascomycota	Sordariomycetes	Sordariales	NA	NA	NA
+ASV912	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	NA	NA	NA
+ASV913	Viridiplantae	Chlorophyta	Mamiellophyceae	Mamiellales	NA	NA	NA
+ASV914	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymellaceae	Calophoma	Calophoma clematidina
+ASV915	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV916	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV917	Fungi	Ascomycota	Leotiomycetes	Helotiales	Hyaloscyphaceae	NA	NA
+ASV918	Fungi	NA	NA	NA	NA	NA	NA
+ASV919	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymosphaeriaceae	Spegazzinia	NA
+ASV920	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Lophiostomataceae	NA	NA
+ASV921	Fungi	Ascomycota	Lecanoromycetes	Peltigerales	NA	NA	NA
+ASV922	Fungi	Mortierellomycota	Mortierellomycetes	Mortierellales	NA	NA	NA
+ASV923	Fungi	Ascomycota	Leotiomycetes	Helotiales	NA	NA	NA
+ASV924	Fungi	NA	NA	NA	NA	NA	NA
+ASV925	Fungi	Basidiomycota	Cystobasidiomycetes	Cystobasidiales	Cystobasidiaceae	Cystobasidium	Cystobasidium benthicum
+ASV926	Fungi	Basidiomycota	NA	NA	NA	NA	NA
+ASV927	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Trematosphaeriaceae	Trematosphaeria	NA
+ASV928	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV929	Metazoa	Arthropoda	Arachnida	Trombidiformes	NA	NA	NA
+ASV930	Metazoa	Arthropoda	Insecta	Diptera	NA	NA	NA
+ASV931	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Preussia	Preussia longisporopsis
+ASV932	Fungi	Ascomycota	Sordariomycetes	Sordariales	Lasiosphaeriaceae	NA	NA
+ASV933	Metazoa	Mollusca	Gastropoda	Stylommatophora	NA	NA	NA
+ASV934	Fungi	Ascomycota	Dothideomycetes	Capnodiales	Cladosporiaceae	Cladosporium	NA
+ASV935	Fungi	Ascomycota	Leotiomycetes	Erysiphales	NA	NA	NA
+ASV936	Fungi	NA	NA	NA	NA	NA	NA
+ASV937	Fungi	Mortierellomycota	Mortierellomycetes	Mortierellales	Mortierellaceae	Mortierella	NA
+ASV938	Fungi	Basidiomycota	Agaricomycetes	Corticiales	Corticiaceae	NA	NA
+ASV939	Fungi	Ascomycota	Lecanoromycetes	Peltigerales	NA	NA	NA
+ASV940	Rhodoplantae	Rhodophyta	Florideophyceae	Gracilariales	NA	NA	NA
+ASV941	Metazoa	Arthropoda	Arachnida	Sarcoptiformes	NA	NA	NA
+ASV942	Fungi	Ascomycota	Sordariomycetes	Glomerellales	Plectosphaerellaceae	Verticillium	NA
+ASV943	Fungi	Basidiobolomycota	Basidiobolomycetes	Basidiobolales	Basidiobolaceae	Basidiobolus	Basidiobolus ranarum
+ASV944	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	NA	NA
+ASV945	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV946	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV947	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	Herpotrichiellaceae	NA	NA
+ASV948	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV949	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV950	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV951	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV952	Viridiplantae	Chlorophyta	Mamiellophyceae	Mamiellales	NA	NA	NA
+ASV953	NA	NA	NA	NA	NA	NA	NA
+ASV954	Alveolata	Apicomplexa	Coccidia	Eucoccidiorida	NA	NA	NA
+ASV955	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Alternaria	Alternaria alternata
+ASV956	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Amesia	Amesia nigricolor
+ASV957	Fungi	Ascomycota	Dothideomycetes	Tubeufiales	NA	NA	NA
+ASV958	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Chaetomium	NA
+ASV959	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV960	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV961	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	NA	NA
+ASV962	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV963	Fungi	NA	NA	NA	NA	NA	NA
+ASV964	Stramenopila	Oomycota	Oomycetes	Peronosporales	NA	NA	NA
+ASV965	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	NA	NA	NA
+ASV966	Fungi	NA	NA	NA	NA	NA	NA
+ASV967	Fungi	Ascomycota	Sordariomycetes	NA	NA	NA	NA
+ASV968	Fungi	Ascomycota	Lecanoromycetes	Acarosporales	NA	NA	NA
+ASV969	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymosphaeriaceae	Deniquelata	Deniquelata barringtoniae
+ASV970	Metazoa	Arthropoda	Insecta	Diptera	NA	NA	NA
+ASV971	Stramenopila	Oomycota	Oomycetes	Pythiales	NA	NA	NA
+ASV972	Viridiplantae	Chlorophyta	Trebouxiophyceae	Chlorellales	NA	NA	NA
+ASV973	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV974	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Agaricaceae	Tulostoma	NA
+ASV975	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV976	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV977	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV978	Fungi	Basidiomycota	Tremellomycetes	Filobasidiales	Filobasidiaceae	Filobasidium	Filobasidium chernovii
+ASV979	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Alternaria	Alternaria eureka
+ASV980	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV981	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	Aspergillaceae	Aspergillus	Aspergillus niger
+ASV982	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV983	Fungi	Ascomycota	Leotiomycetes	Helotiales	NA	NA	NA
+ASV984	Fungi	Ascomycota	Dothideomycetes	Strigulales	NA	NA	NA
+ASV985	Fungi	Chytridiomycota	Rhizophlyctidomycetes	Rhizophlyctidales	Rhizophlyctidaceae	Rhizophlyctis	NA
+ASV986	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Neocamarosporium	NA
+ASV987	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV988	Fungi	Ascomycota	Eurotiomycetes	Onygenales	Ajellomycetaceae	NA	NA
+ASV989	Fungi	NA	NA	NA	NA	NA	NA
+ASV990	Metazoa	Arthropoda	Arachnida	Trombidiformes	NA	NA	NA
+ASV991	Fungi	Rozellomycota	NA	NA	NA	NA	NA
+ASV992	Fungi	Basidiomycota	Tremellomycetes	Tremellales	NA	NA	NA
+ASV993	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV994	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Lophiostomataceae	Lophiostoma	NA
+ASV995	Alveolata	Dinophyta	Dinophyceae	Prorocentrales	NA	NA	NA
+ASV996	Viridiplantae	Marchantiophyta	Jungermanniopsida	Porellales	NA	NA	NA
+ASV997	Fungi	Basidiomycota	Agaricomycetes	Russulales	NA	NA	NA
+ASV998	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV999	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV1000	Fungi	Ascomycota	Leotiomycetes	Helotiales	NA	NA	NA
+ASV1001	Fungi	Ascomycota	Leotiomycetes	Thelebolales	Pseudeurotiaceae	Pseudeurotium	Pseudeurotium desertorum
+ASV1002	Fungi	Ascomycota	Lecanoromycetes	Lecanorales	NA	NA	NA
+ASV1003	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Coniothyriaceae	Camarosporium	Camarosporium brabeji
+ASV1004	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	NA	NA
+ASV1005	Fungi	Ascomycota	Sordariomycetes	NA	NA	NA	NA
+ASV1006	Fungi	Ascomycota	Leotiomycetes	Thelebolales	NA	NA	NA
+ASV1007	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Agaricaceae	Tulostoma	NA
+ASV1008	Fungi	Basidiomycota	Agaricomycetes	Agaricales	NA	NA	NA
+ASV1009	Fungi	Glomeromycota	Glomeromycetes	Glomerales	Glomeraceae	NA	NA
+ASV1010	Viridiplantae	Chlorophyta	Trebouxiophyceae	Oocystales	NA	NA	NA
+ASV1011	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV1012	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV1013	Fungi	Basidiomycota	Geminibasidiomycetes	Geminibasidiales	Geminibasidiaceae	Geminibasidium	NA
+ASV1014	Fungi	Ascomycota	Pezizomycetes	Pezizales	Pyronemataceae	Desertella	NA
+ASV1015	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Bipolaris	NA
+ASV1016	Alveolata	Ciliophora	Oligohymenophorea	Peniculida	NA	NA	NA
+ASV1017	Fungi	Ascomycota	Lecanoromycetes	Acarosporales	Acarosporaceae	Acarospora	NA
+ASV1018	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV1019	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Hygrophoraceae	Hygrophorus	Hygrophorus eburneus
+ASV1020	Fungi	Ascomycota	Orbiliomycetes	Orbiliales	NA	NA	NA
+ASV1021	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV1022	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	Herpotrichiellaceae	Coniosporium	Coniosporium apollinis
+ASV1023	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Coniothyriaceae	Coniothyrium	Coniothyrium telephii
+ASV1024	Fungi	Ascomycota	Saccharomycetes	Saccharomycetales	NA	Candida	Candida tropicalis
+ASV1025	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV1026	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV1027	Fungi	Ascomycota	Sordariomycetes	NA	NA	NA	NA
+ASV1028	Viridiplantae	Chlorophyta	Chlorophyceae	Volvocales	NA	NA	NA
+ASV1029	Viridiplantae	Chlorophyta	Mamiellophyceae	Mamiellales	NA	NA	NA
+ASV1030	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV1031	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Phaeosphaeriaceae	Neostagonospora	NA
+ASV1032	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV1033	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymellaceae	Epicoccum	Epicoccum pimprinum
+ASV1034	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV1035	Fungi	Ascomycota	Sordariomycetes	Sordariales	NA	NA	NA
+ASV1036	Fungi	Ascomycota	Lecanoromycetes	Peltigerales	NA	NA	NA
+ASV1037	Fungi	Ascomycota	Dothideomycetes	Botryosphaeriales	Botryosphaeriaceae	Sphaeropsis	NA
+ASV1038	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	NA	NA
+ASV1039	Fungi	Ascomycota	Eurotiomycetes	Onygenales	NA	NA	NA
+ASV1040	Alveolata	Apicomplexa	Coccidia	Eucoccidiorida	NA	NA	NA
+ASV1041	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	NA	NA
+ASV1042	Fungi	Ascomycota	Dothideomycetes	Capnodiales	Teratosphaeriaceae	Pseudotaeniolina	Pseudotaeniolina globosa
+ASV1043	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Alternaria	NA
+ASV1044	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV1045	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1046	Fungi	Ascomycota	Eurotiomycetes	Onygenales	Onygenaceae	Mallochia	Mallochia reticulata
+ASV1047	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV1048	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV1049	Fungi	NA	NA	NA	NA	NA	NA
+ASV1050	Alveolata	Dinophyta	Dinophyceae	Prorocentrales	NA	NA	NA
+ASV1051	Fungi	Mortierellomycota	Mortierellomycetes	Mortierellales	Mortierellaceae	Mortierella	Mortierella kuhlmanii
+ASV1052	Fungi	Ascomycota	Dothideomycetes	Capnodiales	Teratosphaeriaceae	Capnobotryella	NA
+ASV1053	Fungi	Ascomycota	Leotiomycetes	Thelebolales	NA	NA	NA
+ASV1054	Fungi	Ascomycota	Lecanoromycetes	Acarosporales	NA	NA	NA
+ASV1055	Alveolata	Ciliophora	Oligohymenophorea	Peniculida	NA	NA	NA
+ASV1056	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV1057	Fungi	Ascomycota	Leotiomycetes	Helotiales	Helotiaceae	NA	NA
+ASV1058	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1059	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV1060	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV1061	Metazoa	Arthropoda	Insecta	Diptera	NA	NA	NA
+ASV1062	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1063	Fungi	Ascomycota	Eurotiomycetes	Verrucariales	NA	NA	NA
+ASV1064	Metazoa	Arthropoda	Insecta	Diptera	NA	NA	NA
+ASV1065	Alveolata	Ciliophora	NA	NA	NA	NA	NA
+ASV1066	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	NA	NA
+ASV1067	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Coniothyriaceae	NA	NA
+ASV1068	Viridiplantae	Chlorophyta	NA	NA	NA	NA	NA
+ASV1069	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Achaetomium	NA
+ASV1070	Fungi	Basidiomycota	Agaricomycetes	NA	NA	NA	NA
+ASV1071	Fungi	Ascomycota	Dothideomycetes	Mytilinidales	Gloniaceae	Cenococcum	NA
+ASV1072	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Chaetomium	NA
+ASV1073	Metazoa	Craniata	Actinopterygii	Siluriformes	NA	NA	NA
+ASV1074	Fungi	Mucoromycota	Mucoromycetes	Mucorales	Mucoraceae	Mucor	Mucor mucedo
+ASV1075	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV1076	Fungi	Glomeromycota	Glomeromycetes	Glomerales	Glomeraceae	NA	NA
+ASV1077	Fungi	Ascomycota	Dothideomycetes	Tubeufiales	NA	NA	NA
+ASV1078	Fungi	Basidiomycota	Agaricomycetes	Cantharellales	NA	NA	NA
+ASV1079	Viridiplantae	Chlorophyta	NA	NA	NA	NA	NA
+ASV1080	Viridiplantae	Chlorophyta	Nephroselmidophyceae	Nephroselmidales	NA	NA	NA
+ASV1081	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	Aspergillaceae	Penicillium	Penicillium toxicarium
+ASV1082	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV1083	Fungi	Ascomycota	Lecanoromycetes	Peltigerales	NA	NA	NA
+ASV1084	Fungi	NA	NA	NA	NA	NA	NA
+ASV1085	Alveolata	Apicomplexa	Coccidia	Eucoccidiorida	NA	NA	NA
+ASV1086	Fungi	Ascomycota	Lecanoromycetes	Teloschistales	NA	NA	NA
+ASV1087	Ichthyosporia	NA	Ichthyosporea	Dermocystida	NA	NA	NA
+ASV1088	Fungi	Rozellomycota	NA	NA	NA	NA	NA
+ASV1089	Viridiplantae	Chlorophyta	NA	NA	NA	NA	NA
+ASV1090	Viridiplantae	Chlorophyta	Mamiellophyceae	Mamiellales	NA	NA	NA
+ASV1091	Ichthyosporia	NA	Ichthyosporea	Ichthyophonida	NA	NA	NA
+ASV1092	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV1093	Fungi	NA	NA	NA	NA	NA	NA
+ASV1094	Fungi	Ascomycota	Arthoniomycetes	Lichenostigmatales	Phaeococcomycetaceae	Phaeococcomyces	Phaeococcomyces mexicanus
+ASV1095	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	Aspergillaceae	Aspergillus	Aspergillus cibarius
+ASV1096	Fungi	Ascomycota	Dothideomycetes	Dothideales	NA	NA	NA
+ASV1097	Fungi	Ascomycota	Sordariomycetes	Sordariales	Lasiosphaeriaceae	NA	NA
+ASV1098	Fungi	NA	NA	NA	NA	NA	NA
+ASV1099	Stramenopila	Oomycota	Oomycetes	Pythiales	NA	NA	NA
+ASV1100	Fungi	Basidiomycota	Agaricomycetes	Auriculariales	Exidiaceae	Basidiodendron	NA
+ASV1101	Viridiplantae	Chlorophyta	NA	NA	NA	NA	NA
+ASV1102	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV1103	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	Thyrostroma	NA
+ASV1104	Fungi	NA	NA	NA	NA	NA	NA
+ASV1105	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	Herpotrichiellaceae	Coniosporium	NA
+ASV1106	Fungi	Basidiomycota	Tremellomycetes	Tremellales	Rhynchogastremataceae	Papiliotrema	NA
+ASV1107	Fungi	NA	NA	NA	NA	NA	NA
+ASV1108	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV1109	Viridiplantae	Marchantiophyta	Jungermanniopsida	Porellales	NA	NA	NA
+ASV1110	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Alternaria	Alternaria chlamydosporigena
+ASV1111	Fungi	Ascomycota	Taphrinomycetes	Taphrinales	NA	NA	NA
+ASV1112	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Agaricaceae	Tulostoma	NA
+ASV1113	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1114	Fungi	Basidiomycota	Agaricomycetes	Polyporales	NA	NA	NA
+ASV1115	Fungi	NA	NA	NA	NA	NA	NA
+ASV1116	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV1117	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Agaricaceae	NA	NA
+ASV1118	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	Aspergillaceae	Penicillium	Penicillium thomii
+ASV1119	Fungi	Ascomycota	Lecanoromycetes	Lecideales	Lecideaceae	Lecidea	Lecidea cancriformis
+ASV1120	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV1121	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1122	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	Herpotrichiellaceae	Coniosporium	NA
+ASV1123	Fungi	Mucoromycota	Mucoromycetes	Mucorales	Mucoraceae	Benjaminiella	Benjaminiella poitrasii
+ASV1124	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Agaricaceae	Tulostoma	NA
+ASV1125	Fungi	Ascomycota	Sordariomycetes	Coniochaetales	Coniochaetaceae	Coniochaeta	Coniochaeta polymorpha
+ASV1126	Fungi	Basidiobolomycota	Basidiobolomycetes	Basidiobolales	Basidiobolaceae	Basidiobolus	Basidiobolus ranarum
+ASV1127	Alveolata	Ciliophora	Spirotrichea	Sporadotrichida	NA	NA	NA
+ASV1128	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Agaricaceae	Tulostoma	NA
+ASV1129	Fungi	Ascomycota	Leotiomycetes	Helotiales	Leotiaceae	Pezoloma	Pezoloma ericae
+ASV1130	Metazoa	Arthropoda	Malacostraca	Amphipoda	NA	NA	NA
+ASV1131	Ichthyosporia	NA	Ichthyosporea	Dermocystida	NA	NA	NA
+ASV1132	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV1133	Stramenopila	Ochrophyta	Bacillariophyceae	Lithodesmiales	NA	NA	NA
+ASV1134	Fungi	Ascomycota	Dothideomycetes	Dothideales	Dothioraceae	Hormonema	Hormonema viticola
+ASV1135	Viridiplantae	Marchantiophyta	Jungermanniopsida	Porellales	NA	NA	NA
+ASV1136	Metazoa	Craniata	Actinopterygii	Perciformes	NA	NA	NA
+ASV1137	Fungi	Ascomycota	Leotiomycetes	Thelebolales	NA	NA	NA
+ASV1138	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV1139	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	Neophaeococcomyces	NA
+ASV1140	Metazoa	Nematoda	Dorylaimea	Dorylaimida	NA	NA	NA
+ASV1141	Amoebozoa	Discosea	NA	NA	NA	NA	NA
+ASV1142	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1143	Stramenopila	Oomycota	Oomycetes	Peronosporales	NA	NA	NA
+ASV1144	Viridiplantae	Chlorophyta	Mamiellophyceae	Mamiellales	NA	NA	NA
+ASV1145	Fungi	Ascomycota	Dothideomycetes	Botryosphaeriales	Planistromellaceae	Ramimonilia	Ramimonilia apicalis
+ASV1146	Fungi	Mucoromycota	Mucoromycetes	Mucorales	Rhizopodaceae	Rhizopus	Rhizopus microsporus
+ASV1147	Fungi	Ascomycota	Eurotiomycetes	Verrucariales	Verrucariaceae	Placidium	Placidium lacinulatum var erythrostratum
+ASV1148	Viridiplantae	Chlorophyta	Ulvophyceae	Ulotrichales	NA	NA	NA
+ASV1149	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	Aspergillaceae	Penicillium	NA
+ASV1150	Metazoa	Arthropoda	Arachnida	Sarcoptiformes	NA	NA	NA
+ASV1151	Fungi	Ascomycota	Dothideomycetes	Dothideales	NA	NA	NA
+ASV1152	Fungi	Ascomycota	Eurotiomycetes	Onygenales	Gymnoascaceae	Gymnoascus	Gymnoascus reessii
+ASV1153	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV1154	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1155	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Leptosphaeriaceae	Neophaeosphaeria	NA
+ASV1156	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	Bahusakala	NA
+ASV1157	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	NA	NA
+ASV1158	Fungi	Ascomycota	Lecanoromycetes	Trapeliales	NA	NA	NA
+ASV1159	Stramenopila	Oomycota	Oomycetes	Peronosporales	NA	NA	NA
+ASV1160	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1161	Metazoa	Platyhelminthes	Trematoda	Monopisthocotylea	NA	NA	NA
+ASV1162	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Coniothyriaceae	Camarosporium	Camarosporium brabeji
+ASV1163	Rhodoplantae	Rhodophyta	Florideophyceae	Gracilariales	NA	NA	NA
+ASV1164	Fungi	Ascomycota	Lecanoromycetes	Acarosporales	NA	NA	NA
+ASV1165	Fungi	NA	NA	NA	NA	NA	NA
+ASV1166	Viridiplantae	Marchantiophyta	Jungermanniopsida	Porellales	NA	NA	NA
+ASV1167	Viridiplantae	Anthophyta	Eudicotyledonae	Ericales	NA	NA	NA
+ASV1168	Fungi	Ascomycota	Lecanoromycetes	Lecanorales	NA	NA	NA
+ASV1169	Fungi	Ascomycota	Sordariomycetes	Xylariales	NA	NA	NA
+ASV1170	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV1171	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Agaricaceae	NA	NA
+ASV1172	Fungi	NA	NA	NA	NA	NA	NA
+ASV1173	Fungi	Ascomycota	Dothideomycetes	Capnodiales	Teratosphaeriaceae	Meristemomyces	Meristemomyces frigidus
+ASV1174	Fungi	Basidiomycota	Agaricomycetes	Agaricales	NA	NA	NA
+ASV1175	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV1176	Metazoa	Arthropoda	Insecta	Diptera	NA	NA	NA
+ASV1177	Fungi	Neocallimastigomycota	Neocallimastigomycetes	Neocallimastigales	NA	NA	NA
+ASV1178	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Chaetomium	NA
+ASV1179	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV1180	Metazoa	Arthropoda	Insecta	Diptera	NA	NA	NA
+ASV1181	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	Trichomeriaceae	Knufia	NA
+ASV1182	NA	NA	NA	NA	NA	NA	NA
+ASV1183	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV1184	Protista	NA	NA	NA	NA	NA	NA
+ASV1185	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1186	Fungi	NA	NA	NA	NA	NA	NA
+ASV1187	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV1188	Fungi	NA	NA	NA	NA	NA	NA
+ASV1189	Fungi	NA	NA	NA	NA	NA	NA
+ASV1190	Metazoa	Nematoda	Chromadorea	Rhabditida	NA	NA	NA
+ASV1191	Fungi	Rozellomycota	NA	NA	NA	NA	NA
+ASV1192	Alveolata	Apicomplexa	Coccidia	Eucoccidiorida	NA	NA	NA
+ASV1193	Fungi	Basidiomycota	Agaricomycetes	Cantharellales	NA	NA	NA
+ASV1194	Stramenopila	Oomycota	Oomycetes	Pythiales	NA	NA	NA
+ASV1195	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	NA	NA	NA
+ASV1196	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Agaricaceae	Tulostoma	NA
+ASV1197	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV1198	Metazoa	Arthropoda	Insecta	Hemiptera	NA	NA	NA
+ASV1199	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1200	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Bipolaris	Bipolaris chloridis
+ASV1201	Fungi	Chytridiomycota	Rhizophydiomycetes	Rhizophydiales	NA	NA	NA
+ASV1202	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV1203	Metazoa	Arthropoda	Insecta	Diptera	NA	NA	NA
+ASV1204	Fungi	NA	NA	NA	NA	NA	NA
+ASV1205	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	Elaphomycetaceae	Elaphomyces	Elaphomyces muricatus
+ASV1206	Metazoa	Arthropoda	Insecta	Diptera	NA	NA	NA
+ASV1207	Fungi	NA	NA	NA	NA	NA	NA
+ASV1208	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV1209	Fungi	Ascomycota	Leotiomycetes	Thelebolales	Pseudeurotiaceae	Pleuroascus	Pleuroascus nicholsonii
+ASV1210	Stramenopila	Ochrophyta	Bacillariophyceae	Lithodesmiales	NA	NA	NA
+ASV1211	Fungi	Mucoromycota	Mucoromycetes	Mucorales	Rhizopodaceae	Syzygites	Syzygites megalocarpus
+ASV1212	Fungi	Ascomycota	Lecanoromycetes	Acarosporales	NA	NA	NA
+ASV1213	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV1214	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Preussia	NA
+ASV1215	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV1216	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Agaricaceae	Tulostoma	Tulostoma giovanellae
+ASV1217	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1218	Metazoa	Nematoda	Dorylaimea	Dorylaimida	NA	NA	NA
+ASV1219	Fungi	Ascomycota	Dothideomycetes	Venturiales	NA	NA	NA
+ASV1220	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV1221	Fungi	Ascomycota	Sordariomycetes	Xylariales	Xylariaceae	Coniolariella	Coniolariella ershadii
+ASV1222	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	Aspergillaceae	Penicillium	NA
+ASV1223	Alveolata	Ciliophora	Spirotrichea	Sporadotrichida	NA	NA	NA
+ASV1224	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV1225	Fungi	NA	NA	NA	NA	NA	NA
+ASV1226	Fungi	Ascomycota	Dothideomycetes	Dothideales	NA	NA	NA
+ASV1227	Viridiplantae	Chlorophyta	Ulvophyceae	Ulotrichales	NA	NA	NA
+ASV1228	Fungi	Mucoromycota	Mucoromycetes	Mucorales	NA	NA	NA
+ASV1229	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1230	Fungi	Ascomycota	Eurotiomycetes	Onygenales	Onygenaceae	Mallochia	Mallochia reticulata
+ASV1231	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	Libertasomyces	NA
+ASV1232	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Sporormia	NA
+ASV1233	Fungi	Ascomycota	Lecanoromycetes	Ostropales	NA	NA	NA
+ASV1234	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1235	Metazoa	Mollusca	Bivalvia	Ostreoida	NA	NA	NA
+ASV1236	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV1237	Fungi	Basidiomycota	Agaricomycetes	Agaricales	NA	NA	NA
+ASV1238	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1239	Fungi	Ascomycota	Sordariomycetes	Trichosphaeriales	Trichosphaeriaceae	Nigrospora	Nigrospora oryzae
+ASV1240	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Preussia	NA
+ASV1241	Fungi	Basidiomycota	Tremellomycetes	Tremellales	Tremellaceae	Cryptococcus	NA
+ASV1242	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Amesia	Amesia atrobrunnea
+ASV1243	Fungi	Rozellomycota	NA	NA	NA	NA	NA
+ASV1244	Fungi	Ascomycota	Sordariomycetes	Hypocreales	Cordycipitaceae	Lecanicillium	Lecanicillium flavidum
+ASV1245	Alveolata	Dinophyta	Dinophyceae	Prorocentrales	NA	NA	NA
+ASV1246	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV1247	Fungi	Mortierellomycota	Mortierellomycetes	Mortierellales	Mortierellaceae	Mortierella	NA
+ASV1248	Fungi	Basidiomycota	Agaricomycetes	Cantharellales	NA	NA	NA
+ASV1249	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Alternaria	Alternaria alternata
+ASV1250	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV1251	Fungi	Ascomycota	Dothideomycetes	Capnodiales	NA	NA	NA
+ASV1252	Fungi	Ascomycota	Dothideomycetes	Dothideales	Dothioraceae	Kabatina	Kabatina juniperi
+ASV1253	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV1254	Metazoa	Mollusca	Bivalvia	Ostreoida	NA	NA	NA
+ASV1255	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV1256	Fungi	Basidiomycota	Tremellomycetes	Tremellales	Tremellaceae	NA	NA
+ASV1257	Metazoa	Arthropoda	Insecta	Diptera	NA	NA	NA
+ASV1258	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymellaceae	NA	NA
+ASV1259	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Alternaria	NA
+ASV1260	Fungi	Basidiomycota	Pucciniomycetes	Pucciniales	NA	NA	NA
+ASV1261	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV1262	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1263	Fungi	NA	NA	NA	NA	NA	NA
+ASV1264	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Preussia	NA
+ASV1265	Fungi	Ascomycota	Eurotiomycetes	Verrucariales	NA	NA	NA
+ASV1266	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV1267	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Agaricaceae	NA	NA
+ASV1268	Metazoa	Arthropoda	Insecta	Diptera	NA	NA	NA
+ASV1269	Fungi	Ascomycota	Lecanoromycetes	Acarosporales	NA	NA	NA
+ASV1270	Fungi	Chytridiomycota	Rhizophydiomycetes	Rhizophydiales	NA	NA	NA
+ASV1271	Fungi	Ascomycota	Leotiomycetes	Helotiales	NA	NA	NA
+ASV1272	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Thielavia	NA
+ASV1273	Fungi	Basidiobolomycota	Basidiobolomycetes	Basidiobolales	Basidiobolaceae	Basidiobolus	Basidiobolus ranarum
+ASV1274	Fungi	Ascomycota	Dothideomycetes	Tubeufiales	NA	NA	NA
+ASV1275	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Tricholomataceae	Tricholoma	Tricholoma matsutake
+ASV1276	Metazoa	Arthropoda	Malacostraca	Amphipoda	NA	NA	NA
+ASV1277	Fungi	Ascomycota	Dothideomycetes	Botryosphaeriales	NA	NA	NA
+ASV1278	Fungi	NA	NA	NA	NA	NA	NA
+ASV1279	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Sporormiella	Sporormiella minima
+ASV1280	Viridiplantae	Chlorophyta	Mamiellophyceae	Mamiellales	NA	NA	NA
+ASV1281	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	Herpotrichiellaceae	Coniosporium	NA
+ASV1282	Fungi	Basidiomycota	Microbotryomycetes	Sporidiobolales	Sporidiobolaceae	Sporobolomyces	Sporobolomyces salicinus
+ASV1283	Fungi	Ascomycota	Orbiliomycetes	Orbiliales	NA	NA	NA
+ASV1284	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	NA	NA
+ASV1285	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV1286	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	Trichomeriaceae	Knufia	NA
+ASV1287	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Lophiostomataceae	Lophiostoma	NA
+ASV1288	Fungi	Ascomycota	Dothideomycetes	Dothideales	Dothioraceae	Pseudoseptoria	Pseudoseptoria obscura
+ASV1289	Fungi	Basidiomycota	Cystobasidiomycetes	Cystobasidiales	Cystobasidiaceae	Cystobasidium	Cystobasidium pallidum
+ASV1290	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Leptosphaeriaceae	Neophaeosphaeria	NA
+ASV1291	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Agaricaceae	NA	NA
+ASV1292	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV1293	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Torulaceae	Torula	NA
+ASV1294	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV1295	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymosphaeriaceae	Pseudocamarosporium	NA
+ASV1296	Alveolata	Dinophyta	Dinophyceae	Peridiniales	NA	NA	NA
+ASV1297	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Agaricaceae	NA	NA
+ASV1298	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV1299	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Alternaria	Alternaria mouchaccae
+ASV1300	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1301	Fungi	NA	NA	NA	NA	NA	NA
+ASV1302	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV1303	Fungi	Ascomycota	Dothideomycetes	Dothideales	NA	NA	NA
+ASV1304	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	Aspergillaceae	Penicillium	NA
+ASV1305	Viridiplantae	Chlorophyta	NA	NA	NA	NA	NA
+ASV1306	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV1307	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Agaricaceae	Tulostoma	NA
+ASV1308	Fungi	Ascomycota	Dothideomycetes	Capnodiales	Teratosphaeriaceae	Elasticomyces	Elasticomyces elasticus
+ASV1309	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1310	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV1311	Fungi	NA	NA	NA	NA	NA	NA
+ASV1312	Metazoa	Arthropoda	Insecta	Diptera	NA	NA	NA
+ASV1313	NA	NA	NA	NA	NA	NA	NA
+ASV1314	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Alternaria	NA
+ASV1315	Metazoa	Porifera	Demospongiae	Verongida	NA	NA	NA
+ASV1316	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV1317	Alveolata	Apicomplexa	Coccidia	Eucoccidiorida	NA	NA	NA
+ASV1318	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	NA	NA	NA
+ASV1319	Metazoa	Mollusca	Bivalvia	Ostreoida	NA	NA	NA
+ASV1320	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	Neophaeococcomyces	NA
+ASV1321	Fungi	Glomeromycota	Glomeromycetes	Gigasporales	NA	NA	NA
+ASV1322	Rhizaria	Cercozoa	NA	NA	NA	NA	NA
+ASV1323	Fungi	Rozellomycota	NA	NA	NA	NA	NA
+ASV1324	Fungi	NA	NA	NA	NA	NA	NA
+ASV1325	Fungi	NA	NA	NA	NA	NA	NA
+ASV1326	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1327	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Tetraplosphaeriaceae	NA	NA
+ASV1328	Fungi	Ascomycota	Arthoniomycetes	Lichenostigmatales	NA	NA	NA
+ASV1329	Fungi	Basidiomycota	Agaricomycetes	Agaricales	NA	NA	NA
+ASV1330	Metazoa	Nematoda	Dorylaimea	Dorylaimida	NA	NA	NA
+ASV1331	Alveolata	Apicomplexa	Coccidia	Eucoccidiorida	NA	NA	NA
+ASV1332	Fungi	Ascomycota	Sordariomycetes	Coniochaetales	Coniochaetaceae	Coniochaeta	NA
+ASV1333	Fungi	Ascomycota	Sordariomycetes	Coniochaetales	Coniochaetaceae	Coniochaeta	NA
+ASV1334	Fungi	NA	NA	NA	NA	NA	NA
+ASV1335	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV1336	Fungi	Ascomycota	Sordariomycetes	Hypocreales	NA	NA	NA
+ASV1337	Fungi	Ascomycota	Sordariomycetes	Chaetosphaeriales	Chaetosphaeriaceae	NA	NA
+ASV1338	Protista	NA	NA	NA	NA	NA	NA
+ASV1339	Stramenopila	Oomycota	Oomycetes	Pythiales	NA	NA	NA
+ASV1340	Fungi	Ascomycota	Sordariomycetes	Xylariales	NA	NA	NA
+ASV1341	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Achaetomium	NA
+ASV1342	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV1343	Fungi	Ascomycota	Pezizomycetes	Pezizales	NA	NA	NA
+ASV1344	Cryptista	Cryptophyta	NA	NA	NA	NA	NA
+ASV1345	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV1346	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV1347	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV1348	Viridiplantae	Marchantiophyta	Jungermanniopsida	Porellales	NA	NA	NA
+ASV1349	Fungi	NA	NA	NA	NA	NA	NA
+ASV1350	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Chaetomium	Chaetomium brasiliense
+ASV1351	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Acrophialophora	Acrophialophora levis
+ASV1352	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV1353	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV1354	Metazoa	Nematoda	Chromadorea	Spirurida	NA	NA	NA
+ASV1355	Fungi	Ascomycota	Pezizomycetes	Pezizales	Pezizaceae	Iodophanus	NA
+ASV1356	Fungi	NA	NA	NA	NA	NA	NA
+ASV1357	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1358	Fungi	Glomeromycota	Glomeromycetes	Diversisporales	Diversisporaceae	Diversispora	NA
+ASV1359	NA	NA	NA	NA	NA	NA	NA
+ASV1360	Metazoa	Arthropoda	Insecta	Diptera	NA	NA	NA
+ASV1361	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Lophiostomataceae	Biappendiculispora	NA
+ASV1362	Alveolata	Ciliophora	NA	NA	NA	NA	NA
+ASV1363	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV1364	Metazoa	Arthropoda	Insecta	Diptera	NA	NA	NA
+ASV1365	Metazoa	Arthropoda	Malacostraca	Amphipoda	NA	NA	NA
+ASV1366	Metazoa	Nematoda	Chromadorea	Rhabditida	NA	NA	NA
+ASV1367	Fungi	Ascomycota	Sordariomycetes	Hypocreales	NA	NA	NA
+ASV1368	Fungi	Ascomycota	Leotiomycetes	Helotiales	Helotiaceae	Glarea	Glarea lozoyensis
+ASV1369	Viridiplantae	Chlorophyta	Chlorophyceae	Volvocales	NA	NA	NA
+ASV1370	Alveolata	Apicomplexa	Coccidia	Eucoccidiorida	NA	NA	NA
+ASV1371	Fungi	Ascomycota	Sordariomycetes	Xylariales	NA	NA	NA
+ASV1372	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1373	Fungi	Ascomycota	Eurotiomycetes	Verrucariales	NA	NA	NA
+ASV1374	Fungi	NA	NA	NA	NA	NA	NA
+ASV1375	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Chaetomium	NA
+ASV1376	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Sporormia	NA
+ASV1377	Fungi	Ascomycota	Dothideomycetes	Capnodiales	Cladosporiaceae	Cladosporium	Cladosporium aphidis
+ASV1378	Fungi	Ascomycota	Leotiomycetes	Helotiales	Helotiaceae	Heyderia	Heyderia abietis
+ASV1379	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1380	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV1381	Viridiplantae	Chlorophyta	Chlorophyceae	Volvocales	NA	NA	NA
+ASV1382	Fungi	Ascomycota	Dothideomycetes	Tubeufiales	NA	NA	NA
+ASV1383	Viridiplantae	Chlorophyta	Mamiellophyceae	Mamiellales	NA	NA	NA
+ASV1384	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV1385	Fungi	Ascomycota	Orbiliomycetes	Orbiliales	NA	NA	NA
+ASV1386	Fungi	Ascomycota	Lecanoromycetes	Acarosporales	NA	NA	NA
+ASV1387	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Zopfiella	NA
+ASV1388	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV1389	Viridiplantae	Marchantiophyta	Jungermanniopsida	Porellales	NA	NA	NA
+ASV1390	Viridiplantae	Chlorophyta	Mamiellophyceae	Mamiellales	NA	NA	NA
+ASV1391	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV1392	Choanoflagellozoa	Choanoflagellata	NA	Choanoflagellida	NA	NA	NA
+ASV1393	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV1394	Fungi	Ascomycota	Sordariomycetes	NA	NA	NA	NA
+ASV1395	Fungi	NA	NA	NA	NA	NA	NA
+ASV1396	Metazoa	Nematomorpha	Gordiida	NA	NA	NA	NA
+ASV1397	Fungi	Basidiomycota	Tremellomycetes	Tremellales	Tremellaceae	Cryptococcus	NA
+ASV1398	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV1399	Rhizaria	Cercozoa	NA	NA	NA	NA	NA
+ASV1400	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1401	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1402	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Schizophyllaceae	Schizophyllum	Schizophyllum commune
+ASV1403	Fungi	Ascomycota	Xylonomycetes	Symbiotaphrinales	NA	NA	NA
+ASV1404	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	Aspergillaceae	Penicillium	Penicillium toxicarium
+ASV1405	Stramenopila	Ochrophyta	Bacillariophyceae	Thalassiosirales	NA	NA	NA
+ASV1406	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV1407	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Agaricaceae	Coprinus	NA
+ASV1408	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV1409	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	Herpotrichiellaceae	NA	NA
+ASV1410	Fungi	NA	NA	NA	NA	NA	NA
+ASV1411	Metazoa	Arthropoda	Copepoda	Siphonostomatoida	NA	NA	NA
+ASV1412	Protista	NA	NA	NA	NA	NA	NA
+ASV1413	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	NA	NA
+ASV1414	Alveolata	Dinophyta	Dinophyceae	Prorocentrales	NA	NA	NA
+ASV1415	Fungi	Basidiomycota	Agaricomycetes	Cantharellales	NA	NA	NA
+ASV1416	Fungi	Ascomycota	Dothideomycetes	Botryosphaeriales	Botryosphaeriaceae	Dothiorella	Dothiorella viticola
+ASV1417	Viridiplantae	Chlorophyta	Mamiellophyceae	Mamiellales	NA	NA	NA
+ASV1418	Fungi	Ascomycota	Saccharomycetes	Saccharomycetales	NA	NA	NA
+ASV1419	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV1420	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1421	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV1422	Fungi	Glomeromycota	Glomeromycetes	Diversisporales	Diversisporaceae	Diversispora	NA
+ASV1423	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1424	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymosphaeriaceae	Paraconiothyrium	NA
+ASV1425	Fungi	Calcarisporiellomycota	Calcarisporiellomycetes	Calcarisporiellales	Calcarisporiellaceae	Calcarisporiella	NA
+ASV1426	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	Trichomeriaceae	Knufia	NA
+ASV1427	Fungi	Ascomycota	Dothideomycetes	Strigulales	NA	NA	NA
+ASV1428	Fungi	NA	NA	NA	NA	NA	NA
+ASV1429	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymosphaeriaceae	Montagnula	NA
+ASV1430	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV1431	Rhodoplantae	Rhodophyta	Florideophyceae	Gracilariales	NA	NA	NA
+ASV1432	Fungi	NA	NA	NA	NA	NA	NA
+ASV1433	Fungi	Ascomycota	Eurotiomycetes	Onygenales	Ajellomycetaceae	Helicocarpus	NA
+ASV1434	Fungi	Basidiomycota	Pucciniomycetes	Pucciniales	NA	NA	NA
+ASV1435	Fungi	NA	NA	NA	NA	NA	NA
+ASV1436	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV1437	Fungi	Ascomycota	Dothideomycetes	Botryosphaeriales	NA	NA	NA
+ASV1438	Fungi	Ascomycota	Pezizomycetes	Pezizales	Pyronemataceae	Trichophaeopsis	NA
+ASV1439	Stramenopila	Oomycota	Oomycetes	Peronosporales	NA	NA	NA
+ASV1440	Fungi	Basidiomycota	Microbotryomycetes	Sporidiobolales	Sporidiobolaceae	Rhodotorula	NA
+ASV1441	Fungi	NA	NA	NA	NA	NA	NA
+ASV1442	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV1443	Fungi	Ascomycota	Sordariomycetes	NA	NA	NA	NA
+ASV1444	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1445	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	NA	NA
+ASV1446	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV1447	Fungi	Ascomycota	Lecanoromycetes	Acarosporales	NA	Cryomyces	Cryomyces antarcticus
+ASV1448	Fungi	NA	NA	NA	NA	NA	NA
+ASV1449	Ichthyosporia	NA	Ichthyosporea	Dermocystida	NA	NA	NA
+ASV1450	Fungi	Ascomycota	Dothideomycetes	Venturiales	NA	NA	NA
+ASV1451	Viridiplantae	Chlorophyta	Mamiellophyceae	Mamiellales	NA	NA	NA
+ASV1452	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Leptosphaeriaceae	Neophaeosphaeria	NA
+ASV1453	Protista	NA	NA	NA	NA	NA	NA
+ASV1454	Fungi	Basidiomycota	Agaricomycetes	Atheliales	Atheliaceae	Piloderma	NA
+ASV1455	Viridiplantae	Chlorophyta	Mamiellophyceae	Mamiellales	NA	NA	NA
+ASV1456	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Thielavia	Thielavia microspora
+ASV1457	Fungi	NA	NA	NA	NA	NA	NA
+ASV1458	Fungi	Ascomycota	Dothideomycetes	Botryosphaeriales	NA	NA	NA
+ASV1459	Viridiplantae	Chlorophyta	Mamiellophyceae	Mamiellales	NA	NA	NA
+ASV1460	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1461	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Sporormia	NA
+ASV1462	Alveolata	Ciliophora	NA	NA	NA	NA	NA
+ASV1463	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV1464	Rhizaria	Cercozoa	NA	NA	NA	NA	NA
+ASV1465	Alveolata	Apicomplexa	Coccidia	Eucoccidiorida	NA	NA	NA
+ASV1466	Fungi	Ascomycota	Leotiomycetes	Thelebolales	NA	NA	NA
+ASV1467	Fungi	Ascomycota	Dothideomycetes	Dothideales	Aureobasidiaceae	NA	NA
+ASV1468	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Agaricaceae	Coprinus	NA
+ASV1469	Cryptista	Cryptophyta	NA	NA	NA	NA	NA
+ASV1470	Fungi	Basidiomycota	Tremellomycetes	Tremellales	Tremellaceae	NA	NA
+ASV1471	Fungi	Ascomycota	Dothideomycetes	Botryosphaeriales	Botryosphaeriaceae	Diplodia	Diplodia seriata
+ASV1472	Fungi	NA	NA	NA	NA	NA	NA
+ASV1473	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1474	Viridiplantae	Chlorophyta	NA	NA	NA	NA	NA
+ASV1475	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Preussia	NA
+ASV1476	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	NA	NA
+ASV1477	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV1478	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV1479	Fungi	NA	NA	NA	NA	NA	NA
+ASV1480	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV1481	Stramenopila	Oomycota	Oomycetes	Peronosporales	NA	NA	NA
+ASV1482	Stramenopila	Oomycota	Oomycetes	Peronosporales	NA	NA	NA
+ASV1483	Fungi	Mortierellomycota	Mortierellomycetes	Mortierellales	Mortierellaceae	Mortierella	NA
+ASV1484	Metazoa	Arthropoda	Insecta	Hymenoptera	NA	NA	NA
+ASV1485	Fungi	NA	NA	NA	NA	NA	NA
+ASV1486	Metazoa	Arthropoda	Insecta	Diptera	NA	NA	NA
+ASV1487	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV1488	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV1489	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV1490	Viridiplantae	Chlorophyta	NA	NA	NA	NA	NA
+ASV1491	Fungi	Ascomycota	Dothideomycetes	Botryosphaeriales	Botryosphaeriaceae	Lasiodiplodia	NA
+ASV1492	Fungi	Basidiomycota	Agaricomycetes	Thelephorales	Thelephoraceae	Tomentella	NA
+ASV1493	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Agaricaceae	Tulostoma	NA
+ASV1494	Fungi	Ascomycota	Dothideomycetes	Capnodiales	NA	NA	NA
+ASV1495	Metazoa	Craniata	Actinopterygii	Siluriformes	NA	NA	NA
+ASV1496	Alveolata	Apicomplexa	Coccidia	Eucoccidiorida	NA	NA	NA
+ASV1497	Alveolata	Apicomplexa	Coccidia	Eucoccidiorida	NA	NA	NA
+ASV1498	Fungi	Ascomycota	Xylonomycetes	Symbiotaphrinales	NA	NA	NA
+ASV1499	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Agaricaceae	Agaricus	Agaricus aridicola
+ASV1500	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV1501	Fungi	Ascomycota	Leotiomycetes	Helotiales	Hyaloscyphaceae	NA	NA
+ASV1502	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1503	Fungi	Ascomycota	Geoglossomycetes	Geoglossales	NA	NA	NA
+ASV1504	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	Herpotrichiellaceae	NA	NA
+ASV1505	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV1506	Protista	NA	NA	NA	NA	NA	NA
+ASV1507	Fungi	NA	NA	NA	NA	NA	NA
+ASV1508	Fungi	Basidiomycota	Agaricomycetes	Thelephorales	Thelephoraceae	Tomentella	NA
+ASV1509	Fungi	Ascomycota	Pezizomycetes	Pezizales	Pezizaceae	Peziza	Peziza badia
+ASV1510	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1511	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV1512	Fungi	Basidiomycota	Agaricomycetes	Agaricales	NA	NA	NA
+ASV1513	Fungi	Ascomycota	Eurotiomycetes	Onygenales	NA	NA	NA
+ASV1514	Alveolata	Apicomplexa	Coccidia	Eucoccidiorida	NA	NA	NA
+ASV1515	Metazoa	Arthropoda	Malacostraca	Amphipoda	NA	NA	NA
+ASV1516	Metazoa	Mollusca	Bivalvia	Ostreoida	NA	NA	NA
+ASV1517	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymosphaeriaceae	Paracamarosporium	Paracamarosporium leucadendri
+ASV1518	Fungi	NA	NA	NA	NA	NA	NA
+ASV1519	Fungi	Calcarisporiellomycota	Calcarisporiellomycetes	Calcarisporiellales	Calcarisporiellaceae	Calcarisporiella	NA
+ASV1520	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1521	Fungi	NA	NA	NA	NA	NA	NA
+ASV1522	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV1523	Fungi	NA	NA	NA	NA	NA	NA
+ASV1524	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV1525	Viridiplantae	Chlorophyta	Mamiellophyceae	Mamiellales	NA	NA	NA
+ASV1526	Metazoa	Arthropoda	Arachnida	Sarcoptiformes	NA	NA	NA
+ASV1527	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Sporormiella	Sporormiella affinis
+ASV1528	Fungi	Rozellomycota	NA	NA	NA	NA	NA
+ASV1529	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Podaxaceae	Podaxis	Podaxis pistillaris
+ASV1530	Cryptista	Cryptophyta	NA	Pyrenomonadales	NA	NA	NA
+ASV1531	Fungi	Ascomycota	Lecanoromycetes	Peltigerales	NA	NA	NA
+ASV1532	Metazoa	Arthropoda	Insecta	Diptera	NA	NA	NA
+ASV1533	Alveolata	Apicomplexa	Aconoidasida	NA	NA	NA	NA
+ASV1534	Fungi	Ascomycota	Dothideomycetes	Capnodiales	NA	NA	NA
+ASV1535	Fungi	Rozellomycota	NA	NA	NA	NA	NA
+ASV1536	Stramenopila	Oomycota	Oomycetes	Pythiales	NA	NA	NA
+ASV1537	Fungi	Rozellomycota	NA	NA	NA	NA	NA
+ASV1538	Fungi	Mortierellomycota	Mortierellomycetes	Mortierellales	Mortierellaceae	Mortierella	NA
+ASV1539	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Curvularia	Curvularia caricae-papayae
+ASV1540	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Agaricaceae	Tulostoma	NA
+ASV1541	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	NA	NA
+ASV1542	Fungi	Ascomycota	Pezizomycetes	Pezizales	Pyronemataceae	Trichophaeopsis	NA
+ASV1543	NA	NA	NA	NA	NA	NA	NA
+ASV1544	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1545	Fungi	NA	NA	NA	NA	NA	NA
+ASV1546	Alveolata	Ciliophora	Spirotrichea	Sporadotrichida	NA	NA	NA
+ASV1547	Alveolata	Apicomplexa	Coccidia	Eucoccidiorida	NA	NA	NA
+ASV1548	Fungi	Ascomycota	Eurotiomycetes	Onygenales	NA	NA	NA
+ASV1549	Fungi	Ascomycota	Dothideomycetes	Dothideales	Aureobasidiaceae	NA	NA
+ASV1550	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1551	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Agaricaceae	NA	NA
+ASV1552	Protista	NA	NA	NA	NA	NA	NA
+ASV1553	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Agaricaceae	Tulostoma	NA
+ASV1554	Fungi	Ascomycota	Sordariomycetes	Xylariales	NA	Fantasmomyces	NA
+ASV1555	Fungi	NA	NA	NA	NA	NA	NA
+ASV1556	Fungi	Ascomycota	Leotiomycetes	Helotiales	NA	NA	NA
+ASV1557	Fungi	Ascomycota	Eurotiomycetes	Verrucariales	Verrucariaceae	Placidium	Placidium umbrinum
+ASV1558	Fungi	Basidiomycota	Pucciniomycetes	Pucciniales	NA	NA	NA
+ASV1559	Viridiplantae	Chlorophyta	Trebouxiophyceae	Oocystales	NA	NA	NA
+ASV1560	Alveolata	Dinophyta	Dinophyceae	Prorocentrales	NA	NA	NA
+ASV1561	Viridiplantae	Marchantiophyta	Jungermanniopsida	Porellales	NA	NA	NA
+ASV1562	Metazoa	Arthropoda	Insecta	Diptera	NA	NA	NA
+ASV1563	Fungi	Ascomycota	Lecanoromycetes	Acarosporales	Acarosporaceae	Acarospora	NA
+ASV1564	Fungi	Basidiomycota	Agaricomycetes	Sebacinales	Sebacinaceae	Sebacina	NA
+ASV1565	Fungi	NA	NA	NA	NA	NA	NA
+ASV1566	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV1567	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV1568	Fungi	Ascomycota	Dothideomycetes	Venturiales	Venturiaceae	NA	NA
+ASV1569	Fungi	NA	NA	NA	NA	NA	NA
+ASV1570	Fungi	Ascomycota	Eurotiomycetes	Onygenales	Onygenaceae	Mallochia	Mallochia reticulata
+ASV1571	Viridiplantae	Chlorophyta	NA	NA	NA	NA	NA
+ASV1572	Fungi	Ascomycota	Dothideomycetes	Capnodiales	Teratosphaeriaceae	Friedmanniomyces	Friedmanniomyces endolithicus
+ASV1573	Fungi	Ascomycota	Dothideomycetes	Capnodiales	NA	NA	NA
+ASV1574	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Chaetomium	NA
+ASV1575	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Coniothyriaceae	Camarosporium	Camarosporium brabeji
+ASV1576	Fungi	Ascomycota	Sordariomycetes	Hypocreales	Nectriaceae	NA	NA
+ASV1577	Fungi	Ascomycota	Lecanoromycetes	Acarosporales	Acarosporaceae	NA	NA
+ASV1578	Fungi	Ascomycota	Lecanoromycetes	Lecanorales	NA	NA	NA
+ASV1579	Fungi	Basidiomycota	Agaricomycetes	Agaricales	NA	NA	NA
+ASV1580	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymosphaeriaceae	Deniquelata	Deniquelata barringtoniae
+ASV1581	Alveolata	Ciliophora	NA	NA	NA	NA	NA
+ASV1582	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Podaxaceae	Podaxis	Podaxis pistillaris
+ASV1583	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV1584	Fungi	Ascomycota	Dothideomycetes	Dothideales	NA	NA	NA
+ASV1585	Metazoa	Nematoda	Chromadorea	Spirurida	NA	NA	NA
+ASV1586	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1587	Fungi	Ascomycota	Dothideomycetes	Capnodiales	NA	NA	NA
+ASV1588	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Alternaria	Alternaria dauci
+ASV1589	Fungi	Ascomycota	Lecanoromycetes	Acarosporales	NA	NA	NA
+ASV1590	Fungi	Rozellomycota	NA	NA	NA	NA	NA
+ASV1591	Fungi	Basidiomycota	Agaricomycetes	Boletales	NA	NA	NA
+ASV1592	Fungi	Basidiomycota	Tremellomycetes	Tremellales	Tremellaceae	Cryptococcus	NA
+ASV1593	Fungi	Basidiomycota	Agaricomycetes	Trechisporales	Hydnodontaceae	Trechispora	NA
+ASV1594	Fungi	Ascomycota	Lecanoromycetes	Trapeliales	NA	NA	NA
+ASV1595	Fungi	Ascomycota	Sordariomycetes	Microascales	Ceratocystidaceae	Ceratocystis	Ceratocystis minor
+ASV1596	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	Herpotrichiellaceae	Cladophialophora	NA
+ASV1597	Fungi	Ascomycota	Leotiomycetes	Helotiales	NA	NA	NA
+ASV1598	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV1599	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	Trichomeriaceae	Knufia	NA
+ASV1600	Fungi	Ascomycota	Sordariomycetes	Sordariales	NA	NA	NA
+ASV1601	Fungi	Basidiomycota	Agaricomycetes	Thelephorales	Thelephoraceae	Tomentella	Tomentella sublilacina
+ASV1602	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Phaeosphaeriaceae	Phaeodothis	NA
+ASV1603	Fungi	Ascomycota	Leotiomycetes	Erysiphales	Erysiphaceae	Podosphaera	NA
+ASV1604	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV1605	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV1606	Fungi	Ascomycota	Sordariomycetes	Hypocreales	NA	NA	NA
+ASV1607	Metazoa	Platyhelminthes	Trematoda	Strigeida	NA	NA	NA
+ASV1608	Fungi	Ascomycota	Sordariomycetes	Hypocreales	NA	NA	NA
+ASV1609	Fungi	Chytridiomycota	NA	NA	NA	NA	NA
+ASV1610	Fungi	Basidiomycota	Agaricomycetes	Atheliales	Atheliaceae	Piloderma	NA
+ASV1611	Fungi	Ascomycota	Lecanoromycetes	Umbilicariales	NA	NA	NA
+ASV1612	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	Aspergillaceae	Aspergillus	NA
+ASV1613	Fungi	Basidiomycota	Tremellomycetes	Filobasidiales	Filobasidiaceae	Filobasidium	Filobasidium oeirense
+ASV1614	Fungi	Ascomycota	Eurotiomycetes	Onygenales	Onygenaceae	Mallochia	Mallochia reticulata
+ASV1615	Fungi	Ascomycota	Pezizomycetes	Pezizales	Pyronemataceae	Tricharina	Tricharina praecox
+ASV1616	Metazoa	Arthropoda	Insecta	Diptera	NA	NA	NA
+ASV1617	Fungi	Ascomycota	Dothideomycetes	Capnodiales	NA	NA	NA
+ASV1618	Viridiplantae	Chlorophyta	Mamiellophyceae	Mamiellales	NA	NA	NA
+ASV1619	Fungi	Basidiomycota	Agaricomycetes	Auriculariales	Exidiaceae	Basidiodendron	NA
+ASV1620	Fungi	Basidiobolomycota	Basidiobolomycetes	Basidiobolales	Basidiobolaceae	Basidiobolus	Basidiobolus ranarum
+ASV1621	Fungi	NA	NA	NA	NA	NA	NA
+ASV1622	Viridiplantae	Chlorophyta	NA	NA	NA	NA	NA
+ASV1623	Fungi	Basidiomycota	Tremellomycetes	Tremellales	NA	NA	NA
+ASV1624	Metazoa	Arthropoda	Malacostraca	Decapoda	NA	NA	NA
+ASV1625	Ichthyosporia	NA	Ichthyosporea	Dermocystida	NA	NA	NA
+ASV1626	Fungi	Ascomycota	Leotiomycetes	Helotiales	Helotiaceae	Meliniomyces	NA
+ASV1627	Fungi	Ascomycota	Dothideomycetes	Tubeufiales	NA	NA	NA
+ASV1628	Fungi	NA	NA	NA	NA	NA	NA
+ASV1629	Fungi	Basidiomycota	Agaricomycetes	Auriculariales	Exidiaceae	Basidiodendron	Basidiodendron caesiocinereum
+ASV1630	Ichthyosporia	NA	Ichthyosporea	Dermocystida	NA	NA	NA
+ASV1631	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1632	Fungi	Ascomycota	Lecanoromycetes	Peltigerales	NA	NA	NA
+ASV1633	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV1634	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV1635	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymellaceae	Phoma	NA
+ASV1636	Alveolata	Ciliophora	Spirotrichea	Sporadotrichida	NA	NA	NA
+ASV1637	Alveolata	Dinophyta	Dinophyceae	Prorocentrales	NA	NA	NA
+ASV1638	Fungi	NA	NA	NA	NA	NA	NA
+ASV1639	Fungi	Basidiomycota	Agaricomycetes	Agaricales	NA	NA	NA
+ASV1640	Fungi	Ascomycota	Sordariomycetes	Xylariales	NA	NA	NA
+ASV1641	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV1642	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Agaricaceae	Tulostoma	NA
+ASV1643	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV1644	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV1645	Fungi	Basidiomycota	Agaricomycetes	Agaricales	NA	NA	NA
+ASV1646	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	NA	NA	NA
+ASV1647	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1648	Fungi	NA	NA	NA	NA	NA	NA
+ASV1649	Fungi	Basidiomycota	Tremellomycetes	Filobasidiales	Piskurozymaceae	Solicoccozyma	Solicoccozyma terrea
+ASV1650	Metazoa	Arthropoda	Insecta	Diptera	NA	NA	NA
+ASV1651	Fungi	Ascomycota	Saccharomycetes	Saccharomycetales	Dipodascaceae	NA	NA
+ASV1652	Fungi	Ascomycota	Lecanoromycetes	Acarosporales	NA	NA	NA
+ASV1653	Fungi	Ascomycota	Sordariomycetes	Trichosphaeriales	Trichosphaeriaceae	NA	NA
+ASV1654	Stramenopila	Oomycota	Oomycetes	Peronosporales	NA	NA	NA
+ASV1655	Fungi	Ascomycota	Eurotiomycetes	Onygenales	NA	NA	NA
+ASV1656	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	Trichocomaceae	Talaromyces	Talaromyces pinophilus
+ASV1657	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1658	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	NA	NA	NA
+ASV1659	Fungi	NA	NA	NA	NA	NA	NA
+ASV1660	Fungi	Ascomycota	Arthoniomycetes	Lichenostigmatales	NA	NA	NA
+ASV1661	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymosphaeriaceae	Paraphaeosphaeria	NA
+ASV1662	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV1663	Fungi	Ascomycota	Dothideomycetes	Dothideales	Dothioraceae	Hormonema	Hormonema viticola
+ASV1664	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1665	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV1666	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV1667	Fungi	Basidiomycota	Agaricomycetes	Polyporales	NA	NA	NA
+ASV1668	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Subramaniula	Subramaniula cuniculorum
+ASV1669	Fungi	Ascomycota	Lecanoromycetes	Acarosporales	NA	NA	NA
+ASV1670	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	NA	NA
+ASV1671	Fungi	Basidiomycota	Tremellomycetes	Filobasidiales	Piskurozymaceae	Solicoccozyma	Solicoccozyma aeria
+ASV1672	Metazoa	Arthropoda	Insecta	Diptera	NA	NA	NA
+ASV1673	Rhizaria	Cercozoa	NA	NA	NA	NA	NA
+ASV1674	Fungi	Ascomycota	Sordariomycetes	Xylariales	Xylariaceae	NA	NA
+ASV1675	Metazoa	Nematomorpha	Gordiida	NA	NA	NA	NA
+ASV1676	Viridiplantae	Anthophyta	Monocotyledonae	Poales	Poaceae	Schismus	Schismus barbatus
+ASV1677	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Coniothyriaceae	Coniothyrium	NA
+ASV1678	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1679	Fungi	Ascomycota	Pezizomycetes	NA	NA	NA	NA
+ASV1680	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1681	Fungi	Glomeromycota	Glomeromycetes	Glomerales	Claroideoglomeraceae	Claroideoglomus	NA
+ASV1682	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	NA	NA
+ASV1683	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Lophiostomataceae	Lophiostoma	NA
+ASV1684	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	Herpotrichiellaceae	Coniosporium	NA
+ASV1685	Metazoa	Arthropoda	Insecta	Diptera	NA	NA	NA
+ASV1686	Fungi	Ascomycota	Dothideomycetes	Capnodiales	NA	NA	NA
+ASV1687	Fungi	Rozellomycota	NA	NA	NA	NA	NA
+ASV1688	Fungi	Ascomycota	Sordariomycetes	Sordariales	NA	NA	NA
+ASV1689	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	Aspergillaceae	Aspergillus	Aspergillus niger
+ASV1690	Fungi	Ascomycota	Sordariomycetes	Sordariales	NA	NA	NA
+ASV1691	Metazoa	Arthropoda	Malacostraca	Amphipoda	NA	NA	NA
+ASV1692	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Preussia	NA
+ASV1693	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Agaricaceae	Tulostoma	NA
+ASV1694	Stramenopila	Ochrophyta	Bacillariophyceae	Thalassiosirales	NA	NA	NA
+ASV1695	Metazoa	Platyhelminthes	Trematoda	Strigeida	NA	NA	NA
+ASV1696	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Agaricaceae	Tulostoma	NA
+ASV1697	Fungi	NA	NA	NA	NA	NA	NA
+ASV1698	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV1699	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Preussia	NA
+ASV1700	Fungi	Ascomycota	Dothideomycetes	Botryosphaeriales	NA	NA	NA
+ASV1701	Alveolata	Ciliophora	NA	NA	NA	NA	NA
+ASV1702	Fungi	Ascomycota	Eurotiomycetes	Onygenales	NA	NA	NA
+ASV1703	Cryptista	Cryptophyta	NA	NA	NA	NA	NA
+ASV1704	Fungi	Ascomycota	Sordariomycetes	Sordariales	Lasiosphaeriaceae	Schizothecium	Schizothecium inaequale
+ASV1705	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Preussia	NA
+ASV1706	Fungi	Ascomycota	Dothideomycetes	Capnodiales	Cladosporiaceae	Rachicladosporium	NA
+ASV1707	Fungi	Basidiomycota	Tremellomycetes	Tremellales	NA	NA	NA
+ASV1708	Metazoa	Arthropoda	Insecta	Diptera	NA	NA	NA
+ASV1709	Viridiplantae	Marchantiophyta	Jungermanniopsida	Porellales	NA	NA	NA
+ASV1710	Cryptista	Cryptophyta	NA	NA	NA	NA	NA
+ASV1711	Fungi	Ascomycota	Sordariomycetes	Xylariales	NA	NA	NA
+ASV1712	Fungi	Ascomycota	Eurotiomycetes	Verrucariales	NA	NA	NA
+ASV1713	Fungi	Ascomycota	Lecanoromycetes	Acarosporales	NA	NA	NA
+ASV1714	Fungi	Chytridiomycota	Rhizophlyctidomycetes	Rhizophlyctidales	Rhizophlyctidaceae	Rhizophlyctis	NA
+ASV1715	Fungi	Basidiomycota	Agaricomycetes	Polyporales	NA	NA	NA
+ASV1716	Fungi	Basidiomycota	Agaricomycetes	Sebacinales	Sebacinaceae	Sebacina	NA
+ASV1717	Fungi	Ascomycota	Eurotiomycetes	Onygenales	NA	NA	NA
+ASV1718	Fungi	Ascomycota	Sordariomycetes	Sordariales	NA	NA	NA
+ASV1719	Fungi	Basidiomycota	Agaricomycetes	Polyporales	Fomitopsidaceae	Fomitopsis	Fomitopsis pinicola
+ASV1720	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV1721	Fungi	NA	NA	NA	NA	NA	NA
+ASV1722	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV1723	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Agaricaceae	Tulostoma	NA
+ASV1724	Protista	NA	NA	NA	NA	NA	NA
+ASV1725	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Chaetomium	NA
+ASV1726	Fungi	NA	NA	NA	NA	NA	NA
+ASV1727	Viridiplantae	Anthophyta	Eudicotyledonae	Fabales	NA	NA	NA
+ASV1728	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV1729	Fungi	NA	NA	NA	NA	NA	NA
+ASV1730	Fungi	Ascomycota	Sordariomycetes	Coniochaetales	Coniochaetaceae	Coniochaeta	NA
+ASV1731	Fungi	Ascomycota	Dothideomycetes	Capnodiales	NA	NA	NA
+ASV1732	Alveolata	Ciliophora	NA	NA	NA	NA	NA
+ASV1733	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1734	Fungi	Rozellomycota	NA	NA	NA	NA	NA
+ASV1735	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV1736	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV1737	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymosphaeriaceae	Pseudopithomyces	Pseudopithomyces chartarum
+ASV1738	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	Aspergillaceae	Penicillium	NA
+ASV1739	Fungi	Ascomycota	Lecanoromycetes	Lecanorales	NA	NA	NA
+ASV1740	Fungi	Ascomycota	Sordariomycetes	Sordariales	Sordariaceae	NA	NA
+ASV1741	Viridiplantae	Anthophyta	Monocotyledonae	Alismatales	NA	NA	NA
+ASV1742	Fungi	Basidiomycota	Agaricomycetes	Agaricales	NA	NA	NA
+ASV1743	Alveolata	Apicomplexa	Coccidia	Eucoccidiorida	NA	NA	NA
+ASV1744	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymosphaeriaceae	Deniquelata	Deniquelata barringtoniae
+ASV1745	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1746	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Agaricaceae	Tulostoma	NA
+ASV1747	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	NA	NA
+ASV1748	Viridiplantae	Chlorophyta	Trebouxiophyceae	Microthamniales	NA	NA	NA
+ASV1749	Fungi	Ascomycota	Arthoniomycetes	Lichenostigmatales	NA	NA	NA
+ASV1750	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Psathyrellaceae	Psathyrella	Psathyrella intermedia
+ASV1751	Fungi	Glomeromycota	Paraglomeromycetes	Paraglomerales	NA	NA	NA
+ASV1752	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Westerdykella	NA
+ASV1753	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Sporormiaceae	Preussia	NA
+ASV1754	Fungi	Chytridiomycota	Rhizophlyctidomycetes	Rhizophlyctidales	Rhizophlyctidaceae	Rhizophlyctis	Rhizophlyctis rosea
+ASV1755	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Agaricaceae	Tulostoma	NA
+ASV1756	NA	NA	NA	NA	NA	NA	NA
+ASV1757	Fungi	Ascomycota	Sordariomycetes	Hypocreales	NA	NA	NA
+ASV1758	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV1759	Fungi	Ascomycota	Dothideomycetes	Capnodiales	Cladosporiaceae	Cladosporium	NA
+ASV1760	Fungi	Ascomycota	Lecanoromycetes	Trapeliales	NA	NA	NA
+ASV1761	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV1762	Stramenopila	Oomycota	Oomycetes	Peronosporales	NA	NA	NA
+ASV1763	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV1764	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	NA	NA
+ASV1765	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Myceliophthora	Myceliophthora sepedonium
+ASV1766	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV1767	Fungi	Mortierellomycota	Mortierellomycetes	Mortierellales	Mortierellaceae	Mortierella	NA
+ASV1768	Viridiplantae	Chlorophyta	NA	NA	NA	NA	NA
+ASV1769	Fungi	Ascomycota	Sordariomycetes	Hypocreales	NA	NA	NA
+ASV1770	Fungi	Ascomycota	Lecanoromycetes	Trapeliales	NA	NA	NA
+ASV1771	Fungi	Basidiomycota	Tremellomycetes	Tremellales	Tremellaceae	NA	NA
+ASV1772	Fungi	Basidiomycota	Malasseziomycetes	Malasseziales	Malasseziaceae	Malassezia	Malassezia restricta
+ASV1773	Fungi	NA	NA	NA	NA	NA	NA
+ASV1774	Fungi	Basidiomycota	Agaricomycetes	Agaricales	Amanitaceae	Amanita	Amanita exitialis
+ASV1775	Fungi	NA	NA	NA	NA	NA	NA
+ASV1776	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Chaetomium	NA
+ASV1777	Stramenopila	Oomycota	Oomycetes	Peronosporales	NA	NA	NA
+ASV1778	Fungi	Ascomycota	Dothideomycetes	Tubeufiales	NA	NA	NA
+ASV1779	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymosphaeriaceae	Deniquelata	Deniquelata barringtoniae
+ASV1780	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV1781	Fungi	Basidiomycota	Agaricostilbomycetes	Agaricostilbales	Chionosphaeraceae	Chionosphaera	Chionosphaera cuniculicola
+ASV1782	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV1783	Fungi	Rozellomycota	NA	NA	NA	NA	NA
+ASV1784	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	Herpotrichiellaceae	Coniosporium	NA
+ASV1785	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Alternaria	Alternaria chlamydosporigena
+ASV1786	Protista	NA	NA	NA	NA	NA	NA
+ASV1787	Alveolata	Apicomplexa	Coccidia	Eucoccidiorida	NA	NA	NA
+ASV1788	Fungi	Ascomycota	Archaeorhizomycetes	Archaeorhizomycetales	Archaeorhizomycetaceae	Archaeorhizomyces	NA
+ASV1789	Ichthyosporia	NA	Ichthyosporea	Dermocystida	NA	NA	NA
+ASV1790	Fungi	Ascomycota	Sordariomycetes	Sordariales	NA	NA	NA
+ASV1791	Fungi	Ascomycota	Dothideomycetes	Dothideales	Dothioraceae	Dothiora	NA
+ASV1792	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Pleosporaceae	Pyrenophora	NA
+ASV1793	Fungi	Chytridiomycota	NA	NA	NA	NA	NA
+ASV1794	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV1795	Fungi	Ascomycota	Eurotiomycetes	Eurotiales	Aspergillaceae	Neosartorya	NA
+ASV1796	Fungi	NA	NA	NA	NA	NA	NA
+ASV1797	Fungi	Basidiomycota	Agaricomycetes	Auriculariales	Exidiaceae	Basidiodendron	NA
+ASV1798	Fungi	Ascomycota	Lecanoromycetes	Acarosporales	Acarosporaceae	Polysporina	Polysporina subfuscescens
+ASV1799	Fungi	Ascomycota	Lecanoromycetes	Acarosporales	NA	NA	NA
+ASV1800	Fungi	Basidiomycota	Tremellomycetes	Filobasidiales	Filobasidiaceae	Filobasidium	Filobasidium oeirense
+ASV1801	Fungi	Ascomycota	Leotiomycetes	Helotiales	Helotiaceae	Heyderia	Heyderia abietis
+ASV1802	Fungi	NA	NA	NA	NA	NA	NA
+ASV1803	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Phaeosphaeriaceae	Populocrescentia	Populocrescentia forlicesenensis
+ASV1804	Fungi	Ascomycota	Lecanoromycetes	Acarosporales	Acarosporaceae	Acarospora	Acarospora rugulosa
+ASV1805	Fungi	Ascomycota	Sordariomycetes	Sordariales	Chaetomiaceae	Acrophialophora	NA
+ASV1806	Fungi	NA	NA	NA	NA	NA	NA
+ASV1807	Fungi	Ascomycota	Dothideomycetes	Dothideales	NA	NA	NA
+ASV1808	Metazoa	Arthropoda	Insecta	Hymenoptera	NA	NA	NA
+ASV1809	Metazoa	Arthropoda	Insecta	Diptera	NA	NA	NA
+ASV1810	Fungi	Ascomycota	Sordariomycetes	Sordariales	NA	NA	NA
+ASV1811	Fungi	NA	NA	NA	NA	NA	NA
+ASV1812	Viridiplantae	Chlorophyta	Trebouxiophyceae	Microthamniales	NA	NA	NA
+ASV1813	Fungi	Ascomycota	Eurotiomycetes	Verrucariales	Verrucariaceae	Placidium	NA
+ASV1814	Fungi	Ascomycota	Lecanoromycetes	Acarosporales	NA	NA	NA
+ASV1815	Fungi	Entomophthoromycota	Entomophthoromycetes	Entomophthorales	NA	NA	NA
+ASV1816	Protista	NA	NA	NA	NA	NA	NA
+ASV1817	Fungi	Ascomycota	Lecanoromycetes	Lecanorales	NA	NA	NA
+ASV1818	Fungi	Ascomycota	Dothideomycetes	Venturiales	NA	NA	NA
+ASV1819	Fungi	Ascomycota	Leotiomycetes	Helotiales	NA	NA	NA
+ASV1820	Alveolata	Dinophyta	Dinophyceae	Prorocentrales	NA	NA	NA
+ASV1821	Fungi	Ascomycota	Dothideomycetes	Pleosporales	Didymosphaeriaceae	Kalmusia	Kalmusia variispora
+ASV1822	Fungi	Ascomycota	Dothideomycetes	Venturiales	NA	NA	NA
+ASV1823	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	Herpotrichiellaceae	NA	NA
+ASV1824	Fungi	Ascomycota	Dothideomycetes	Pleosporales	NA	NA	NA
+ASV1825	Fungi	NA	NA	NA	NA	NA	NA
+ASV1826	Viridiplantae	Chlorophyta	Chlorophyceae	Sphaeropleales	NA	NA	NA
+ASV1827	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV1828	Metazoa	Porifera	Demospongiae	Verongida	NA	NA	NA
+ASV1829	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV1830	Metazoa	Arthropoda	Insecta	Diptera	NA	NA	NA
+ASV1831	Fungi	Ascomycota	Dothideomycetes	Tubeufiales	Tubeufiaceae	Acanthostigma	NA
+ASV1832	Fungi	Ascomycota	Lecanoromycetes	Ostropales	NA	NA	NA
+ASV1833	Fungi	Ascomycota	Sordariomycetes	Hypocreales	NA	NA	NA
+ASV1834	Fungi	Ascomycota	NA	NA	NA	NA	NA
+ASV1835	Fungi	Ascomycota	Dothideomycetes	Venturiales	NA	NA	NA
+ASV1836	Stramenopila	Oomycota	Oomycetes	Peronosporales	NA	NA	NA
+ASV1837	Rhizaria	Cercozoa	NA	Thaumatomonadida	NA	NA	NA
+ASV1838	Viridiplantae	Chlorophyta	Trebouxiophyceae	Oocystales	NA	NA	NA
+ASV1839	Fungi	Ascomycota	Eurotiomycetes	Chaetothyriales	NA	NA	NA
+ASV1840	Fungi	Ascomycota	Dothideomycetes	NA	NA	NA	NA
+ASV1841	Viridiplantae	Chlorophyta	Mamiellophyceae	Mamiellales	NA	NA	NA
+ASV1842	Fungi	Ascomycota	Lecanoromycetes	Acarosporales	NA	NA	NA
